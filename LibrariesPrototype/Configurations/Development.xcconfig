@@ -6,6 +6,8 @@
 //  Copyright © 2018 Ozgun Zor. All rights reserved.
 //
 
+#include "Pods/Target Support Files/Pods-LibrariesPrototype/Pods-LibrariesPrototype.development.xcconfig"
+
 GENERAL_ENVIRONMENT = Development
 
 HOCKEY_APP_IDENTIFIER =

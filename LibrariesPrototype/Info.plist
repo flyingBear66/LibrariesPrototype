@@ -41,5 +41,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>General.Environment</key>
+    <string>$(GENERAL_ENVIRONMENT)</string>
 </dict>
 </plist>
