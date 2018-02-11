@@ -1,0 +1,6 @@
+framework module Pods_LibrariesPrototype {
+  umbrella header "Pods-LibrariesPrototype-umbrella.h"
+
+  export *
+  module * { export * }
+}
