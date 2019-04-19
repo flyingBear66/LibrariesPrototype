@@ -17,7 +17,7 @@ class HeroListViewModel: LTViewModel {
     public var herosDidError = Bindable<String>("")
 
     // MARK: - Init
-    init(with service: BaseService) {
+    init(with service: LTService) {
         self.service = (service as! HeroListService)
     }
     

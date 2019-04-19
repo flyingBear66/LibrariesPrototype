@@ -10,7 +10,7 @@ import UIKit
 
 let kRequiredCountForDetails = 3
 
-class HeroDetailService: BaseService {
+class HeroDetailService: LTService {
     func getHeroComics(with heroId: Int, completion: @escaping (Result<[Comic], Error>) -> Void) {
         print("\nGetHeroComics starting:")
         marvelAPIClient.send(GetHeroComics(heroId: heroId, limit: HeroDetailServiceConstants.requiredDetailCount)) { response in

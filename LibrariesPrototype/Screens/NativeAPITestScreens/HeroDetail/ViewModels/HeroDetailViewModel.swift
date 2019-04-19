@@ -28,7 +28,7 @@ class HeroDetailViewModel: LTViewModel {
     
     // MARK: - Init
     
-    init(with service: BaseService, heroId id: Int) {
+    init(with service: LTService, heroId id: Int) {
         self.service = (service as! HeroDetailService)
         self.heroId = id
         favorited.value = UserDefaults.standard.bool(forKey: "\(heroId)")

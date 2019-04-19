@@ -8,7 +8,7 @@
 
 import Foundation
 
-class HeroListService: BaseService {
+class HeroListService: LTService {
     
     var offset = 0
     let limit = 20

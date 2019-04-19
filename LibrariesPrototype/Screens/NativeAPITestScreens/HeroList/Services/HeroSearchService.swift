@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HeroSearchService: BaseService {
+class HeroSearchService: LTService {
 
     func getHeros(with name: String, completion: @escaping (Result<[ComicCharacter], Error>) -> Void) {
         print("\ngetHeroswithName starting:")
