@@ -30,6 +30,12 @@
 		9EE91FCB226A3B9E0079827F /* URLQueryItemEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE91FCA226A3B9E0079827F /* URLQueryItemEncoder.swift */; };
 		9EE91FCD226A3BA90079827F /* md5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE91FCC226A3BA90079827F /* md5.swift */; };
 		9EE91FD1226A3C630079827F /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE91FD0226A3C630079827F /* BaseService.swift */; };
+		9EE91FDA226A3E5B0079827F /* Serie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE91FD4226A3E5B0079827F /* Serie.swift */; };
+		9EE91FDB226A3E5B0079827F /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE91FD5226A3E5B0079827F /* Story.swift */; };
+		9EE91FDC226A3E5B0079827F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE91FD6226A3E5B0079827F /* Event.swift */; };
+		9EE91FDD226A3E5B0079827F /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE91FD7226A3E5B0079827F /* Comic.swift */; };
+		9EE91FDE226A3E5B0079827F /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE91FD8226A3E5B0079827F /* Image.swift */; };
+		9EE91FDF226A3E5B0079827F /* ComicCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE91FD9226A3E5B0079827F /* ComicCharacter.swift */; };
 		ABDE27FEA19C25945F82AB08 /* Pods_LibrariesPrototypeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFAA968927402D631B262A8 /* Pods_LibrariesPrototypeUITests.framework */; };
 		F22E94A131A902D1727629A8 /* Pods_LibrariesPrototype.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F2A9BBB640BE5DCB529C15 /* Pods_LibrariesPrototype.framework */; };
 /* End PBXBuildFile section */
@@ -89,6 +95,12 @@
 		9EE91FCA226A3B9E0079827F /* URLQueryItemEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueryItemEncoder.swift; sourceTree = "<group>"; };
 		9EE91FCC226A3BA90079827F /* md5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = md5.swift; sourceTree = "<group>"; };
 		9EE91FD0226A3C630079827F /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		9EE91FD4226A3E5B0079827F /* Serie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serie.swift; sourceTree = "<group>"; };
+		9EE91FD5226A3E5B0079827F /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		9EE91FD6226A3E5B0079827F /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		9EE91FD7226A3E5B0079827F /* Comic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
+		9EE91FD8226A3E5B0079827F /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		9EE91FD9226A3E5B0079827F /* ComicCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComicCharacter.swift; sourceTree = "<group>"; };
 		A641A8D8E78C9E8B21CB0487 /* Pods-LibrariesPrototypeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototypeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototypeTests/Pods-LibrariesPrototypeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C0F2A9BBB640BE5DCB529C15 /* Pods_LibrariesPrototype.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibrariesPrototype.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0101268CB92B19951DB637D /* Pods-LibrariesPrototypeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototypeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototypeTests/Pods-LibrariesPrototypeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -272,6 +284,7 @@
 		9E94B4132030C19000B8BA18 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				9EE91FD3226A3E1D0079827F /* Models */,
 				9E94B4142030C19000B8BA18 /* Constants */,
 				9E94B4152030C19000B8BA18 /* Extensions */,
 				9E94B4162030C19000B8BA18 /* Helpers */,
@@ -364,6 +377,19 @@
 				9EE91FD0226A3C630079827F /* BaseService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		9EE91FD3226A3E1D0079827F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9EE91FD7226A3E5B0079827F /* Comic.swift */,
+				9EE91FD9226A3E5B0079827F /* ComicCharacter.swift */,
+				9EE91FD6226A3E5B0079827F /* Event.swift */,
+				9EE91FD8226A3E5B0079827F /* Image.swift */,
+				9EE91FD4226A3E5B0079827F /* Serie.swift */,
+				9EE91FD5226A3E5B0079827F /* Story.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		C6F8907B2D6825A6BB6D03AC /* Frameworks */ = {
@@ -668,18 +694,24 @@
 			files = (
 				9EE91FB9226A37410079827F /* LTViewModel.swift in Sources */,
 				9EE91FC0226A3A040079827F /* DataContainer.swift in Sources */,
+				9EE91FDB226A3E5B0079827F /* Story.swift in Sources */,
 				9EE91FC6226A3A2E0079827F /* APIRequest.swift in Sources */,
+				9EE91FDC226A3E5B0079827F /* Event.swift in Sources */,
 				9EE91FB3226A36E70079827F /* LTLabel.swift in Sources */,
 				9EE91FB5226A371C0079827F /* LTTableView.swift in Sources */,
 				9EE91FAF226A36CD0079827F /* LTView.swift in Sources */,
 				9EE91FC4226A3A180079827F /* MarvelError.swift in Sources */,
+				9EE91FDE226A3E5B0079827F /* Image.swift in Sources */,
 				9EE91FB1226A36DC0079827F /* LTButton.swift in Sources */,
 				9EE91FCB226A3B9E0079827F /* URLQueryItemEncoder.swift in Sources */,
 				9EE91FC2226A3A0C0079827F /* MarvelResponse.swift in Sources */,
 				9EE91FCD226A3BA90079827F /* md5.swift in Sources */,
 				9EE91FAD226A36C00079827F /* LTViewController.swift in Sources */,
 				9EE91FD1226A3C630079827F /* BaseService.swift in Sources */,
+				9EE91FDF226A3E5B0079827F /* ComicCharacter.swift in Sources */,
 				9EE91FB7226A372B0079827F /* LTCollectionView.swift in Sources */,
+				9EE91FDD226A3E5B0079827F /* Comic.swift in Sources */,
+				9EE91FDA226A3E5B0079827F /* Serie.swift in Sources */,
 				9EE91FBD226A37F90079827F /* MarvelAPIClient.swift in Sources */,
 				9E94B3DD2030BEC000B8BA18 /* AppDelegate.swift in Sources */,
 				9EE91FC9226A3B920079827F /* HTTPParameter.swift in Sources */,
