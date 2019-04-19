@@ -362,7 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				9EEA0F3C226A3F3C008595CC /* Main */,
-				9EEA0F50226A4958008595CC /* NativeAPITestScreens */,
+				9EEA0F50226A4958008595CC /* NativeAPI */,
 				9EEA0F3D226A3F46008595CC /* Splash */,
 			);
 			path = Screens;
@@ -543,14 +543,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		9EEA0F50226A4958008595CC /* NativeAPITestScreens */ = {
+		9EEA0F50226A4958008595CC /* NativeAPI */ = {
 			isa = PBXGroup;
 			children = (
 				9EEA0FB6226A5DBB008595CC /* Shared */,
 				9EEA0F69226A498A008595CC /* HeroDetail */,
 				9EEA0F51226A498A008595CC /* HeroList */,
 			);
-			path = NativeAPITestScreens;
+			path = NativeAPI;
 			sourceTree = "<group>";
 		};
 		9EEA0F51226A498A008595CC /* HeroList */ = {
