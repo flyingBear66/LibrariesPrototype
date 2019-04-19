@@ -14,6 +14,13 @@
 		9E94B3E72030BEC000B8BA18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E94B3E52030BEC000B8BA18 /* LaunchScreen.storyboard */; };
 		9E94B3F22030BEC000B8BA18 /* LibrariesPrototypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E94B3F12030BEC000B8BA18 /* LibrariesPrototypeTests.swift */; };
 		9E94B3FD2030BEC000B8BA18 /* LibrariesPrototypeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E94B3FC2030BEC000B8BA18 /* LibrariesPrototypeUITests.swift */; };
+		9EE91FAD226A36C00079827F /* LTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE91FAC226A36C00079827F /* LTViewController.swift */; };
+		9EE91FAF226A36CD0079827F /* LTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE91FAE226A36CD0079827F /* LTView.swift */; };
+		9EE91FB1226A36DC0079827F /* LTButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE91FB0226A36DC0079827F /* LTButton.swift */; };
+		9EE91FB3226A36E70079827F /* LTLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE91FB2226A36E70079827F /* LTLabel.swift */; };
+		9EE91FB5226A371C0079827F /* LTTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE91FB4226A371C0079827F /* LTTableView.swift */; };
+		9EE91FB7226A372B0079827F /* LTCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE91FB6226A372B0079827F /* LTCollectionView.swift */; };
+		9EE91FB9226A37410079827F /* LTViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE91FB8226A37410079827F /* LTViewModel.swift */; };
 		ABDE27FEA19C25945F82AB08 /* Pods_LibrariesPrototypeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFAA968927402D631B262A8 /* Pods_LibrariesPrototypeUITests.framework */; };
 		F22E94A131A902D1727629A8 /* Pods_LibrariesPrototype.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F2A9BBB640BE5DCB529C15 /* Pods_LibrariesPrototype.framework */; };
 /* End PBXBuildFile section */
@@ -57,6 +64,13 @@
 		9E94B58A2030DCAB00B8BA18 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		9E94B58B2030DCB900B8BA18 /* Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Test.xcconfig; sourceTree = "<group>"; };
 		9E94B58C2030DCD300B8BA18 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
+		9EE91FAC226A36C00079827F /* LTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LTViewController.swift; path = ../../../../../../Projects/test_ios_ozgun_zor/TestFarfetchOzgunZor/MarvelAPIAppZor/Screens/HeroList/Views/LTViewController.swift; sourceTree = "<group>"; };
+		9EE91FAE226A36CD0079827F /* LTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTView.swift; sourceTree = "<group>"; };
+		9EE91FB0226A36DC0079827F /* LTButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTButton.swift; sourceTree = "<group>"; };
+		9EE91FB2226A36E70079827F /* LTLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTLabel.swift; sourceTree = "<group>"; };
+		9EE91FB4226A371C0079827F /* LTTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTTableView.swift; sourceTree = "<group>"; };
+		9EE91FB6226A372B0079827F /* LTCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTCollectionView.swift; sourceTree = "<group>"; };
+		9EE91FB8226A37410079827F /* LTViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTViewModel.swift; sourceTree = "<group>"; };
 		A641A8D8E78C9E8B21CB0487 /* Pods-LibrariesPrototypeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototypeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototypeTests/Pods-LibrariesPrototypeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C0F2A9BBB640BE5DCB529C15 /* Pods_LibrariesPrototype.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibrariesPrototype.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0101268CB92B19951DB637D /* Pods-LibrariesPrototypeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototypeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototypeTests/Pods-LibrariesPrototypeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -183,6 +197,7 @@
 		9E94B40C2030C19000B8BA18 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				9EE91FB8226A37410079827F /* LTViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -204,6 +219,8 @@
 		9E94B40F2030C19000B8BA18 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				9EE91FB0226A36DC0079827F /* LTButton.swift */,
+				9EE91FB2226A36E70079827F /* LTLabel.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -211,6 +228,7 @@
 		9E94B4102030C19000B8BA18 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				9EE91FAC226A36C00079827F /* LTViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -218,6 +236,9 @@
 		9E94B4112030C19000B8BA18 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9EE91FB6226A372B0079827F /* LTCollectionView.swift */,
+				9EE91FB4226A371C0079827F /* LTTableView.swift */,
+				9EE91FAE226A36CD0079827F /* LTView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -570,6 +591,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EE91FB9226A37410079827F /* LTViewModel.swift in Sources */,
+				9EE91FB3226A36E70079827F /* LTLabel.swift in Sources */,
+				9EE91FB5226A371C0079827F /* LTTableView.swift in Sources */,
+				9EE91FAF226A36CD0079827F /* LTView.swift in Sources */,
+				9EE91FB1226A36DC0079827F /* LTButton.swift in Sources */,
+				9EE91FAD226A36C00079827F /* LTViewController.swift in Sources */,
+				9EE91FB7226A372B0079827F /* LTCollectionView.swift in Sources */,
 				9E94B3DD2030BEC000B8BA18 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
