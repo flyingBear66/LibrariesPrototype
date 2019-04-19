@@ -54,6 +54,9 @@
 		9E94B3F82030BEC000B8BA18 /* LibrariesPrototypeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LibrariesPrototypeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E94B3FC2030BEC000B8BA18 /* LibrariesPrototypeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibrariesPrototypeUITests.swift; sourceTree = "<group>"; };
 		9E94B3FE2030BEC000B8BA18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E94B58A2030DCAB00B8BA18 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		9E94B58B2030DCB900B8BA18 /* Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Test.xcconfig; sourceTree = "<group>"; };
+		9E94B58C2030DCD300B8BA18 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		A641A8D8E78C9E8B21CB0487 /* Pods-LibrariesPrototypeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototypeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototypeTests/Pods-LibrariesPrototypeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C0F2A9BBB640BE5DCB529C15 /* Pods_LibrariesPrototype.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibrariesPrototype.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0101268CB92B19951DB637D /* Pods-LibrariesPrototypeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototypeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototypeTests/Pods-LibrariesPrototypeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +137,7 @@
 				9E94B3E32030BEC000B8BA18 /* Assets.xcassets */,
 				9E94B3E52030BEC000B8BA18 /* LaunchScreen.storyboard */,
 				9E94B3E82030BEC000B8BA18 /* Info.plist */,
+				9E94B5892030DC7B00B8BA18 /* Configurations */,
 			);
 			path = LibrariesPrototype;
 			sourceTree = "<group>";
@@ -254,6 +258,16 @@
 			children = (
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9E94B5892030DC7B00B8BA18 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				9E94B58A2030DCAB00B8BA18 /* Development.xcconfig */,
+				9E94B58B2030DCB900B8BA18 /* Test.xcconfig */,
+				9E94B58C2030DCD300B8BA18 /* Production.xcconfig */,
+			);
+			path = Configurations;
 			sourceTree = "<group>";
 		};
 		C6F8907B2D6825A6BB6D03AC /* Frameworks */ = {
