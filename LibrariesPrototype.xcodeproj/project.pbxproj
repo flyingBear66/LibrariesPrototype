@@ -27,6 +27,7 @@
 		9EEA0F49226A3FBD008595CC /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA0F48226A3FBD008595CC /* SplashViewModel.swift */; };
 		9EEA0F4D226A400B008595CC /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA0F4C226A400B008595CC /* MainService.swift */; };
 		9EEA0F4F226A401F008595CC /* SplashService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA0F4E226A401F008595CC /* SplashService.swift */; };
+		9EEA0FBC226A63F5008595CC /* Codextended.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA0FBB226A63F5008595CC /* Codextended.swift */; };
 		ABDE27FEA19C25945F82AB08 /* Pods_LibrariesPrototypeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFAA968927402D631B262A8 /* Pods_LibrariesPrototypeUITests.framework */; };
 		F22E94A131A902D1727629A8 /* Pods_LibrariesPrototype.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F2A9BBB640BE5DCB529C15 /* Pods_LibrariesPrototype.framework */; };
 /* End PBXBuildFile section */
@@ -83,6 +84,7 @@
 		9EEA0F48226A3FBD008595CC /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		9EEA0F4C226A400B008595CC /* MainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
 		9EEA0F4E226A401F008595CC /* SplashService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashService.swift; sourceTree = "<group>"; };
+		9EEA0FBB226A63F5008595CC /* Codextended.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Codextended.swift; sourceTree = "<group>"; };
 		A641A8D8E78C9E8B21CB0487 /* Pods-LibrariesPrototypeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototypeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototypeTests/Pods-LibrariesPrototypeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C0F2A9BBB640BE5DCB529C15 /* Pods_LibrariesPrototype.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibrariesPrototype.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0101268CB92B19951DB637D /* Pods-LibrariesPrototypeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototypeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototypeTests/Pods-LibrariesPrototypeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 				9E94B4142030C19000B8BA18 /* Constants */,
 				9E94B4152030C19000B8BA18 /* Extensions */,
 				9E94B4162030C19000B8BA18 /* Helpers */,
+				9EEA0FBA226A63E4008595CC /* Libraries */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -371,6 +374,14 @@
 				9EEA0F4C226A400B008595CC /* MainService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		9EEA0FBA226A63E4008595CC /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				9EEA0FBB226A63F5008595CC /* Codextended.swift */,
+			);
+			path = Libraries;
 			sourceTree = "<group>";
 		};
 		C6F8907B2D6825A6BB6D03AC /* Frameworks */ = {
@@ -683,6 +694,7 @@
 				9EEA0F43226A3F8B008595CC /* MainViewController.swift in Sources */,
 				9EEA0F4F226A401F008595CC /* SplashService.swift in Sources */,
 				9EE91FB7226A372B0079827F /* LTCollectionView.swift in Sources */,
+				9EEA0FBC226A63F5008595CC /* Codextended.swift in Sources */,
 				9E94B3DD2030BEC000B8BA18 /* AppDelegate.swift in Sources */,
 				9EEA0F45226A3F9B008595CC /* SplashViewController.swift in Sources */,
 				9EEA0F47226A3FB2008595CC /* MainViewModel.swift in Sources */,
