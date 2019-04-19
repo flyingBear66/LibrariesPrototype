@@ -19,12 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
+        
         let service = SplashService()
         let viewModel = SplashViewModel(with: service)
         window?.rootViewController = UINavigationController(rootViewController: SplashViewController(with: viewModel))
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-            self.openMainScreen()
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: { [weak self] in
+            self?.openMainScreen()
         })
         
         return true
