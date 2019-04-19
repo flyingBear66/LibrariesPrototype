@@ -21,6 +21,12 @@
 		9EE91FB5226A371C0079827F /* LTTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE91FB4226A371C0079827F /* LTTableView.swift */; };
 		9EE91FB7226A372B0079827F /* LTCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE91FB6226A372B0079827F /* LTCollectionView.swift */; };
 		9EE91FB9226A37410079827F /* LTViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE91FB8226A37410079827F /* LTViewModel.swift */; };
+		9EEA0F43226A3F8B008595CC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA0F42226A3F8B008595CC /* MainViewController.swift */; };
+		9EEA0F45226A3F9B008595CC /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA0F44226A3F9B008595CC /* SplashViewController.swift */; };
+		9EEA0F47226A3FB2008595CC /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA0F46226A3FB2008595CC /* MainViewModel.swift */; };
+		9EEA0F49226A3FBD008595CC /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA0F48226A3FBD008595CC /* SplashViewModel.swift */; };
+		9EEA0F4D226A400B008595CC /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA0F4C226A400B008595CC /* MainService.swift */; };
+		9EEA0F4F226A401F008595CC /* SplashService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA0F4E226A401F008595CC /* SplashService.swift */; };
 		ABDE27FEA19C25945F82AB08 /* Pods_LibrariesPrototypeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFAA968927402D631B262A8 /* Pods_LibrariesPrototypeUITests.framework */; };
 		F22E94A131A902D1727629A8 /* Pods_LibrariesPrototype.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F2A9BBB640BE5DCB529C15 /* Pods_LibrariesPrototype.framework */; };
 /* End PBXBuildFile section */
@@ -71,6 +77,12 @@
 		9EE91FB4226A371C0079827F /* LTTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTTableView.swift; sourceTree = "<group>"; };
 		9EE91FB6226A372B0079827F /* LTCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTCollectionView.swift; sourceTree = "<group>"; };
 		9EE91FB8226A37410079827F /* LTViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTViewModel.swift; sourceTree = "<group>"; };
+		9EEA0F42226A3F8B008595CC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		9EEA0F44226A3F9B008595CC /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		9EEA0F46226A3FB2008595CC /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		9EEA0F48226A3FBD008595CC /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		9EEA0F4C226A400B008595CC /* MainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
+		9EEA0F4E226A401F008595CC /* SplashService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashService.swift; sourceTree = "<group>"; };
 		A641A8D8E78C9E8B21CB0487 /* Pods-LibrariesPrototypeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototypeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototypeTests/Pods-LibrariesPrototypeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C0F2A9BBB640BE5DCB529C15 /* Pods_LibrariesPrototype.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibrariesPrototype.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0101268CB92B19951DB637D /* Pods-LibrariesPrototypeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototypeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototypeTests/Pods-LibrariesPrototypeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -246,6 +258,8 @@
 		9E94B4122030C19000B8BA18 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				9EEA0F3D226A3F46008595CC /* Splash */,
+				9EEA0F3C226A3F3C008595CC /* Main */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -289,6 +303,74 @@
 				9E94B58C2030DCD300B8BA18 /* Production.xcconfig */,
 			);
 			path = Configurations;
+			sourceTree = "<group>";
+		};
+		9EEA0F3C226A3F3C008595CC /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				9EEA0F4B226A3FE9008595CC /* Services */,
+				9EEA0F41226A3F73008595CC /* ViewControllers */,
+				9EEA0F40226A3F6D008595CC /* ViewModels */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		9EEA0F3D226A3F46008595CC /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				9EEA0F4A226A3FE4008595CC /* Services */,
+				9EEA0F3F226A3F66008595CC /* ViewModels */,
+				9EEA0F3E226A3F5F008595CC /* ViewControllers */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		9EEA0F3E226A3F5F008595CC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9EEA0F44226A3F9B008595CC /* SplashViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9EEA0F3F226A3F66008595CC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9EEA0F48226A3FBD008595CC /* SplashViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9EEA0F40226A3F6D008595CC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9EEA0F46226A3FB2008595CC /* MainViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9EEA0F41226A3F73008595CC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9EEA0F42226A3F8B008595CC /* MainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9EEA0F4A226A3FE4008595CC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9EEA0F4E226A401F008595CC /* SplashService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9EEA0F4B226A3FE9008595CC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9EEA0F4C226A400B008595CC /* MainService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		C6F8907B2D6825A6BB6D03AC /* Frameworks */ = {
@@ -594,11 +676,17 @@
 				9EE91FB9226A37410079827F /* LTViewModel.swift in Sources */,
 				9EE91FB3226A36E70079827F /* LTLabel.swift in Sources */,
 				9EE91FB5226A371C0079827F /* LTTableView.swift in Sources */,
+				9EEA0F49226A3FBD008595CC /* SplashViewModel.swift in Sources */,
 				9EE91FAF226A36CD0079827F /* LTView.swift in Sources */,
 				9EE91FB1226A36DC0079827F /* LTButton.swift in Sources */,
 				9EE91FAD226A36C00079827F /* LTViewController.swift in Sources */,
+				9EEA0F43226A3F8B008595CC /* MainViewController.swift in Sources */,
+				9EEA0F4F226A401F008595CC /* SplashService.swift in Sources */,
 				9EE91FB7226A372B0079827F /* LTCollectionView.swift in Sources */,
 				9E94B3DD2030BEC000B8BA18 /* AppDelegate.swift in Sources */,
+				9EEA0F45226A3F9B008595CC /* SplashViewController.swift in Sources */,
+				9EEA0F47226A3FB2008595CC /* MainViewModel.swift in Sources */,
+				9EEA0F4D226A400B008595CC /* MainService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
