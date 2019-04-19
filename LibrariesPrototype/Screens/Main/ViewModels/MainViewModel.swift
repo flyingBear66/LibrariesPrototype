@@ -12,6 +12,11 @@ class MainViewModel: LTViewModel {
 
     // MARK: - Variables
     private let service: MainService!
+    public var menus: [String] {
+        get {
+            return self.getMenus()
+        }
+    }
     
     // MARK: - Init
     init(with service: MainService) {
@@ -20,5 +25,8 @@ class MainViewModel: LTViewModel {
     
     // MARK: - Services
 
+    private func getMenus() -> [String] {
+        return ["Native Networking Test with MarvelAPI"]
+    }
     
 }

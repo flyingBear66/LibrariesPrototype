@@ -19,12 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
+        
         let service = SplashService()
         let viewModel = SplashViewModel(with: service)
-        window?.rootViewController = UINavigationController(rootViewController: SplashViewController(with: viewModel))
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-            self.openMainScreen()
+        window?.rootViewController = LTNavigationController(rootViewController: SplashViewController(with: viewModel))
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: { [weak self] in
+            self?.openMainScreen()
         })
         
         return true
@@ -35,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let mainViewModel = MainViewModel(with: mainService)
         let mainViewController = MainViewController(with: mainViewModel)
         
-        window?.rootViewController = UINavigationController(rootViewController: mainViewController)
+        window?.rootViewController = LTNavigationController(rootViewController: mainViewController)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
