@@ -1,0 +1,21 @@
+//
+//  Development.xcconfig
+//  LibrariesPrototype
+//
+//  Created by Ozgun Zor on 2/11/18.
+//  Copyright © 2018 Ozgun Zor. All rights reserved.
+//
+
+#include "Pods/Target Support Files/Pods-LibrariesPrototype/Pods-LibrariesPrototype.development.xcconfig"
+
+GENERAL_ENVIRONMENT = Development
+
+HOCKEY_APP_IDENTIFIER =
+HOCKEY_DEBUG_LOG_ENABLED = 1
+
+NETWORKING_API_SCHEME = http
+NETWORKING_API_HOST = dev.com
+NETWORKING_API_PATH = api
+NETWORKING_API_VERSION = v1
+
+THEME_NAME = Default
