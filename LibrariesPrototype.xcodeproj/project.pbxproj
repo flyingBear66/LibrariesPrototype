@@ -78,6 +78,7 @@
 		9EEA0FB1226A586B008595CC /* LTViewController+ActivitiyIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA0FB0226A586A008595CC /* LTViewController+ActivitiyIndicator.swift */; };
 		9EEA0FB5226A5BB1008595CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EEA0FB4226A5BB1008595CC /* LaunchScreen.storyboard */; };
 		9EEA0FB9226A615D008595CC /* LTNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA0FB8226A615D008595CC /* LTNavigationController.swift */; };
+		9EEA0FBC226A63F5008595CC /* Codextended.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA0FBB226A63F5008595CC /* Codextended.swift */; };
 		ABDE27FEA19C25945F82AB08 /* Pods_LibrariesPrototypeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFAA968927402D631B262A8 /* Pods_LibrariesPrototypeUITests.framework */; };
 		F22E94A131A902D1727629A8 /* Pods_LibrariesPrototype.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F2A9BBB640BE5DCB529C15 /* Pods_LibrariesPrototype.framework */; };
 /* End PBXBuildFile section */
@@ -185,6 +186,7 @@
 		9EEA0FB0226A586A008595CC /* LTViewController+ActivitiyIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTViewController+ActivitiyIndicator.swift"; sourceTree = "<group>"; };
 		9EEA0FB4226A5BB1008595CC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9EEA0FB8226A615D008595CC /* LTNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTNavigationController.swift; sourceTree = "<group>"; };
+		9EEA0FBB226A63F5008595CC /* Codextended.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Codextended.swift; sourceTree = "<group>"; };
 		A641A8D8E78C9E8B21CB0487 /* Pods-LibrariesPrototypeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototypeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototypeTests/Pods-LibrariesPrototypeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C0F2A9BBB640BE5DCB529C15 /* Pods_LibrariesPrototype.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibrariesPrototype.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0101268CB92B19951DB637D /* Pods-LibrariesPrototypeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototypeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototypeTests/Pods-LibrariesPrototypeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -373,6 +375,7 @@
 				9E94B4142030C19000B8BA18 /* Constants */,
 				9E94B4152030C19000B8BA18 /* Extensions */,
 				9E94B4162030C19000B8BA18 /* Helpers */,
+				9EEA0FBA226A63E4008595CC /* Libraries */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -708,6 +711,14 @@
 				9EE91FD5226A3E5B0079827F /* Story.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		9EEA0FBA226A63E4008595CC /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				9EEA0FBB226A63F5008595CC /* Codextended.swift */,
+			);
+			path = Libraries;
 			sourceTree = "<group>";
 		};
 		C6F8907B2D6825A6BB6D03AC /* Frameworks */ = {
@@ -1064,6 +1075,7 @@
 				9EE91FBD226A37F90079827F /* MarvelAPIClient.swift in Sources */,
 				9EEA0FB9226A615D008595CC /* LTNavigationController.swift in Sources */,
 				9EEA0F92226A498A008595CC /* HeroEventViewModel.swift in Sources */,
+				9EEA0FBC226A63F5008595CC /* Codextended.swift in Sources */,
 				9E94B3DD2030BEC000B8BA18 /* AppDelegate.swift in Sources */,
 				9EEA0F81226A498A008595CC /* HeroListViewController.swift in Sources */,
 				9EEA0F99226A498A008595CC /* HeroDetailService.swift in Sources */,
