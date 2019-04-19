@@ -1,4 +1,4 @@
 language: swift
-xcode_workspace: LibrariesPrototype.xcwoorkspace
+xcode_workspace: LibrariesPrototype.xcworkspace
 xcode_scheme: LibrariesPrototypeTests
 xcode_destination: platform=iOS Simulator,OS=12.0,name=iPhone XR
