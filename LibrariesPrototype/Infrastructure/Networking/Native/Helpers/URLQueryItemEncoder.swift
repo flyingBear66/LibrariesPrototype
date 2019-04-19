@@ -13,8 +13,8 @@ import Foundation
 /// Encodes any encodable to a URLQueryItem list
 enum URLQueryItemEncoder {
     static func encode<T: Encodable>(_ encodable: T) throws -> [URLQueryItem] {
-        let parametersData = try JSONEncoder().encode(encodable)
-        let parameters = try JSONDecoder().decode([String: HTTPParameter].self, from: parametersData)
+        let parametersData = try encodable.encoded()
+        let parameters = try parametersData.decoded() as [String: HTTPParameter]
         return parameters.map { URLQueryItem(name: $0, value: $1.description) }
     }
 }
