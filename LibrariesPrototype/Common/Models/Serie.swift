@@ -1,6 +1,6 @@
 //
 //  Serie.swift
-//  MarvelAPIAppZor
+//  LibrariesPrototype
 //
 //  Created by Ozgun Zor on 4/4/19.
 //  Copyright © 2019 Ozgun Zor. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  ComicCharacter.swift
-//  MarvelAPIAppZor
+//  LibrariesPrototype
 //
 //  This API and Model related coded are taken from "https://github.com/victorpimentel/MarvelAPI" repo.
 
