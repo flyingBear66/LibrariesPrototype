@@ -1,20 +1,21 @@
 //
-//  MainViewController.swift
+//  MainEmptyDataSetListViewController.swift
 //  LibrariesPrototype
 //
-//  Created by Ozgun Zor on 4/19/19.
+//  Created by Ozgun Zor on 4/20/19.
 //  Copyright © 2019 Ozgun Zor. All rights reserved.
 //
 
 import UIKit
 
-fileprivate enum MenuCase: Int {
-    case nativeNetworking = 0
-    case emptyDataSet = 1
+fileprivate enum EmptyDataSetMenuCase: Int {
+    case list = 0
+    case listWithImage = 1
+    case listWithButton = 2
     case none = -1
 }
 
-class MainViewController: LTViewController {
+class MainEmptyDataSetListViewController: LTViewController {
 
     // MARK: - UIControls
     let tableView: LTTableView = {
@@ -22,13 +23,13 @@ class MainViewController: LTViewController {
         return tableView
     }()
     
-    // MARK: - Variables
-    private var viewModel: MainViewModel!
+    let menus: [String] = {
+       return ["List", "List with Image", "List With Button"]
+    }()
     
     // MARK: - View LifeCycle
-    init(with viewModel: MainViewModel) {
+    override init() {
         super.init()
-        self.viewModel = viewModel
         setupViews()
     }
     
@@ -53,49 +54,46 @@ class MainViewController: LTViewController {
         tableView.addConstraints(equalToSuperview())
     }
     
-    func bindViewModel() {
-
-    }
-    
-    fileprivate func openScreen(with menuIndex: MenuCase) {
+    fileprivate func openScreen(with menuIndex: EmptyDataSetMenuCase) {
         switch menuIndex {
-        case .nativeNetworking:
-            openNativeNetworkingScreens()
-        case .emptyDataSet:
-            openEmptyDataSets()
+        case .list:
+            openList()
+        case .listWithImage:
+            openListWithImage()
+        case .listWithButton:
+            openListWithButton()
         default:
             print("Default case")
         }
     }
     
-    func openNativeNetworkingScreens() {
-        let service = HeroListService()
-        let viewModel = HeroListViewModel(with: service)
-        present(LTNavigationController(rootViewController: HeroListViewController(with: viewModel)), animated: true, completion: nil)
+    func openList() {
+        navigationController?.pushViewController(EmptyDataSetListViewController(), animated: true)
     }
     
-    func openEmptyDataSets() {
-        present(LTNavigationController(rootViewController: MainEmptyDataSetListViewController()), animated: true, completion: nil)
+    func openListWithImage() {
+        navigationController?.pushViewController(EmptyDataSetListWithImageViewController(), animated: true)
     }
     
-    // MARK: - UI Actions
+    func openListWithButton() {
+        navigationController?.pushViewController(EmptyDataSetListWithButtonViewController(), animated: true)
+    }
+    
 }
 
-extension MainViewController: UITableViewDataSource, UITableViewDelegate {
+extension MainEmptyDataSetListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.menus.count
+        return menus.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = LTTableViewCell(style: .default, reuseIdentifier: nil)
-        cell.textLabel?.text = viewModel.menus[indexPath.row]
+        cell.textLabel?.text = menus[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        openScreen(with: MenuCase(rawValue: indexPath.row) ?? .none)
+        openScreen(with: EmptyDataSetMenuCase(rawValue: indexPath.row) ?? .none)
     }
-    
-    
 }

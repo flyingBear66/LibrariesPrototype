@@ -26,7 +26,7 @@ class MainViewModel: LTViewModel {
     // MARK: - Services
 
     private func getMenus() -> [String] {
-        return ["Native Networking Test with MarvelAPI"]
+        return ["Native Networking Test with MarvelAPI", "Empty Data Set List"]
     }
     
 }
