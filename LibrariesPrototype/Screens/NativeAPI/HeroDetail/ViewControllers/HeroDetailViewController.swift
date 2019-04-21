@@ -61,7 +61,6 @@ class HeroDetailViewController: LTViewController {
         return view
     }()
 
-
     let seriesView: HeroDetailContainerView = {
         let view = HeroDetailContainerView()
         view.containerTitleLabel.text = "Series"
@@ -171,7 +170,7 @@ class HeroDetailViewController: LTViewController {
                 }
                 return
             }
-            for i in 0..<comicViewModels.count   {
+            for i in 0..<comicViewModels.count {
                 DispatchQueue.main.async {
                     self?.comicsView.detailViews[i].titleLabel.text = comicViewModels[i].title
                     self?.comicsView.detailViews[i].descriptionLabel.text = comicViewModels[i].comicDescription

@@ -10,13 +10,13 @@ import UIKit
 
 class Application {
     
-    //MARK: - Dependencies
+    // MARK: - Dependencies
     private let window: LTWindow
     lazy var navigation: Navigation = Navigation(
         window: self.window
     )
 
-    //MARK: - Lifecycle
+    // MARK: - Lifecycle
     init(window: LTWindow) {
         self.window = window
         self.window.makeKeyAndVisible()

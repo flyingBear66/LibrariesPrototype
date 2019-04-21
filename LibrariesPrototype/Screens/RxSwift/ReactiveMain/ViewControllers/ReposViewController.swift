@@ -6,11 +6,11 @@
 //  Copyright © 2019 Ozgun Zor. All rights reserved.
 //
 
-import UIKit
-import RxSwift
-import RxCocoa
-import SVProgressHUD
 import EmptyDataSet_Swift
+import RxCocoa
+import RxSwift
+import SVProgressHUD
+import UIKit
 
 class ReposViewController: LTRXViewController {
     
@@ -72,7 +72,7 @@ class ReposViewController: LTRXViewController {
         viewModel
             .error
             .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { (error) in
+            .subscribe(onNext: { error in
                 switch error {
                 case .internalError(let message):
                     print("Internal Error \(message)")

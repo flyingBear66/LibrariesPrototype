@@ -6,8 +6,8 @@
 //  Copyright © 2019 Ozgun Zor. All rights reserved.
 //
 
-import UIKit
 import RxSwift
+import UIKit
 
 class LTRXViewController: LTViewController {
 

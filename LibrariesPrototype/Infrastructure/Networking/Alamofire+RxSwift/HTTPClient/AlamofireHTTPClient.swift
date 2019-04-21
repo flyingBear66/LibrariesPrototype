@@ -6,8 +6,8 @@
 //  Copyright © 2019 Ozgun Zor. All rights reserved.
 //
 
-import Foundation
 import Alamofire
+import Foundation
 import RxSwift
 
 protocol ClientProtocol {
@@ -17,7 +17,7 @@ protocol ClientProtocol {
 final class AlamofireHTTPClient: ClientProtocol {
     private let manager: Alamofire.SessionManager
     private let baseURL = URL(string: "https://api.github.com")!
-    private let queue = DispatchQueue(label: "httpQueue")
+    private let queue = DispatchQueue(label: "httpsQueue")
     
     init(accessToken: String) {
         var defaultHeaders = Alamofire.SessionManager.defaultHTTPHeaders
@@ -50,7 +50,7 @@ final class AlamofireHTTPClient: ClientProtocol {
                     case let .success(val): observer(.success(val))
                     case let .failure(err): observer(.error(err))
                     }
-            }
+                }
             return Disposables.create {
                 request.cancel()
             }

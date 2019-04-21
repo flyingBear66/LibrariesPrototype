@@ -6,9 +6,9 @@
 //  Copyright © 2019 Ozgun Zor. All rights reserved.
 //
 
-import UIKit
-import RxSwift
 import RxCocoa
+import RxSwift
+import UIKit
 
 class RepositoryCollectionViewCell: LTCollectionViewCell {
     
@@ -77,14 +77,12 @@ class RepositoryCollectionViewCell: LTCollectionViewCell {
         repositoryOwnerLoginLabel.addConstraints([equal(self, \.bottomAnchor),
                                                   equal(self, \.leadingAnchor, constant: 8),
                                                   equal(self, \.trailingAnchor, constant: -8)])
-        
-
     }
+    
     private func setupViewModel() {
         guard let viewModel = self.viewModel else {
             fatalError("ViewModel has to be set correctly")
         }
-
         
         self.repositoryNameLabel.text = viewModel.name.value
         self.repositoryDescriptionLabel.text = viewModel.repoDescription.value

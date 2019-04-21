@@ -14,7 +14,7 @@ public enum HeroScreens {
 }
 
 // TODO: make it work with favorited closures.
-//typealias FavoritedClosure = (Bool) -> Void
+// typealias FavoritedClosure = (Bool) -> Void
 
 protocol HeroListViewModelEvents {
     var showHeroDetail: ((Int) -> Void)? {get set}
@@ -26,7 +26,6 @@ class HeroListViewModel: LTViewModel, HeroListViewModelEvents {
     // MARK: - Events
     var showHeroDetail: ((Int) -> Void)?
     var showHeroSearch: (() -> Void)?
-    
     
     // MARK: - Variables
     private let service: HeroListService!

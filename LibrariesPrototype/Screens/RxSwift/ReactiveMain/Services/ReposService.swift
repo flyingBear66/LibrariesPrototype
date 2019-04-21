@@ -6,9 +6,9 @@
 //  Copyright © 2019 Ozgun Zor. All rights reserved.
 //
 
-import UIKit
-import RxSwift
 import RxCocoa
+import RxSwift
+import UIKit
 
 protocol ReposServiceProtocol {
     func getRepos() -> Observable<[Repository]>
@@ -40,7 +40,5 @@ class ReposService: LTService, ReposServiceProtocol {
     func getRepos() -> Observable<[Repository]> {
         return githubAPIClient.request(GithubAPI.getFlyingBearPublicReposMore(limit: limit, offset: offset)).asObservable()
     }
-    
-    
 
 }
