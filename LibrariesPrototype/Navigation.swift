@@ -72,6 +72,10 @@ extension Navigation {
             self.openEmptyDataSetScreens()
         }
         
+        viewModel.showRxSwiftScreens = { [unowned self] in
+            self.openRxSwiftAlamofireScreens()
+        }
+        
         currentViewController = MainViewController(withViewModel: viewModel)
         navigateTo(viewContoller: currentViewController!, MainViewController.self)
     }
@@ -146,6 +150,14 @@ extension Navigation {
         currentViewController = EmptyDataSetListWithImageViewController()
         pushTo(viewContoller: currentViewController, EmptyDataSetListWithImageViewController.self)
     }
+    
+    // MARK: RxSwift+Alamofire
+
+    private func openRxSwiftAlamofireScreens() {
+        currentViewController = ReposViewController()
+        pushTo(viewContoller: currentViewController, ReposViewController.self)
+    }
+    
     
 }
 
