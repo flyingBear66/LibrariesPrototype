@@ -7,7 +7,8 @@ target 'LibrariesPrototype' do
 
   # Pods for LibrariesPrototype
   pod 'EmptyDataSet-Swift', '~> 4.2.0'
-  
+  pod 'SVProgressHUD'
+
   target 'LibrariesPrototypeTests' do
     inherit! :search_paths
     # Pods for testing
