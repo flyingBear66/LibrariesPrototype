@@ -6,7 +6,8 @@ target 'LibrariesPrototype' do
   use_frameworks!
 
   # Pods for LibrariesPrototype
-
+  pod 'EmptyDataSet-Swift', '~> 4.2.0'
+  
   target 'LibrariesPrototypeTests' do
     inherit! :search_paths
     # Pods for testing

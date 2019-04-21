@@ -10,6 +10,7 @@ import UIKit
 
 enum MenuCase: Int {
     case nativeNetworking = 0
+    case emptyDataSet = 1
     case none = -1
 }
 
@@ -33,13 +34,13 @@ class MainViewModel: LTViewModel, MainViewModelEvents {
     }
     
     // MARK: - Init
-    init(with service: MainService) {
+    init(withService service: MainService) {
         self.service = service
     }
     
     // MARK: - Services
     private func getMenus() -> [String] {
-        return ["Native Networking Test with MarvelAPI"]
+        return ["Native Networking Test with MarvelAPI", "Empty Data Set List"]
     }
     
     // MARK: - Helpers
@@ -48,6 +49,8 @@ class MainViewModel: LTViewModel, MainViewModelEvents {
         switch menuIndex {
         case .nativeNetworking:
             showNativeNetworkingScreens!()
+        case .emptyDataSet:
+            showEmptyDataSet!()
         case .none:
             print("Default case. Error happened or index not exist")            
         }

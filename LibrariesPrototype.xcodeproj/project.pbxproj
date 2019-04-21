@@ -15,6 +15,8 @@
 		9EA1EC38226BE5A100AC5F88 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA1EC37226BE5A100AC5F88 /* Navigation.swift */; };
 		9EA1EC3A226BE60000AC5F88 /* LTWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA1EC39226BE60000AC5F88 /* LTWindow.swift */; };
 		9EA1EC3C226BE6E800AC5F88 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA1EC3B226BE6E800AC5F88 /* Application.swift */; };
+		9EA1EC3F226BFDF600AC5F88 /* MainEmptyDataSetListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA1EC3E226BFDF600AC5F88 /* MainEmptyDataSetListViewModel.swift */; };
+		9EB35A0F226A8F8C0024FDEC /* MainEmptyDataSetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB35A0E226A8F8C0024FDEC /* MainEmptyDataSetListViewController.swift */; };
 		9EE91FAF226A36CD0079827F /* LTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE91FAE226A36CD0079827F /* LTView.swift */; };
 		9EE91FB1226A36DC0079827F /* LTButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE91FB0226A36DC0079827F /* LTButton.swift */; };
 		9EE91FB3226A36E70079827F /* LTLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE91FB2226A36E70079827F /* LTLabel.swift */; };
@@ -82,6 +84,10 @@
 		9EEA0FB5226A5BB1008595CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EEA0FB4226A5BB1008595CC /* LaunchScreen.storyboard */; };
 		9EEA0FB9226A615D008595CC /* LTNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA0FB8226A615D008595CC /* LTNavigationController.swift */; };
 		9EEA0FBC226A63F5008595CC /* Codextended.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA0FBB226A63F5008595CC /* Codextended.swift */; };
+		9EEA0FCB226A8988008595CC /* EmptyDataSetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA0FCA226A8988008595CC /* EmptyDataSetListViewController.swift */; };
+		9EEA0FCD226A8995008595CC /* EmptyDataSetListWithButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA0FCC226A8995008595CC /* EmptyDataSetListWithButtonViewController.swift */; };
+		9EEA0FCF226A89A0008595CC /* EmptyDataSetListWithImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA0FCE226A89A0008595CC /* EmptyDataSetListWithImageViewController.swift */; };
+		9EEA0FD1226A89EB008595CC /* BaseEmptyDataSetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA0FD0226A89EB008595CC /* BaseEmptyDataSetListViewController.swift */; };
 		ABDE27FEA19C25945F82AB08 /* Pods_LibrariesPrototypeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFAA968927402D631B262A8 /* Pods_LibrariesPrototypeUITests.framework */; };
 		F22E94A131A902D1727629A8 /* Pods_LibrariesPrototype.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F2A9BBB640BE5DCB529C15 /* Pods_LibrariesPrototype.framework */; };
 /* End PBXBuildFile section */
@@ -126,6 +132,8 @@
 		9EA1EC37226BE5A100AC5F88 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		9EA1EC39226BE60000AC5F88 /* LTWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTWindow.swift; sourceTree = "<group>"; };
 		9EA1EC3B226BE6E800AC5F88 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		9EA1EC3E226BFDF600AC5F88 /* MainEmptyDataSetListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainEmptyDataSetListViewModel.swift; sourceTree = "<group>"; };
+		9EB35A0E226A8F8C0024FDEC /* MainEmptyDataSetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainEmptyDataSetListViewController.swift; sourceTree = "<group>"; };
 		9EE91FAE226A36CD0079827F /* LTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTView.swift; sourceTree = "<group>"; };
 		9EE91FB0226A36DC0079827F /* LTButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTButton.swift; sourceTree = "<group>"; };
 		9EE91FB2226A36E70079827F /* LTLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTLabel.swift; sourceTree = "<group>"; };
@@ -193,6 +201,10 @@
 		9EEA0FB4226A5BB1008595CC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9EEA0FB8226A615D008595CC /* LTNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTNavigationController.swift; sourceTree = "<group>"; };
 		9EEA0FBB226A63F5008595CC /* Codextended.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Codextended.swift; sourceTree = "<group>"; };
+		9EEA0FCA226A8988008595CC /* EmptyDataSetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDataSetListViewController.swift; sourceTree = "<group>"; };
+		9EEA0FCC226A8995008595CC /* EmptyDataSetListWithButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDataSetListWithButtonViewController.swift; sourceTree = "<group>"; };
+		9EEA0FCE226A89A0008595CC /* EmptyDataSetListWithImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDataSetListWithImageViewController.swift; sourceTree = "<group>"; };
+		9EEA0FD0226A89EB008595CC /* BaseEmptyDataSetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEmptyDataSetListViewController.swift; sourceTree = "<group>"; };
 		A641A8D8E78C9E8B21CB0487 /* Pods-LibrariesPrototypeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototypeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototypeTests/Pods-LibrariesPrototypeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C0F2A9BBB640BE5DCB529C15 /* Pods_LibrariesPrototype.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibrariesPrototype.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0101268CB92B19951DB637D /* Pods-LibrariesPrototypeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototypeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototypeTests/Pods-LibrariesPrototypeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -370,8 +382,9 @@
 		9E94B4122030C19000B8BA18 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				9EEA0FBE226A88C1008595CC /* EmptyDataSet */,
 				9EEA0F3C226A3F3C008595CC /* Main */,
-				9EEA0F50226A4958008595CC /* NativeAPITestScreens */,
+				9EEA0F50226A4958008595CC /* NativeAPI */,
 				9EEA0F3D226A3F46008595CC /* Splash */,
 			);
 			path = Screens;
@@ -419,6 +432,14 @@
 				9E94B58C2030DCD300B8BA18 /* Production.xcconfig */,
 			);
 			path = Configurations;
+			sourceTree = "<group>";
+		};
+		9EA1EC3D226BFDDA00AC5F88 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9EA1EC3E226BFDF600AC5F88 /* MainEmptyDataSetListViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		9EE91FBA226A37CE0079827F /* Networking */ = {
@@ -552,14 +573,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		9EEA0F50226A4958008595CC /* NativeAPITestScreens */ = {
+		9EEA0F50226A4958008595CC /* NativeAPI */ = {
 			isa = PBXGroup;
 			children = (
 				9EEA0FB6226A5DBB008595CC /* Shared */,
 				9EEA0F69226A498A008595CC /* HeroDetail */,
 				9EEA0F51226A498A008595CC /* HeroList */,
 			);
-			path = NativeAPITestScreens;
+			path = NativeAPI;
 			sourceTree = "<group>";
 		};
 		9EEA0F51226A498A008595CC /* HeroList */ = {
@@ -728,6 +749,27 @@
 				9EEA0FBB226A63F5008595CC /* Codextended.swift */,
 			);
 			path = Libraries;
+			sourceTree = "<group>";
+		};
+		9EEA0FBE226A88C1008595CC /* EmptyDataSet */ = {
+			isa = PBXGroup;
+			children = (
+				9EA1EC3D226BFDDA00AC5F88 /* ViewModels */,
+				9EEA0FC3226A891B008595CC /* ViewControllers */,
+			);
+			path = EmptyDataSet;
+			sourceTree = "<group>";
+		};
+		9EEA0FC3226A891B008595CC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9EEA0FD0226A89EB008595CC /* BaseEmptyDataSetListViewController.swift */,
+				9EEA0FCA226A8988008595CC /* EmptyDataSetListViewController.swift */,
+				9EEA0FCE226A89A0008595CC /* EmptyDataSetListWithImageViewController.swift */,
+				9EEA0FCC226A8995008595CC /* EmptyDataSetListWithButtonViewController.swift */,
+				9EB35A0E226A8F8C0024FDEC /* MainEmptyDataSetListViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		C6F8907B2D6825A6BB6D03AC /* Frameworks */ = {
@@ -962,9 +1004,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LibrariesPrototype/Pods-LibrariesPrototype-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/EmptyDataSet-Swift/EmptyDataSet_Swift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EmptyDataSet_Swift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1029,6 +1074,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EB35A0F226A8F8C0024FDEC /* MainEmptyDataSetListViewController.swift in Sources */,
 				9EE91FB9226A37410079827F /* LTViewModel.swift in Sources */,
 				9EE91FC0226A3A040079827F /* DataContainer.swift in Sources */,
 				9EEA0F95226A498A008595CC /* GetHeroStories.swift in Sources */,
@@ -1036,11 +1082,13 @@
 				9EE91FC6226A3A2E0079827F /* APIRequest.swift in Sources */,
 				9EEA0FAD226A573E008595CC /* UIImageView+AsyncLoadingFromURL.swift in Sources */,
 				9EEA0F9D226A4A51008595CC /* UIView+Constraints.swift in Sources */,
+				9EEA0FCF226A89A0008595CC /* EmptyDataSetListWithImageViewController.swift in Sources */,
 				9EEA0FA0226A4BF6008595CC /* LTViewController.swift in Sources */,
 				9EEA0F7F226A498A008595CC /* HeroSearchViewModel.swift in Sources */,
 				9EE91FDC226A3E5B0079827F /* Event.swift in Sources */,
 				9EE91FB3226A36E70079827F /* LTLabel.swift in Sources */,
 				9EEA0F8E226A498A008595CC /* HeroStoryViewModel.swift in Sources */,
+				9EEA0FD1226A89EB008595CC /* BaseEmptyDataSetListViewController.swift in Sources */,
 				9EEA0FA6226A4D56008595CC /* LTTableViewCell.swift in Sources */,
 				9EE91FB5226A371C0079827F /* LTTableView.swift in Sources */,
 				9EEA0F49226A3FBD008595CC /* SplashViewModel.swift in Sources */,
@@ -1050,6 +1098,7 @@
 				9EEA0F8C226A498A008595CC /* GetCharacters.swift in Sources */,
 				9EEA0F8A226A498A008595CC /* HeroListCollectionViewLayout.swift in Sources */,
 				9EE91FB1226A36DC0079827F /* LTButton.swift in Sources */,
+				9EEA0FCB226A8988008595CC /* EmptyDataSetListViewController.swift in Sources */,
 				9EE91FCB226A3B9E0079827F /* URLQueryItemEncoder.swift in Sources */,
 				9EEA0FA4226A4D42008595CC /* LTCollectionViewCell.swift in Sources */,
 				9EEA0FAF226A57F1008595CC /* LTScrollView.swift in Sources */,
@@ -1069,6 +1118,7 @@
 				9EEA0F9B226A498A008595CC /* HeroDetailContainerView.swift in Sources */,
 				9EE91FD1226A3C630079827F /* LTService.swift in Sources */,
 				9EEA0F98226A498A008595CC /* GetHeroEvents.swift in Sources */,
+				9EA1EC3F226BFDF600AC5F88 /* MainEmptyDataSetListViewModel.swift in Sources */,
 				9EEA0F8F226A498A008595CC /* HeroDetailViewModel.swift in Sources */,
 				9EEA0F93226A498A008595CC /* HeroDetailConstants.swift in Sources */,
 				9EE91FDF226A3E5B0079827F /* ComicCharacter.swift in Sources */,
@@ -1085,6 +1135,7 @@
 				9EE91FBD226A37F90079827F /* MarvelAPIClient.swift in Sources */,
 				9EEA0FB9226A615D008595CC /* LTNavigationController.swift in Sources */,
 				9EEA0F92226A498A008595CC /* HeroEventViewModel.swift in Sources */,
+				9EEA0FCD226A8995008595CC /* EmptyDataSetListWithButtonViewController.swift in Sources */,
 				9EEA0FBC226A63F5008595CC /* Codextended.swift in Sources */,
 				9E94B3DD2030BEC000B8BA18 /* AppDelegate.swift in Sources */,
 				9EEA0F81226A498A008595CC /* HeroListViewController.swift in Sources */,

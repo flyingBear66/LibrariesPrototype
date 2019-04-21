@@ -49,20 +49,20 @@ extension Navigation {
     // MARK: Native Networking Test with Marvel API
     private func openSplash() {
         let service = SplashService()
-        let viewModel = SplashViewModel(with: service)
+        let viewModel = SplashViewModel(withService: service)
         
         viewModel.showMainMenu = { [unowned self] in
             self.openMainMenu()
         }
         
-        currentViewController = SplashViewController(with: viewModel)
+        currentViewController = SplashViewController(withViewModel: viewModel)
         navigateTo(viewContoller: currentViewController!, SplashViewController.self)
     }
     
     // MARK: Native Networking Test with Marvel API
     private func openMainMenu() {
         let service = MainService()
-        let viewModel = MainViewModel(with: service)
+        let viewModel = MainViewModel(withService: service)
         
         viewModel.showNativeNetworkingScreens = { [unowned self] in
             self.openNativeNetworkingTestScreens()
@@ -72,14 +72,14 @@ extension Navigation {
             self.openEmptyDataSetScreens()
         }
         
-        currentViewController = MainViewController(with: viewModel)
+        currentViewController = MainViewController(withViewModel: viewModel)
         navigateTo(viewContoller: currentViewController!, MainViewController.self)
     }
     
     // MARK: Native Networking Test with Marvel API
     private func openNativeNetworkingTestScreens() {
         let service = HeroListService()
-        let viewModel = HeroListViewModel(with: service)
+        let viewModel = HeroListViewModel(withService: service)
         
         viewModel.showHeroSearch = { [unowned self] in
             self.openHeroSearchScreen()
@@ -89,32 +89,62 @@ extension Navigation {
             self.openHeroDetailScreen(withHeroId: heroId)
         }
             
-        currentViewController = HeroListViewController(with: viewModel)
+        currentViewController = HeroListViewController(withViewModel: viewModel)
         pushTo(viewContoller: currentViewController, HeroListViewController.self)
     }
     
     private func openHeroDetailScreen(withHeroId heroId: Int) {
         let heroDetailService = HeroDetailService()
-        let heroDetailViewModel = HeroDetailViewModel(with: heroDetailService, heroId: heroId)
+        let heroDetailViewModel = HeroDetailViewModel(withService: heroDetailService, heroId: heroId)
         
         // TODO: make it work with favorited closures.
 //        heroDetailViewModel.favorited.bind { favorited in
 //            favoritedClosure(favorited)
 //        }
-        currentViewController = HeroDetailViewController(with: heroDetailViewModel)
+        currentViewController = HeroDetailViewController(withViewModel: heroDetailViewModel)
         pushTo(viewContoller: currentViewController, HeroDetailViewController.self)
     }
 
     private func openHeroSearchScreen() {
         let heroSearchService = HeroSearchService()
-        let heroSearchViewModel = HeroSearchViewModel(with: heroSearchService)
-        currentViewController = HeroSearchViewController(with: heroSearchViewModel)
+        let heroSearchViewModel = HeroSearchViewModel(withService: heroSearchService)
+        currentViewController = HeroSearchViewController(withViewModel: heroSearchViewModel)
         pushTo(viewContoller: currentViewController, HeroSearchViewController.self)
     }
     
     // MARK: Empty Data Set
     private func openEmptyDataSetScreens() {
+        let viewModel = MainEmptyDataSetListViewModel()
         
+        viewModel.showEmptyDataSetList = { [unowned self] in
+            self.openEmptyDataSetList()
+        }
+        
+        viewModel.showEmptyDataSetListWithImage = { [unowned self] in
+            self.openEmptyDataSetListWithImage()
+        }
+        
+        viewModel.showEmptyDataSetListWithButton = { [unowned self] in
+            self.openEmptyDataSetListWithButton()
+        }
+        
+        currentViewController = MainEmptyDataSetListViewController(withViewModel: viewModel)
+        pushTo(viewContoller: currentViewController, MainEmptyDataSetListViewController.self)
+    }
+    
+    private func openEmptyDataSetList() {
+        currentViewController = EmptyDataSetListViewController()
+        pushTo(viewContoller: currentViewController, EmptyDataSetListViewController.self)
+    }
+    
+    private func openEmptyDataSetListWithButton() {
+        currentViewController = EmptyDataSetListWithButtonViewController()
+        pushTo(viewContoller: currentViewController, EmptyDataSetListWithButtonViewController.self)
+    }
+    
+    private func openEmptyDataSetListWithImage() {
+        currentViewController = EmptyDataSetListWithImageViewController()
+        pushTo(viewContoller: currentViewController, EmptyDataSetListWithImageViewController.self)
     }
     
 }

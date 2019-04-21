@@ -1,14 +1,14 @@
 //
-//  MainViewController.swift
+//  MainEmptyDataSetListViewController.swift
 //  LibrariesPrototype
 //
-//  Created by Ozgun Zor on 4/19/19.
+//  Created by Ozgun Zor on 4/20/19.
 //  Copyright © 2019 Ozgun Zor. All rights reserved.
 //
 
 import UIKit
 
-class MainViewController: LTViewController {
+class MainEmptyDataSetListViewController: LTViewController {
 
     // MARK: - UIControls
     let tableView: LTTableView = {
@@ -16,11 +16,15 @@ class MainViewController: LTViewController {
         return tableView
     }()
     
+    let menus: [String] = {
+       return ["List", "List with Image", "List With Button"]
+    }()
+    
     // MARK: - Variables
-    private var viewModel: MainViewModel!
+    private var viewModel: MainEmptyDataSetListViewModel!
     
     // MARK: - View LifeCycle
-    init(withViewModel viewModel: MainViewModel) {
+    init(withViewModel viewModel: MainEmptyDataSetListViewModel) {
         super.init()
         self.viewModel = viewModel
         setupViews()
@@ -46,28 +50,21 @@ class MainViewController: LTViewController {
         view.addSubview(tableView)
         tableView.addConstraints(equalToSuperview())
     }
-    
-    func bindViewModel() {
-        // TODO: When needed
-    }
-    
-    // MARK: - UI Actions
 }
 
-extension MainViewController: UITableViewDataSource, UITableViewDelegate {
+extension MainEmptyDataSetListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.menus.count
+        return menus.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = LTTableViewCell(style: .default, reuseIdentifier: nil)
-        cell.textLabel?.text = viewModel.menus[indexPath.row]
+        cell.textLabel?.text = menus[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.openScreen(withIndexPath: indexPath)
     }
-    
 }

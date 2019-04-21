@@ -80,7 +80,7 @@ class HeroDetailViewController: LTViewController {
     private var viewModel: HeroDetailViewModel!
     
     // MARK: - View LifeCycle
-    required init(with viewModel: LTViewModel) {
+    required init(withViewModel viewModel: LTViewModel) {
         super.init()
         self.viewModel = (viewModel as! HeroDetailViewModel)
         setupViews()

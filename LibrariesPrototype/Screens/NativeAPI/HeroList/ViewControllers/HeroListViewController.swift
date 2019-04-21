@@ -14,7 +14,7 @@ class HeroListViewController: BaseHeroViewController {
     private var viewModel: HeroListViewModel!
     
     // MARK: - View LifeCycle
-    init(with viewModel: HeroListViewModel) {
+    init(withViewModel viewModel: HeroListViewModel) {
         super.init()
         self.viewModel = viewModel
         setupViews()
@@ -68,8 +68,8 @@ class HeroListViewController: BaseHeroViewController {
     
     func openSeachScreen() {
         let heroSearchService = HeroSearchService()
-        let heroSearchViewModel = HeroSearchViewModel(with: heroSearchService)
-        let heroSearchViewController = HeroSearchViewController(with: heroSearchViewModel)
+        let heroSearchViewModel = HeroSearchViewModel(withService: heroSearchService)
+        let heroSearchViewController = HeroSearchViewController(withViewModel: heroSearchViewModel)
         
         navigationController?.pushViewController(heroSearchViewController, animated: true)
     }

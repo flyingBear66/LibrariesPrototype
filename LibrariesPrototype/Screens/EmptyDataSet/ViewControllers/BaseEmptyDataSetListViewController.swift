@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  BaseEmptyDataSetListViewController.swift
 //  LibrariesPrototype
 //
 //  Created by Ozgun Zor on 4/19/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController: LTViewController {
+class BaseEmptyDataSetListViewController: LTViewController {
 
     // MARK: - UIControls
     let tableView: LTTableView = {
@@ -16,13 +16,9 @@ class MainViewController: LTViewController {
         return tableView
     }()
     
-    // MARK: - Variables
-    private var viewModel: MainViewModel!
-    
     // MARK: - View LifeCycle
-    init(withViewModel viewModel: MainViewModel) {
+    override init() {
         super.init()
-        self.viewModel = viewModel
         setupViews()
     }
     
@@ -46,28 +42,15 @@ class MainViewController: LTViewController {
         view.addSubview(tableView)
         tableView.addConstraints(equalToSuperview())
     }
-    
-    func bindViewModel() {
-        // TODO: When needed
-    }
-    
-    // MARK: - UI Actions
 }
 
-extension MainViewController: UITableViewDataSource, UITableViewDelegate {
+extension BaseEmptyDataSetListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.menus.count
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = LTTableViewCell(style: .default, reuseIdentifier: nil)
-        cell.textLabel?.text = viewModel.menus[indexPath.row]
-        return cell
+        return LTTableViewCell()
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel.openScreen(withIndexPath: indexPath)
-    }
-    
 }
