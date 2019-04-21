@@ -20,7 +20,7 @@ class MainViewController: LTViewController {
     private var viewModel: MainViewModel!
     
     // MARK: - View LifeCycle
-    init(with viewModel: MainViewModel) {
+    init(withViewModel viewModel: MainViewModel) {
         super.init()
         self.viewModel = viewModel
         setupViews()

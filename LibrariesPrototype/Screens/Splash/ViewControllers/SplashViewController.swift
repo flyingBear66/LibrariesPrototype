@@ -14,7 +14,7 @@ class SplashViewController: LTViewController {
     private var viewModel: SplashViewModel!
     
     // MARK: - View LifeCycle
-    init(with viewModel: SplashViewModel) {
+    init(withViewModel viewModel: SplashViewModel) {
         super.init()
         self.viewModel = viewModel
         setupViews()

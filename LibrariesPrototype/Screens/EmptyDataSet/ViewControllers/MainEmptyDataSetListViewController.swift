@@ -8,13 +8,6 @@
 
 import UIKit
 
-fileprivate enum EmptyDataSetMenuCase: Int {
-    case list = 0
-    case listWithImage = 1
-    case listWithButton = 2
-    case none = -1
-}
-
 class MainEmptyDataSetListViewController: LTViewController {
 
     // MARK: - UIControls
@@ -27,9 +20,13 @@ class MainEmptyDataSetListViewController: LTViewController {
        return ["List", "List with Image", "List With Button"]
     }()
     
+    // MARK: - Variables
+    private var viewModel: MainEmptyDataSetListViewModel!
+    
     // MARK: - View LifeCycle
-    override init() {
+    init(withViewModel viewModel: MainEmptyDataSetListViewModel) {
         super.init()
+        self.viewModel = viewModel
         setupViews()
     }
     
@@ -53,32 +50,6 @@ class MainEmptyDataSetListViewController: LTViewController {
         view.addSubview(tableView)
         tableView.addConstraints(equalToSuperview())
     }
-    
-    fileprivate func openScreen(with menuIndex: EmptyDataSetMenuCase) {
-        switch menuIndex {
-        case .list:
-            openList()
-        case .listWithImage:
-            openListWithImage()
-        case .listWithButton:
-            openListWithButton()
-        default:
-            print("Default case")
-        }
-    }
-    
-    func openList() {
-        navigationController?.pushViewController(EmptyDataSetListViewController(), animated: true)
-    }
-    
-    func openListWithImage() {
-        navigationController?.pushViewController(EmptyDataSetListWithImageViewController(), animated: true)
-    }
-    
-    func openListWithButton() {
-        navigationController?.pushViewController(EmptyDataSetListWithButtonViewController(), animated: true)
-    }
-    
 }
 
 extension MainEmptyDataSetListViewController: UITableViewDataSource, UITableViewDelegate {
@@ -94,6 +65,6 @@ extension MainEmptyDataSetListViewController: UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        openScreen(with: EmptyDataSetMenuCase(rawValue: indexPath.row) ?? .none)
+        viewModel.openScreen(withIndexPath: indexPath)
     }
 }

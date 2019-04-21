@@ -21,7 +21,7 @@ class SplashViewModel: LTViewModel, SplashViewModelEvents {
     private let service: SplashService!
     
     // MARK: - Init
-    init(with service: SplashService) {
+    init(withService service: SplashService) {
         self.service = service
     }
     

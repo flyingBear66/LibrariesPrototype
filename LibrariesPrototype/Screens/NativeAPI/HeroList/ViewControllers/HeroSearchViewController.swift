@@ -17,7 +17,7 @@ class HeroSearchViewController: BaseHeroViewController {
     private let searchController = UISearchController(searchResultsController: nil)
 
     // MARK: - View LifeCycle
-    required init(with viewModel: HeroSearchViewModel) {
+    required init(withViewModel viewModel: HeroSearchViewModel) {
         super.init()
         self.viewModel = viewModel
         setupViews()
@@ -114,8 +114,8 @@ extension HeroSearchViewController: UICollectionViewDataSource, UICollectionView
         self.selectedCell = (collectionView.cellForItem(at: indexPath) as! HeroCollectionViewCell)
 
         let heroDetailService = HeroDetailService()
-        let heroDetailViewModel = HeroDetailViewModel(with: heroDetailService, heroId: selectedCellViewModel.heroId)
-        let heroDetailViewController = HeroDetailViewController(with: heroDetailViewModel)
+        let heroDetailViewModel = HeroDetailViewModel(withService: heroDetailService, heroId: selectedCellViewModel.heroId)
+        let heroDetailViewController = HeroDetailViewController(withViewModel: heroDetailViewModel)
 
         navigationController?.pushViewController(heroDetailViewController, animated: true)
         

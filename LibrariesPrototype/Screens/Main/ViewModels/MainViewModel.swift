@@ -34,7 +34,7 @@ class MainViewModel: LTViewModel, MainViewModelEvents {
     }
     
     // MARK: - Init
-    init(with service: MainService) {
+    init(withService service: MainService) {
         self.service = service
     }
     
