@@ -8,12 +8,6 @@
 
 import UIKit
 
-fileprivate enum MenuCase: Int {
-    case nativeNetworking = 0
-    case emptyDataSet = 1
-    case none = -1
-}
-
 class MainViewController: LTViewController {
 
     // MARK: - UIControls
@@ -54,28 +48,7 @@ class MainViewController: LTViewController {
     }
     
     func bindViewModel() {
-
-    }
-    
-    fileprivate func openScreen(with menuIndex: MenuCase) {
-        switch menuIndex {
-        case .nativeNetworking:
-            openNativeNetworkingScreens()
-        case .emptyDataSet:
-            openEmptyDataSets()
-        default:
-            print("Default case")
-        }
-    }
-    
-    func openNativeNetworkingScreens() {
-        let service = HeroListService()
-        let viewModel = HeroListViewModel(with: service)
-        present(LTNavigationController(rootViewController: HeroListViewController(with: viewModel)), animated: true, completion: nil)
-    }
-    
-    func openEmptyDataSets() {
-        present(LTNavigationController(rootViewController: MainEmptyDataSetListViewController()), animated: true, completion: nil)
+        // TODO: When needed
     }
     
     // MARK: - UI Actions
@@ -94,8 +67,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        openScreen(with: MenuCase(rawValue: indexPath.row) ?? .none)
+        viewModel.openScreen(withIndexPath: indexPath)
     }
-    
     
 }

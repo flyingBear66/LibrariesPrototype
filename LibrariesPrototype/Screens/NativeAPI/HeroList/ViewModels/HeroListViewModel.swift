@@ -8,7 +8,25 @@
 
 import UIKit
 
-class HeroListViewModel: LTViewModel {
+public enum HeroScreens {
+    case detail
+    case search
+}
+
+// TODO: make it work with favorited closures.
+//typealias FavoritedClosure = (Bool) -> Void
+
+protocol HeroListViewModelEvents {
+    var showHeroDetail: ((Int) -> Void)? {get set}
+    var showHeroSearch: (() -> Void)? {get set}
+}
+
+class HeroListViewModel: LTViewModel, HeroListViewModelEvents {
+
+    // MARK: - Events
+    var showHeroDetail: ((Int) -> Void)?
+    var showHeroSearch: (() -> Void)?
+    
     
     // MARK: - Variables
     private let service: HeroListService!
@@ -57,4 +75,25 @@ class HeroListViewModel: LTViewModel {
         })
     }
 
+    // MARK: - Publics
+    func openScreen(withHeroScreen heroScreen: HeroScreens, selectedIndexPath indexPath: IndexPath? = nil) {
+        switch heroScreen {
+        case .detail:
+            guard let indexPath = indexPath else {
+                assertionFailure("indexPath should be filled")
+                return
+            }
+            let selectedCellViewModel = heroCellViewModels.value[indexPath.row]
+            self.showHeroDetail!(selectedCellViewModel.heroId)
+            
+            // TODO: make it work with favorited closures.
+//            self.showHeroDetail!(selectedCellViewModel.heroId) { favorited in
+//                DispatchQueue.main.async {
+//                    selectedCellViewModel.favorited.value = favorited
+//                }
+//            }
+        case .search:
+            self.showHeroSearch!()
+        }
+    }
 }

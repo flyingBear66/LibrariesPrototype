@@ -76,7 +76,7 @@ class HeroListViewController: BaseHeroViewController {
     
     // MARK: - UI Actions
     @objc func searchTapped() {
-        openSeachScreen()
+        viewModel.openScreen(withHeroScreen: .search)
     }
 }
 
@@ -94,20 +94,7 @@ extension HeroListViewController: UICollectionViewDataSource, UICollectionViewDe
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedCellViewModel = viewModel.heroCellViewModels.value[indexPath.row]
-        selectedCell = (collectionView.cellForItem(at: indexPath) as! HeroCollectionViewCell)
-
-        let heroDetailService = HeroDetailService()
-        let heroDetailViewModel = HeroDetailViewModel(with: heroDetailService, heroId: selectedCellViewModel.heroId)
-        let heroDetailViewController = HeroDetailViewController(with: heroDetailViewModel)
-
-        navigationController?.pushViewController(heroDetailViewController, animated: true)
-        
-        heroDetailViewModel.favorited.bind { favorited in
-            DispatchQueue.main.async {
-                 selectedCellViewModel.favorited.value = favorited
-            }
-        }
+        viewModel.openScreen(withHeroScreen: .detail, selectedIndexPath: indexPath)
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
