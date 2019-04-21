@@ -8,8 +8,22 @@
 
 import UIKit
 
-class MainViewModel: LTViewModel {
+enum MenuCase: Int {
+    case nativeNetworking = 0
+    case none = -1
+}
 
+protocol MainViewModelEvents {
+    var showNativeNetworkingScreens: (() -> Void)? {get set}
+    var showEmptyDataSet: (() -> Void)? {get set}
+}
+
+class MainViewModel: LTViewModel, MainViewModelEvents {
+
+    // MARK: - Events
+    var showNativeNetworkingScreens: (() -> Void)?
+    var showEmptyDataSet: (() -> Void)?
+    
     // MARK: - Variables
     private let service: MainService!
     public var menus: [String] {
@@ -24,9 +38,19 @@ class MainViewModel: LTViewModel {
     }
     
     // MARK: - Services
-
     private func getMenus() -> [String] {
         return ["Native Networking Test with MarvelAPI"]
+    }
+    
+    // MARK: - Helpers
+    func openScreen(withIndexPath indexPath: IndexPath) {
+        let menuIndex = MenuCase(rawValue: indexPath.row) ?? .none
+        switch menuIndex {
+        case .nativeNetworking:
+            showNativeNetworkingScreens!()
+        case .none:
+            print("Default case. Error happened or index not exist")            
+        }
     }
     
 }

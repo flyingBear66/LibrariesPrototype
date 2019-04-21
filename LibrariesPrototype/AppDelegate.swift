@@ -11,32 +11,20 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
-
-
+    var window: LTWindow?
+    
+    var application: Application?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.makeKeyAndVisible()
+        let window = LTWindow(frame: UIScreen.main.bounds)
+        self.application = Application(window: window)
+        self.window = window
         
-        let service = SplashService()
-        let viewModel = SplashViewModel(with: service)
-        window?.rootViewController = LTNavigationController(rootViewController: SplashViewController(with: viewModel))
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: { [weak self] in
-            self?.openMainScreen()
-        })
+        // Start app first Screen
+        self.application?.navigation.firstScreenAsSplash()
         
         return true
-    }
-    
-    func openMainScreen() {
-        let mainService = MainService()
-        let mainViewModel = MainViewModel(with: mainService)
-        let mainViewController = MainViewController(with: mainViewModel)
-        
-        window?.rootViewController = LTNavigationController(rootViewController: mainViewController)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
