@@ -158,7 +158,6 @@ extension Navigation {
         pushTo(viewContoller: currentViewController, ReposViewController.self)
     }
     
-    
 }
 
 // MARK: - Navigate methods

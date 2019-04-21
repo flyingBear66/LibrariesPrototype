@@ -1,6 +1,6 @@
 //
 //  UIImageView+AsyncLoadingFromURL.swift
-//  MarvelAPIAppZor
+//  LibrariesPrototype
 //
 // This code is inspried from the code snippet from the below link
 // https://stackoverflow.com/questions/37018916/swift-async-load-image
@@ -20,7 +20,7 @@ extension UIImageView {
         }
 
         if let url = URL(string: URLString) {
-            URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
+            URLSession.shared.dataTask(with: url, completionHandler: { data, response, error in
 
                 if error != nil {
                     print("ERROR LOADING IMAGES FROM URL: \(error?.localizedDescription ?? "Unknown error")")

@@ -38,9 +38,9 @@ class HeroDetailViewModel: LTViewModel {
     // MARK: - Public Methods
     func favoriteTapped() {
         UserDefaults.standard.set(!favorited.value, forKey: "\(heroId)")
-        //To Notify Hero List
+        // To Notify Hero List
         favorited.value = UserDefaults.standard.bool(forKey: "\(heroId)")
-        //To Notify Hero Detail
+        // To Notify Hero Detail
         favoritedDetail.value = UserDefaults.standard.bool(forKey: "\(heroId)")
     }
     

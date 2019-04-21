@@ -1,6 +1,6 @@
 //
 //  Endpoint.swift
-//  testiOSOzgunEmreZor
+//  LibrariesPrototype
 //
 //  Created by Ozgun Zor on 3/30/19.
 //  Copyright © 2019 Ozgun Zor. All rights reserved.
@@ -15,7 +15,6 @@ typealias Path = String
 enum Method {
     case get, post, put, patch, delete
 }
-
 
 // MARK: Endpoint
 final class Endpoint<Response> {
@@ -34,7 +33,6 @@ final class Endpoint<Response> {
         self.decode = decode
     }
 }
-
 
 // MARK: Convenience
 extension Endpoint where Response: Swift.Decodable {

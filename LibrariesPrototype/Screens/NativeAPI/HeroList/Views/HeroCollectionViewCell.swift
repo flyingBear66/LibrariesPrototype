@@ -76,7 +76,7 @@ class HeroCollectionViewCell: LTCollectionViewCell {
         let strokeTextAttributes: [NSAttributedString.Key : Any] = [
             .strokeColor : UIColor.black,
             .foregroundColor : UIColor.white,
-            .strokeWidth : -2.0,
+            .strokeWidth : -2.0
         ]
         self.heroNameLabel.attributedText = NSAttributedString(string: self.viewModel.heroName, attributes: strokeTextAttributes)
         self.heroImageView.imageFromServerURL(self.viewModel.heroImageURLString, placeHolder: nil)

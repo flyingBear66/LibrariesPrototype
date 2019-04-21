@@ -1,6 +1,6 @@
 //
-//  MainViewModel.swift
-//  testiOSOzgunEmreZor
+//  ReposViewModel.swift
+//  LibrariesPrototype
 //
 //  Created by Ozgun Zor on 3/30/19.
 //  Copyright © 2019 Ozgun Zor. All rights reserved.
