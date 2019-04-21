@@ -11,12 +11,14 @@ import UIKit
 enum MenuCase: Int {
     case nativeNetworking = 0
     case emptyDataSet = 1
+    case rxSwift = 2
     case none = -1
 }
 
 protocol MainViewModelEvents {
     var showNativeNetworkingScreens: (() -> Void)? {get set}
     var showEmptyDataSet: (() -> Void)? {get set}
+    var showRxSwiftScreens: (() -> Void)? {get set}
 }
 
 class MainViewModel: LTViewModel, MainViewModelEvents {
@@ -24,7 +26,8 @@ class MainViewModel: LTViewModel, MainViewModelEvents {
     // MARK: - Events
     var showNativeNetworkingScreens: (() -> Void)?
     var showEmptyDataSet: (() -> Void)?
-    
+    var showRxSwiftScreens: (() -> Void)?
+
     // MARK: - Variables
     private let service: MainService!
     public var menus: [String] {
@@ -40,7 +43,7 @@ class MainViewModel: LTViewModel, MainViewModelEvents {
     
     // MARK: - Services
     private func getMenus() -> [String] {
-        return ["Native Networking Test with MarvelAPI", "Empty Data Set List"]
+        return ["Native Networking Test with MarvelAPI", "Empty Data Set List", "RxSwift and Alamofire Screens"]
     }
     
     // MARK: - Helpers
@@ -51,6 +54,8 @@ class MainViewModel: LTViewModel, MainViewModelEvents {
             showNativeNetworkingScreens!()
         case .emptyDataSet:
             showEmptyDataSet!()
+        case .rxSwift:
+            showRxSwiftScreens!()
         case .none:
             print("Default case. Error happened or index not exist")            
         }

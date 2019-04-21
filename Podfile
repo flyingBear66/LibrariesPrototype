@@ -6,9 +6,12 @@ target 'LibrariesPrototype' do
   use_frameworks!
 
   # Pods for LibrariesPrototype
+  pod 'Alamofire'
   pod 'EmptyDataSet-Swift', '~> 4.2.0'
+  pod 'RxCocoa'
+  pod 'RxSwift'
   pod 'SVProgressHUD'
-
+  
   target 'LibrariesPrototypeTests' do
     inherit! :search_paths
     # Pods for testing
