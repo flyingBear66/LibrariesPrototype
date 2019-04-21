@@ -76,6 +76,10 @@ extension Navigation {
             self.openRxSwiftAlamofireScreens()
         }
         
+        viewModel.showKeychainAccessScreens = { [unowned self] in
+            self.openKeychainAccessMain()
+        }
+        
         currentViewController = MainViewController(withViewModel: viewModel)
         navigateTo(viewContoller: currentViewController!, MainViewController.self)
     }
@@ -152,10 +156,16 @@ extension Navigation {
     }
     
     // MARK: RxSwift+Alamofire
-
     private func openRxSwiftAlamofireScreens() {
         currentViewController = ReposViewController()
         pushTo(viewContoller: currentViewController, ReposViewController.self)
+    }
+    
+    // MARK: Keychain Access
+    private func openKeychainAccessMain() {
+        let viewModel = KeychainAccessMainViewModel()
+        currentViewController = KeychainAccessMainViewController(withViewModel: viewModel)
+        pushTo(viewContoller: currentViewController, KeychainAccessMainViewController.self)
     }
     
 }

@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.8.1)
   - EmptyDataSet-Swift (4.2.0)
+  - KeychainAccess (3.1.2)
   - RxAtomic (4.4.2)
   - RxCocoa (4.4.2):
     - RxSwift (>= 4.4.2, ~> 4.4)
@@ -11,18 +12,30 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - EmptyDataSet-Swift (~> 4.2.0)
+  - KeychainAccess
   - RxCocoa
   - RxSwift
   - SVProgressHUD
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - EmptyDataSet-Swift
+    - KeychainAccess
+    - RxAtomic
+    - RxCocoa
+    - RxSwift
+    - SVProgressHUD
+
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   EmptyDataSet-Swift: 1fa0b35f530a35f852ecb2b53564728b0c300aaf
+  KeychainAccess: b3816fddcf28aa29d94b10ec305cd52be14c472b
   RxAtomic: d00e97c10db88c6f08540e0bf2752fc5a2404167
   RxCocoa: 477990dc3b4c3ff55fb0ac77e1cc06244e0aaec8
   RxSwift: 74c29b693c8e42b0f64400e8b06564575742d649
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: d1cd91bef84df132548046c11634d1a851f4d2df
+PODFILE CHECKSUM: b6d3e1ca27fda1113754ca01e9bad3fe07d6a8a9
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.6.1

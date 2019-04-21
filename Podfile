@@ -8,10 +8,11 @@ target 'LibrariesPrototype' do
   # Pods for LibrariesPrototype
   pod 'Alamofire'
   pod 'EmptyDataSet-Swift', '~> 4.2.0'
+  pod 'KeychainAccess'
   pod 'RxCocoa'
   pod 'RxSwift'
   pod 'SVProgressHUD'
-  
+
   target 'LibrariesPrototypeTests' do
     inherit! :search_paths
     # Pods for testing
