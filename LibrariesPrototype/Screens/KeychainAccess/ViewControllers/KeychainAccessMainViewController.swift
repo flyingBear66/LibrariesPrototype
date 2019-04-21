@@ -33,6 +33,7 @@ class KeychainAccessMainViewController: LTViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
+        bindViewModel()
     }
     
     // MARK: - Helpers
@@ -48,19 +49,23 @@ class KeychainAccessMainViewController: LTViewController {
     }
     
     func bindViewModel() {
-        // TODO: When needed
+        viewModel.keychainItems.bind { [weak self] _ in
+            self?.tableView.reloadData()
+        }
+        
+        viewModel.getKeychainItems()
     }
 }
 
 extension KeychainAccessMainViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.keychainInfos.count
+        return viewModel.keychainItems.value.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = LTTableViewCell(style: .default, reuseIdentifier: nil)
-        cell.textLabel?.text = viewModel.keychainInfos[indexPath.row]
+        cell.textLabel?.text = viewModel.keychainItems.value[indexPath.row]
         return cell
     }
     
