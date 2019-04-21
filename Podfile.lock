@@ -1,12 +1,15 @@
 PODS:
   - EmptyDataSet-Swift (4.2.0)
+  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - EmptyDataSet-Swift (~> 4.2.0)
+  - SVProgressHUD
 
 SPEC CHECKSUMS:
   EmptyDataSet-Swift: 1fa0b35f530a35f852ecb2b53564728b0c300aaf
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: e73850dbbb8ec272f7e41c522f0ab968d0b77674
+PODFILE CHECKSUM: 2ea20a34a27c519c26e7d2d6ed4a452de9cf60ca
 
 COCOAPODS: 1.4.0
