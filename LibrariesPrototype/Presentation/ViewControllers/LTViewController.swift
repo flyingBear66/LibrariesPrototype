@@ -11,7 +11,6 @@ import UIKit
 class LTViewController: UIViewController {
     
     // MARK: - UIControls
-    var activityIndicator: UIActivityIndicatorView?
     
     // MARK: - View LifeCycle
     init() {
