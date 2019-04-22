@@ -11,6 +11,7 @@ target 'LibrariesPrototype' do
   pod 'RxCocoa'
   pod 'RxSwift'
   pod 'SVProgressHUD'
+  pod 'Whisper'
   
   target 'LibrariesPrototypeTests' do
     inherit! :search_paths

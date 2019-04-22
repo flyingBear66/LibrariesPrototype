@@ -21,6 +21,8 @@
 		9E62CD58226C911A0078AAC6 /* LTRXViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E62CD57226C911A0078AAC6 /* LTRXViewModel.swift */; };
 		9E62CD5A226C91BD0078AAC6 /* LTRXViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E62CD59226C91BD0078AAC6 /* LTRXViewController.swift */; };
 		9E62CD5C226C92CE0078AAC6 /* LTCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E62CD5B226C92CE0078AAC6 /* LTCollectionViewFlowLayout.swift */; };
+		9E847DE0226E712D00B69337 /* WhisperMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E847DDF226E712D00B69337 /* WhisperMainViewController.swift */; };
+		9E847DE4226E717400B69337 /* WhisperMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E847DE3226E717400B69337 /* WhisperMainViewModel.swift */; };
 		9E94B3DD2030BEC000B8BA18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E94B3DC2030BEC000B8BA18 /* AppDelegate.swift */; };
 		9E94B3E42030BEC000B8BA18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E94B3E32030BEC000B8BA18 /* Assets.xcassets */; };
 		9E94B3F22030BEC000B8BA18 /* LibrariesPrototypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E94B3F12030BEC000B8BA18 /* LibrariesPrototypeTests.swift */; };
@@ -142,6 +144,8 @@
 		9E62CD57226C911A0078AAC6 /* LTRXViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTRXViewModel.swift; sourceTree = "<group>"; };
 		9E62CD59226C91BD0078AAC6 /* LTRXViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTRXViewController.swift; sourceTree = "<group>"; };
 		9E62CD5B226C92CE0078AAC6 /* LTCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		9E847DDF226E712D00B69337 /* WhisperMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhisperMainViewController.swift; sourceTree = "<group>"; };
+		9E847DE3226E717400B69337 /* WhisperMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhisperMainViewModel.swift; sourceTree = "<group>"; };
 		9E94B3D92030BEC000B8BA18 /* LibrariesPrototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LibrariesPrototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E94B3DC2030BEC000B8BA18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E94B3E32030BEC000B8BA18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -367,6 +371,31 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		9E847DDE226E710B00B69337 /* WhisperMessage */ = {
+			isa = PBXGroup;
+			children = (
+				9E847DE2226E714D00B69337 /* ViewModels */,
+				9E847DE1226E714500B69337 /* ViewControllers */,
+			);
+			path = WhisperMessage;
+			sourceTree = "<group>";
+		};
+		9E847DE1226E714500B69337 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9E847DDF226E712D00B69337 /* WhisperMainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9E847DE2226E714D00B69337 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9E847DE3226E717400B69337 /* WhisperMainViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		9E94B3D02030BEC000B8BA18 = {
 			isa = PBXGroup;
 			children = (
@@ -499,6 +528,7 @@
 		9E94B4122030C19000B8BA18 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				9E847DDE226E710B00B69337 /* WhisperMessage */,
 				9E62CD39226C811C0078AAC6 /* RxSwift */,
 				9EEA0FBE226A88C1008595CC /* EmptyDataSet */,
 				9EEA0F3C226A3F3C008595CC /* Main */,
@@ -913,7 +943,6 @@
 				9E94B3D62030BEC000B8BA18 /* Frameworks */,
 				9E94B3D72030BEC000B8BA18 /* Resources */,
 				6D4E126E540F348DB9BD7198 /* [CP] Embed Pods Frameworks */,
-				C5F0B9B86BCDA8657F29F98F /* [CP] Copy Pods Resources */,
 				9E62CD5D226D07A80078AAC6 /* [LT] SwiftLint */,
 			);
 			buildRules = (
@@ -933,8 +962,6 @@
 				9E94B3E92030BEC000B8BA18 /* Sources */,
 				9E94B3EA2030BEC000B8BA18 /* Frameworks */,
 				9E94B3EB2030BEC000B8BA18 /* Resources */,
-				0CA40583A65640EF6E4F8D6B /* [CP] Embed Pods Frameworks */,
-				4FAF271BACB1D17CE2C946FF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -954,8 +981,6 @@
 				9E94B3F42030BEC000B8BA18 /* Sources */,
 				9E94B3F52030BEC000B8BA18 /* Frameworks */,
 				9E94B3F62030BEC000B8BA18 /* Resources */,
-				67EFF41136F767E0FC4B4468 /* [CP] Embed Pods Frameworks */,
-				4C62D51E5F24924B7D26BA2C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1041,21 +1066,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0CA40583A65640EF6E4F8D6B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LibrariesPrototypeTests/Pods-LibrariesPrototypeTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		48871C4B3A7A87DBDB773A25 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1074,64 +1084,20 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4C62D51E5F24924B7D26BA2C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LibrariesPrototypeUITests/Pods-LibrariesPrototypeUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4FAF271BACB1D17CE2C946FF /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LibrariesPrototypeTests/Pods-LibrariesPrototypeTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		67EFF41136F767E0FC4B4468 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LibrariesPrototypeUITests/Pods-LibrariesPrototypeUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6D4E126E540F348DB9BD7198 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-LibrariesPrototype/Pods-LibrariesPrototype-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-LibrariesPrototype/Pods-LibrariesPrototype-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/EmptyDataSet-Swift/EmptyDataSet_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Whisper/Whisper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -1141,10 +1107,11 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Whisper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LibrariesPrototype/Pods-LibrariesPrototype-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LibrariesPrototype/Pods-LibrariesPrototype-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8E957ECFA09DA55786149081 /* [CP] Check Pods Manifest.lock */ = {
@@ -1201,21 +1168,6 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
-		C5F0B9B86BCDA8657F29F98F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LibrariesPrototype/Pods-LibrariesPrototype-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1223,6 +1175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E847DE4226E717400B69337 /* WhisperMainViewModel.swift in Sources */,
 				9EB35A0F226A8F8C0024FDEC /* MainEmptyDataSetListViewController.swift in Sources */,
 				9EE91FB9226A37410079827F /* LTViewModel.swift in Sources */,
 				9EE91FC0226A3A040079827F /* DataContainer.swift in Sources */,
@@ -1253,6 +1206,7 @@
 				9EEA0FCB226A8988008595CC /* EmptyDataSetListViewController.swift in Sources */,
 				9EE91FCB226A3B9E0079827F /* URLQueryItemEncoder.swift in Sources */,
 				9EEA0FA4226A4D42008595CC /* LTCollectionViewCell.swift in Sources */,
+				9E847DE0226E712D00B69337 /* WhisperMainViewController.swift in Sources */,
 				9EEA0FAF226A57F1008595CC /* LTScrollView.swift in Sources */,
 				9EE91FC2226A3A0C0079827F /* MarvelResponse.swift in Sources */,
 				9EEA0F8B226A498A008595CC /* HeroSearchService.swift in Sources */,

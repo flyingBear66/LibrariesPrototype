@@ -7,6 +7,7 @@ PODS:
   - RxSwift (4.4.2):
     - RxAtomic (>= 4.4.2, ~> 4.4)
   - SVProgressHUD (2.2.5)
+  - Whisper (6.0.2)
 
 DEPENDENCIES:
   - Alamofire
@@ -14,6 +15,17 @@ DEPENDENCIES:
   - RxCocoa
   - RxSwift
   - SVProgressHUD
+  - Whisper
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - EmptyDataSet-Swift
+    - RxAtomic
+    - RxCocoa
+    - RxSwift
+    - SVProgressHUD
+    - Whisper
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
@@ -22,7 +34,8 @@ SPEC CHECKSUMS:
   RxCocoa: 477990dc3b4c3ff55fb0ac77e1cc06244e0aaec8
   RxSwift: 74c29b693c8e42b0f64400e8b06564575742d649
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  Whisper: 169760fc4bab0abf24d5529f9276f95c25cf1025
 
-PODFILE CHECKSUM: d1cd91bef84df132548046c11634d1a851f4d2df
+PODFILE CHECKSUM: 6fd498073de68f1743a06548b0b6728e83d79012
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.6.1

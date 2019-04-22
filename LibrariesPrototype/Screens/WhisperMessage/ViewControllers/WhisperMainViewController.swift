@@ -1,14 +1,14 @@
 //
-//  MainViewController.swift
+//  WhisperMainViewController.swift
 //  LibrariesPrototype
 //
-//  Created by Ozgun Zor on 4/19/19.
+//  Created by Ozgun Zor on 4/22/19.
 //  Copyright © 2019 Ozgun Zor. All rights reserved.
 //
 
 import UIKit
 
-class MainViewController: LTViewController {
+class WhisperMainViewController: LTViewController {
 
     // MARK: - UIControls
     let tableView: LTTableView = {
@@ -17,10 +17,10 @@ class MainViewController: LTViewController {
     }()
     
     // MARK: - Variables
-    private var viewModel: MainViewModel!
+    private var viewModel: WhisperMainViewModel!
     
     // MARK: - View LifeCycle
-    init(withViewModel viewModel: MainViewModel) {
+    init(withViewModel viewModel: WhisperMainViewModel) {
         super.init()
         self.viewModel = viewModel
         setupViews()
@@ -38,7 +38,7 @@ class MainViewController: LTViewController {
     // MARK: - Helpers
     func setupViews() {
         view.backgroundColor = .white
-        title = "Main"
+        title = "Whisper"
         tableView.dataSource = self
         tableView.delegate = self
     }
@@ -53,9 +53,10 @@ class MainViewController: LTViewController {
     }
     
     // MARK: - UI Actions
+
 }
 
-extension MainViewController: UITableViewDataSource, UITableViewDelegate {
+extension WhisperMainViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.menus.count
@@ -68,7 +69,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel.openScreen(withIndexPath: indexPath)
+        viewModel.showMessage(withWhisperMenuCase: .basic)
     }
     
 }

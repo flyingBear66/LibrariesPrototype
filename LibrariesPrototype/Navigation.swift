@@ -76,6 +76,10 @@ extension Navigation {
             self.openRxSwiftAlamofireScreens()
         }
         
+        viewModel.showWhisperMessageScreen = { [unowned self] in
+            self.openWhisperMain()
+        }
+        
         currentViewController = MainViewController(withViewModel: viewModel)
         navigateTo(viewContoller: currentViewController!, MainViewController.self)
     }
@@ -158,6 +162,13 @@ extension Navigation {
         pushTo(viewContoller: currentViewController, ReposViewController.self)
     }
     
+    // MARK: Whisper Message
+    private func openWhisperMain() {
+        let viewModel = WhisperMainViewModel()
+        currentViewController = WhisperMainViewController(withViewModel: viewModel)
+        pushTo(viewContoller: currentViewController, WhisperMainViewController.self)
+    }
+
 }
 
 // MARK: - Navigate methods
