@@ -157,7 +157,12 @@ extension Navigation {
         currentViewController = ReposViewController()
         pushTo(viewContoller: currentViewController, ReposViewController.self)
     }
-    
+
+    // MARK: GradientProgressBar
+    private func openRxSwiftAlamofireScreens() {
+        currentViewController = ReposViewController()
+        pushTo(viewContoller: currentViewController, ReposViewController.self)
+    }
 }
 
 // MARK: - Navigate methods

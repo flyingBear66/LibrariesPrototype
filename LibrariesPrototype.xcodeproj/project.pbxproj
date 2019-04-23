@@ -103,6 +103,8 @@
 		9EEA0FD1226A89EB008595CC /* BaseEmptyDataSetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA0FD0226A89EB008595CC /* BaseEmptyDataSetListViewController.swift */; };
 		ABDE27FEA19C25945F82AB08 /* Pods_LibrariesPrototypeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFAA968927402D631B262A8 /* Pods_LibrariesPrototypeUITests.framework */; };
 		F22E94A131A902D1727629A8 /* Pods_LibrariesPrototype.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F2A9BBB640BE5DCB529C15 /* Pods_LibrariesPrototype.framework */; };
+		FB3271EA226F662900B94AE6 /* GradientProgressMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3271E9226F662900B94AE6 /* GradientProgressMainViewController.swift */; };
+		FB3271EC226F663500B94AE6 /* GradientProgressMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3271EB226F663500B94AE6 /* GradientProgressMainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -234,6 +236,8 @@
 		A641A8D8E78C9E8B21CB0487 /* Pods-LibrariesPrototypeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototypeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototypeTests/Pods-LibrariesPrototypeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C0F2A9BBB640BE5DCB529C15 /* Pods_LibrariesPrototype.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibrariesPrototype.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0101268CB92B19951DB637D /* Pods-LibrariesPrototypeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototypeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototypeTests/Pods-LibrariesPrototypeTests.release.xcconfig"; sourceTree = "<group>"; };
+		FB3271E9226F662900B94AE6 /* GradientProgressMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientProgressMainViewController.swift; sourceTree = "<group>"; };
+		FB3271EB226F663500B94AE6 /* GradientProgressMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientProgressMainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -499,6 +503,7 @@
 		9E94B4122030C19000B8BA18 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				FB3271E6226F65FD00B94AE6 /* GradientProgressBar */,
 				9E62CD39226C811C0078AAC6 /* RxSwift */,
 				9EEA0FBE226A88C1008595CC /* EmptyDataSet */,
 				9EEA0F3C226A3F3C008595CC /* Main */,
@@ -901,6 +906,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FB3271E6226F65FD00B94AE6 /* GradientProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				FB3271E7226F660500B94AE6 /* ViewControllers */,
+				FB3271E8226F660A00B94AE6 /* ViewModels */,
+			);
+			path = GradientProgressBar;
+			sourceTree = "<group>";
+		};
+		FB3271E7226F660500B94AE6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FB3271E9226F662900B94AE6 /* GradientProgressMainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FB3271E8226F660A00B94AE6 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FB3271EB226F663500B94AE6 /* GradientProgressMainViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -913,7 +943,6 @@
 				9E94B3D62030BEC000B8BA18 /* Frameworks */,
 				9E94B3D72030BEC000B8BA18 /* Resources */,
 				6D4E126E540F348DB9BD7198 /* [CP] Embed Pods Frameworks */,
-				C5F0B9B86BCDA8657F29F98F /* [CP] Copy Pods Resources */,
 				9E62CD5D226D07A80078AAC6 /* [LT] SwiftLint */,
 			);
 			buildRules = (
@@ -933,8 +962,6 @@
 				9E94B3E92030BEC000B8BA18 /* Sources */,
 				9E94B3EA2030BEC000B8BA18 /* Frameworks */,
 				9E94B3EB2030BEC000B8BA18 /* Resources */,
-				0CA40583A65640EF6E4F8D6B /* [CP] Embed Pods Frameworks */,
-				4FAF271BACB1D17CE2C946FF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -954,8 +981,6 @@
 				9E94B3F42030BEC000B8BA18 /* Sources */,
 				9E94B3F52030BEC000B8BA18 /* Frameworks */,
 				9E94B3F62030BEC000B8BA18 /* Resources */,
-				67EFF41136F767E0FC4B4468 /* [CP] Embed Pods Frameworks */,
-				4C62D51E5F24924B7D26BA2C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1041,21 +1066,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0CA40583A65640EF6E4F8D6B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LibrariesPrototypeTests/Pods-LibrariesPrototypeTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		48871C4B3A7A87DBDB773A25 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1074,60 +1084,16 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4C62D51E5F24924B7D26BA2C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LibrariesPrototypeUITests/Pods-LibrariesPrototypeUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4FAF271BACB1D17CE2C946FF /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LibrariesPrototypeTests/Pods-LibrariesPrototypeTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		67EFF41136F767E0FC4B4468 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LibrariesPrototypeUITests/Pods-LibrariesPrototypeUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6D4E126E540F348DB9BD7198 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-LibrariesPrototype/Pods-LibrariesPrototype-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-LibrariesPrototype/Pods-LibrariesPrototype-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/EmptyDataSet-Swift/EmptyDataSet_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/GradientLoadingBar/GradientLoadingBar.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -1137,6 +1103,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EmptyDataSet_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GradientLoadingBar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -1144,7 +1111,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LibrariesPrototype/Pods-LibrariesPrototype-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LibrariesPrototype/Pods-LibrariesPrototype-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8E957ECFA09DA55786149081 /* [CP] Check Pods Manifest.lock */ = {
@@ -1201,21 +1168,6 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
-		C5F0B9B86BCDA8657F29F98F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LibrariesPrototype/Pods-LibrariesPrototype-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1232,6 +1184,7 @@
 				9EEA0FAD226A573E008595CC /* UIImageView+AsyncLoadingFromURL.swift in Sources */,
 				9EEA0F9D226A4A51008595CC /* UIView+Constraints.swift in Sources */,
 				9EEA0FCF226A89A0008595CC /* EmptyDataSetListWithImageViewController.swift in Sources */,
+				FB3271EC226F663500B94AE6 /* GradientProgressMainViewModel.swift in Sources */,
 				9EEA0FA0226A4BF6008595CC /* LTViewController.swift in Sources */,
 				9EEA0F7F226A498A008595CC /* HeroSearchViewModel.swift in Sources */,
 				9EE91FDC226A3E5B0079827F /* Event.swift in Sources */,
@@ -1269,6 +1222,7 @@
 				9EEA0F83226A498A008595CC /* HeroSearchViewController.swift in Sources */,
 				9EEA0F43226A3F8B008595CC /* MainViewController.swift in Sources */,
 				9E62CD5A226C91BD0078AAC6 /* LTRXViewController.swift in Sources */,
+				FB3271EA226F662900B94AE6 /* GradientProgressMainViewController.swift in Sources */,
 				9E62CD41226C81560078AAC6 /* ReposService.swift in Sources */,
 				9EEA0F87226A498A008595CC /* HeroCollectionView.swift in Sources */,
 				9EEA0F4F226A401F008595CC /* SplashService.swift in Sources */,
