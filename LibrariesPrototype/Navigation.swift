@@ -56,7 +56,7 @@ extension Navigation {
         }
         
         currentViewController = SplashViewController(withViewModel: viewModel)
-        navigateTo(viewContoller: currentViewController!, SplashViewController.self)
+        navigateTo(viewController: currentViewController!, SplashViewController.self)
     }
     
     // MARK: Native Networking Test with Marvel API
@@ -81,7 +81,7 @@ extension Navigation {
         }
         
         currentViewController = MainViewController(withViewModel: viewModel)
-        navigateTo(viewContoller: currentViewController!, MainViewController.self)
+        navigateTo(viewController: currentViewController!, MainViewController.self)
     }
     
     // MARK: Native Networking Test with Marvel API
@@ -98,7 +98,7 @@ extension Navigation {
         }
             
         currentViewController = HeroListViewController(withViewModel: viewModel)
-        pushTo(viewContoller: currentViewController, HeroListViewController.self)
+        pushTo(viewController: currentViewController, HeroListViewController.self)
     }
     
     private func openHeroDetailScreen(withHeroId heroId: Int) {
@@ -110,14 +110,14 @@ extension Navigation {
 //            favoritedClosure(favorited)
 //        }
         currentViewController = HeroDetailViewController(withViewModel: heroDetailViewModel)
-        pushTo(viewContoller: currentViewController, HeroDetailViewController.self)
+        pushTo(viewController: currentViewController, HeroDetailViewController.self)
     }
 
     private func openHeroSearchScreen() {
         let heroSearchService = HeroSearchService()
         let heroSearchViewModel = HeroSearchViewModel(withService: heroSearchService)
         currentViewController = HeroSearchViewController(withViewModel: heroSearchViewModel)
-        pushTo(viewContoller: currentViewController, HeroSearchViewController.self)
+        pushTo(viewController: currentViewController, HeroSearchViewController.self)
     }
     
     // MARK: Empty Data Set
@@ -137,36 +137,36 @@ extension Navigation {
         }
         
         currentViewController = MainEmptyDataSetListViewController(withViewModel: viewModel)
-        pushTo(viewContoller: currentViewController, MainEmptyDataSetListViewController.self)
+        pushTo(viewController: currentViewController, MainEmptyDataSetListViewController.self)
     }
     
     private func openEmptyDataSetList() {
         currentViewController = EmptyDataSetListViewController()
-        pushTo(viewContoller: currentViewController, EmptyDataSetListViewController.self)
+        pushTo(viewController: currentViewController, EmptyDataSetListViewController.self)
     }
     
     private func openEmptyDataSetListWithButton() {
         currentViewController = EmptyDataSetListWithButtonViewController()
-        pushTo(viewContoller: currentViewController, EmptyDataSetListWithButtonViewController.self)
+        pushTo(viewController: currentViewController, EmptyDataSetListWithButtonViewController.self)
     }
     
     private func openEmptyDataSetListWithImage() {
         currentViewController = EmptyDataSetListWithImageViewController()
-        pushTo(viewContoller: currentViewController, EmptyDataSetListWithImageViewController.self)
+        pushTo(viewController: currentViewController, EmptyDataSetListWithImageViewController.self)
     }
     
     // MARK: RxSwift+Alamofire
 
     private func openRxSwiftAlamofireScreens() {
         currentViewController = ReposViewController()
-        pushTo(viewContoller: currentViewController, ReposViewController.self)
+        pushTo(viewController: currentViewController, ReposViewController.self)
     }
     
     // MARK: Whisper Message
     private func openWhisperMain() {
         let viewModel = WhisperMainViewModel()
         currentViewController = WhisperMainViewController(withViewModel: viewModel)
-        pushTo(viewContoller: currentViewController, WhisperMainViewController.self)
+        pushTo(viewController: currentViewController, WhisperMainViewController.self)
     }
 
 }
@@ -174,33 +174,35 @@ extension Navigation {
 // MARK: - Navigate methods
 extension Navigation {
     
-    private func showInWindow<T: LTViewController>(viewContoller: Any, _:T.Type) {
-        self.window.rootViewController = (viewContoller as! T)
+    private func showInWindow<T: LTViewController>(viewController: Any, _:T.Type) {
+        self.window.rootViewController = (viewController as! T)
         self.window.makeKeyAndVisible()
     }
     
-    private func navigateTo<T: LTViewController>(viewContoller: Any, _:T.Type) {
-        self.navigationController = LTNavigationController(rootViewController: (viewContoller as! T))
-        self.window.rootViewController = (viewContoller as! T).navigationController
+    private func navigateTo<T: LTViewController>(viewController: Any, _:T.Type) {
+        Session.shared.currentViewController = viewController as! T
+        self.navigationController = LTNavigationController(rootViewController: (viewController as! T))
+        self.window.rootViewController = (viewController as! T).navigationController
     }
     
-    private func pushTo<T: LTViewController>(viewContoller: Any, _:T.Type) {
-        self.navigationController.pushViewController((viewContoller as! T), animated: true)
+    private func pushTo<T: LTViewController>(viewController: Any, _:T.Type) {
+        Session.shared.currentViewController = viewController as! T
+        self.navigationController.pushViewController((viewController as! T), animated: true)
     }
     
-    private func present<T: LTViewController>(viewContoller: Any, _:T.Type,
+    private func present<T: LTViewController>(viewController: Any, _:T.Type,
                                               animated: Bool = true, completion: (() -> Void)?) {
-        present(viewContoller: viewContoller, T.self, withNavigationController: false, animated: animated, completion: completion)
+        present(viewController: viewController, T.self, withNavigationController: false, animated: animated, completion: completion)
     }
     
-    private func present<T: LTViewController>(viewContoller: Any, _:T.Type, withNavigationController: Bool,
+    private func present<T: LTViewController>(viewController: Any, _:T.Type, withNavigationController: Bool,
                                               animated: Bool = true, completion: (() -> Void)?) {
         let topViewController = self.navigationController.topViewController as! LTViewController
         
         if withNavigationController {
-            topViewController.present(LTNavigationController(rootViewController: (viewContoller as! T)), animated: animated, completion: completion)
+            topViewController.present(LTNavigationController(rootViewController: (viewController as! T)), animated: animated, completion: completion)
         } else {
-            topViewController.present((viewContoller as! T), animated: animated, completion: completion)
+            topViewController.present((viewController as! T), animated: animated, completion: completion)
         }
     }
 }

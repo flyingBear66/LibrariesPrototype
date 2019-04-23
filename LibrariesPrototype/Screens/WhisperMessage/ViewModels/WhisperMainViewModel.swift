@@ -9,7 +9,9 @@
 import UIKit
 
 enum WhisperMenuCase: Int {
-    case basic = 0
+    case whisper = 0
+    case shout = 1
+    case whistle = 2
     case none = -1
 }
 
@@ -24,12 +26,27 @@ class WhisperMainViewModel: LTViewModel {
     
     // MARK: - Services
     private func getMenus() -> [String] {
-        return ["Basic", "none"]
+        // TODO:
+//        var menu = [String]()
+//        WhisperMenuCase.allCases.forEach { menuCase in
+//            menu.append(String(menuCase))
+//        }
+
+        return ["Whisper", "Shout", "Whistle", "None"]
     }
     
     // MARK: - Services
-    func showMessage(withWhisperMenuCase case: WhisperMenuCase) {
-        
+    func showMessage(withWhisperMenuCase menuCase: WhisperMenuCase) {
+        switch menuCase {
+        case .whisper:
+            showMessage(withType: .whisper)
+        case .shout:
+            showMessage(withType: .shout)
+        case .whistle:
+            showMessage(withType: .whistle)
+        case .none:
+            return
+        }
     }
     
 }

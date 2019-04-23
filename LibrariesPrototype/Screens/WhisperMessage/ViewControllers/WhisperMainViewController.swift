@@ -69,7 +69,7 @@ extension WhisperMainViewController: UITableViewDataSource, UITableViewDelegate 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel.showMessage(withWhisperMenuCase: .basic)
+        viewModel.showMessage(withWhisperMenuCase: WhisperMenuCase(rawValue: indexPath.row) ?? .none)
     }
     
 }

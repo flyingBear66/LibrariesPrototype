@@ -105,6 +105,8 @@
 		9EEA0FD1226A89EB008595CC /* BaseEmptyDataSetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA0FD0226A89EB008595CC /* BaseEmptyDataSetListViewController.swift */; };
 		ABDE27FEA19C25945F82AB08 /* Pods_LibrariesPrototypeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFAA968927402D631B262A8 /* Pods_LibrariesPrototypeUITests.framework */; };
 		F22E94A131A902D1727629A8 /* Pods_LibrariesPrototype.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F2A9BBB640BE5DCB529C15 /* Pods_LibrariesPrototype.framework */; };
+		FB3271E3226F3AEE00B94AE6 /* LTViewModel+WhisperMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3271E2226F3AEE00B94AE6 /* LTViewModel+WhisperMessage.swift */; };
+		FB3271E5226F3FE500B94AE6 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3271E4226F3FE500B94AE6 /* Session.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -238,6 +240,8 @@
 		A641A8D8E78C9E8B21CB0487 /* Pods-LibrariesPrototypeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototypeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototypeTests/Pods-LibrariesPrototypeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C0F2A9BBB640BE5DCB529C15 /* Pods_LibrariesPrototype.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibrariesPrototype.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0101268CB92B19951DB637D /* Pods-LibrariesPrototypeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototypeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototypeTests/Pods-LibrariesPrototypeTests.release.xcconfig"; sourceTree = "<group>"; };
+		FB3271E2226F3AEE00B94AE6 /* LTViewModel+WhisperMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LTViewModel+WhisperMessage.swift"; sourceTree = "<group>"; };
+		FB3271E4226F3FE500B94AE6 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -494,6 +498,7 @@
 			isa = PBXGroup;
 			children = (
 				9EEA0FB0226A586A008595CC /* LTViewController+ActivitiyIndicator.swift */,
+				FB3271E2226F3AEE00B94AE6 /* LTViewModel+WhisperMessage.swift */,
 				9EEA0FAC226A573D008595CC /* UIImageView+AsyncLoadingFromURL.swift */,
 				9EEA0F9C226A4A51008595CC /* UIView+Constraints.swift */,
 			);
@@ -568,6 +573,7 @@
 			isa = PBXGroup;
 			children = (
 				9EEA0FA1226A4C81008595CC /* Bindable.swift */,
+				FB3271E4226F3FE500B94AE6 /* Session.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -857,8 +863,8 @@
 		9EEA0F9E226A4BD5008595CC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				9EEA0F9F226A4BF6008595CC /* LTViewController.swift */,
 				9EEA0FB8226A615D008595CC /* LTNavigationController.swift */,
+				9EEA0F9F226A4BF6008595CC /* LTViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1225,6 +1231,7 @@
 				9E62CD5A226C91BD0078AAC6 /* LTRXViewController.swift in Sources */,
 				9E62CD41226C81560078AAC6 /* ReposService.swift in Sources */,
 				9EEA0F87226A498A008595CC /* HeroCollectionView.swift in Sources */,
+				FB3271E5226F3FE500B94AE6 /* Session.swift in Sources */,
 				9EEA0F4F226A401F008595CC /* SplashService.swift in Sources */,
 				9EEA0F94226A498A008595CC /* HeroDetailViewController.swift in Sources */,
 				9E62CD48226C8E3F0078AAC6 /* Repository.swift in Sources */,
@@ -1236,6 +1243,7 @@
 				9E62CD40226C81560078AAC6 /* RepositoryCollectionViewCell.swift in Sources */,
 				9EEA0F8F226A498A008595CC /* HeroDetailViewModel.swift in Sources */,
 				9EEA0F93226A498A008595CC /* HeroDetailConstants.swift in Sources */,
+				FB3271E3226F3AEE00B94AE6 /* LTViewModel+WhisperMessage.swift in Sources */,
 				9EE91FDF226A3E5B0079827F /* ComicCharacter.swift in Sources */,
 				9EE91FB7226A372B0079827F /* LTCollectionView.swift in Sources */,
 				9EEA0FA2226A4C81008595CC /* Bindable.swift in Sources */,
