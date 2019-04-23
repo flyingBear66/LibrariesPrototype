@@ -9,6 +9,7 @@
 import UIKit
 
 class GradientProgressMainViewController: LTViewController {
+
     // MARK: - UIControls
     let tableView: LTTableView = {
         let tableView = LTTableView()
@@ -37,10 +38,31 @@ class GradientProgressMainViewController: LTViewController {
     // MARK: - Helpers
     func setupViews() {
         view.backgroundColor = .white
-
+        title = "Gradient Progress Bar"
+        tableView.dataSource = self
+        tableView.delegate = self
     }
 
     func updateUI() {
+        view.addSubview(tableView)
+        tableView.addConstraints(equalToSuperview())
+    }
+    // MARK: - UI Actions
+}
 
+extension GradientProgressMainViewController: UITableViewDataSource, UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.menus.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = LTTableViewCell(style: .default, reuseIdentifier: nil)
+        cell.textLabel?.text = viewModel.menus[indexPath.row]
+        return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.openScreen(withIndexPath: indexPath)
     }
 }

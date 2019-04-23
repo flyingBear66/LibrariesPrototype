@@ -105,6 +105,12 @@
 		F22E94A131A902D1727629A8 /* Pods_LibrariesPrototype.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F2A9BBB640BE5DCB529C15 /* Pods_LibrariesPrototype.framework */; };
 		FB3271EA226F662900B94AE6 /* GradientProgressMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3271E9226F662900B94AE6 /* GradientProgressMainViewController.swift */; };
 		FB3271EC226F663500B94AE6 /* GradientProgressMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3271EB226F663500B94AE6 /* GradientProgressMainViewModel.swift */; };
+		FB3271EE226F693C00B94AE6 /* GradientProgressButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3271ED226F693C00B94AE6 /* GradientProgressButtonViewModel.swift */; };
+		FB3271F0226F694B00B94AE6 /* GradientProgressStatusBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3271EF226F694B00B94AE6 /* GradientProgressStatusBarViewModel.swift */; };
+		FB3271F2226F695600B94AE6 /* GradientProgressStatusBarWithSafeAreaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3271F1226F695600B94AE6 /* GradientProgressStatusBarWithSafeAreaViewModel.swift */; };
+		FB3271F4226F696600B94AE6 /* GradientProgressStatusBarWithSafeAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3271F3226F696600B94AE6 /* GradientProgressStatusBarWithSafeAreaViewController.swift */; };
+		FB3271F6226F697500B94AE6 /* GradientProgressStatusBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3271F5226F697500B94AE6 /* GradientProgressStatusBarViewController.swift */; };
+		FB3271F8226F697F00B94AE6 /* GradientProgressButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3271F7226F697F00B94AE6 /* GradientProgressButtonViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -238,6 +244,12 @@
 		D0101268CB92B19951DB637D /* Pods-LibrariesPrototypeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototypeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototypeTests/Pods-LibrariesPrototypeTests.release.xcconfig"; sourceTree = "<group>"; };
 		FB3271E9226F662900B94AE6 /* GradientProgressMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientProgressMainViewController.swift; sourceTree = "<group>"; };
 		FB3271EB226F663500B94AE6 /* GradientProgressMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientProgressMainViewModel.swift; sourceTree = "<group>"; };
+		FB3271ED226F693C00B94AE6 /* GradientProgressButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientProgressButtonViewModel.swift; sourceTree = "<group>"; };
+		FB3271EF226F694B00B94AE6 /* GradientProgressStatusBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientProgressStatusBarViewModel.swift; sourceTree = "<group>"; };
+		FB3271F1226F695600B94AE6 /* GradientProgressStatusBarWithSafeAreaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientProgressStatusBarWithSafeAreaViewModel.swift; sourceTree = "<group>"; };
+		FB3271F3226F696600B94AE6 /* GradientProgressStatusBarWithSafeAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientProgressStatusBarWithSafeAreaViewController.swift; sourceTree = "<group>"; };
+		FB3271F5226F697500B94AE6 /* GradientProgressStatusBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientProgressStatusBarViewController.swift; sourceTree = "<group>"; };
+		FB3271F7226F697F00B94AE6 /* GradientProgressButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientProgressButtonViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -918,7 +930,10 @@
 		FB3271E7226F660500B94AE6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FB3271F7226F697F00B94AE6 /* GradientProgressButtonViewController.swift */,
 				FB3271E9226F662900B94AE6 /* GradientProgressMainViewController.swift */,
+				FB3271F5226F697500B94AE6 /* GradientProgressStatusBarViewController.swift */,
+				FB3271F3226F696600B94AE6 /* GradientProgressStatusBarWithSafeAreaViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -926,7 +941,10 @@
 		FB3271E8226F660A00B94AE6 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				FB3271ED226F693C00B94AE6 /* GradientProgressButtonViewModel.swift */,
 				FB3271EB226F663500B94AE6 /* GradientProgressMainViewModel.swift */,
+				FB3271EF226F694B00B94AE6 /* GradientProgressStatusBarViewModel.swift */,
+				FB3271F1226F695600B94AE6 /* GradientProgressStatusBarWithSafeAreaViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -1178,9 +1196,11 @@
 				9EB35A0F226A8F8C0024FDEC /* MainEmptyDataSetListViewController.swift in Sources */,
 				9EE91FB9226A37410079827F /* LTViewModel.swift in Sources */,
 				9EE91FC0226A3A040079827F /* DataContainer.swift in Sources */,
+				FB3271F6226F697500B94AE6 /* GradientProgressStatusBarViewController.swift in Sources */,
 				9EEA0F95226A498A008595CC /* GetHeroStories.swift in Sources */,
 				9EE91FDB226A3E5B0079827F /* Story.swift in Sources */,
 				9EE91FC6226A3A2E0079827F /* APIRequest.swift in Sources */,
+				FB3271F4226F696600B94AE6 /* GradientProgressStatusBarWithSafeAreaViewController.swift in Sources */,
 				9EEA0FAD226A573E008595CC /* UIImageView+AsyncLoadingFromURL.swift in Sources */,
 				9EEA0F9D226A4A51008595CC /* UIView+Constraints.swift in Sources */,
 				9EEA0FCF226A89A0008595CC /* EmptyDataSetListWithImageViewController.swift in Sources */,
@@ -1194,6 +1214,7 @@
 				9EEA0FD1226A89EB008595CC /* BaseEmptyDataSetListViewController.swift in Sources */,
 				9EEA0FA6226A4D56008595CC /* LTTableViewCell.swift in Sources */,
 				9EE91FB5226A371C0079827F /* LTTableView.swift in Sources */,
+				FB3271EE226F693C00B94AE6 /* GradientProgressButtonViewModel.swift in Sources */,
 				9E62CD44226C81560078AAC6 /* ReposViewModel.swift in Sources */,
 				9EEA0F49226A3FBD008595CC /* SplashViewModel.swift in Sources */,
 				9EE91FAF226A36CD0079827F /* LTView.swift in Sources */,
@@ -1206,9 +1227,11 @@
 				9EEA0FCB226A8988008595CC /* EmptyDataSetListViewController.swift in Sources */,
 				9EE91FCB226A3B9E0079827F /* URLQueryItemEncoder.swift in Sources */,
 				9EEA0FA4226A4D42008595CC /* LTCollectionViewCell.swift in Sources */,
+				FB3271F8226F697F00B94AE6 /* GradientProgressButtonViewController.swift in Sources */,
 				9EEA0FAF226A57F1008595CC /* LTScrollView.swift in Sources */,
 				9EE91FC2226A3A0C0079827F /* MarvelResponse.swift in Sources */,
 				9EEA0F8B226A498A008595CC /* HeroSearchService.swift in Sources */,
+				FB3271F0226F694B00B94AE6 /* GradientProgressStatusBarViewModel.swift in Sources */,
 				9E62CD5C226C92CE0078AAC6 /* LTCollectionViewFlowLayout.swift in Sources */,
 				9E62CD42226C81560078AAC6 /* ReposViewController.swift in Sources */,
 				9EEA0F9A226A498A008595CC /* HeroDetailView.swift in Sources */,
@@ -1238,6 +1261,7 @@
 				9EEA0F93226A498A008595CC /* HeroDetailConstants.swift in Sources */,
 				9EE91FDF226A3E5B0079827F /* ComicCharacter.swift in Sources */,
 				9EE91FB7226A372B0079827F /* LTCollectionView.swift in Sources */,
+				FB3271F2226F695600B94AE6 /* GradientProgressStatusBarWithSafeAreaViewModel.swift in Sources */,
 				9EEA0FA2226A4C81008595CC /* Bindable.swift in Sources */,
 				9EEA0F91226A498A008595CC /* HeroSerieViewModel.swift in Sources */,
 				9EE91FDD226A3E5B0079827F /* Comic.swift in Sources */,

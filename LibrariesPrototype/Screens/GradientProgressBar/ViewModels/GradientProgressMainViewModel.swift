@@ -43,4 +43,17 @@ class GradientProgressMainViewModel: LTViewModel {
     }
 
     // MARK: - Helpers
+    func openScreen(withIndexPath indexPath: IndexPath) {
+        let menuIndex = GradientProgressBarMenuCase(rawValue: indexPath.row) ?? .none
+        switch menuIndex {
+        case .button:
+            showButtonScreens!()
+        case .statusBar:
+            showStatusBarScreens!()
+        case .statusBarWithSafe:
+            showStatusBarWithSafeAreaScreens!()
+        case .none:
+            print("Default case. Error happened or index not exist")
+        }
+    }
 }

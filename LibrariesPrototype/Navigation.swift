@@ -165,8 +165,39 @@ extension Navigation {
     // MARK: GradientProgressBar
     private func openGradientProgressBarScreens() {
         let viewModel = GradientProgressMainViewModel()
+
+        viewModel.showButtonScreens = { [unowned self] in
+            self.openGradientProgressButton()
+        }
+
+        viewModel.showStatusBarScreens = { [unowned self] in
+            self.openGradientProgressStatusBar()
+        }
+
+        viewModel.showStatusBarWithSafeAreaScreens = { [unowned self] in
+            self.openGradientProgressStatusBarWithSafeArea()
+        }
+
         currentViewController = GradientProgressMainViewController(withViewModel: viewModel)
         pushTo(viewContoller: currentViewController, GradientProgressMainViewController.self)
+    }
+
+    private func openGradientProgressButton() {
+        let viewModel = GradientProgressButtonViewModel()
+        currentViewController = GradientProgressButtonViewController(withViewModel: viewModel)
+        pushTo(viewContoller: currentViewController, GradientProgressButtonViewController.self)
+    }
+
+    private func openGradientProgressStatusBar() {
+        let viewModel = GradientProgressStatusBarViewModel()
+        currentViewController = GradientProgressStatusBarViewController(withViewModel: viewModel)
+        pushTo(viewContoller: currentViewController, GradientProgressStatusBarViewController.self)
+    }
+
+    private func openGradientProgressStatusBarWithSafeArea() {
+        let viewModel = GradientProgressStatusBarWithSafeAreaViewModel()
+        currentViewController = GradientProgressStatusBarWithSafeAreaViewController(withViewModel: viewModel)
+        pushTo(viewContoller: currentViewController, GradientProgressStatusBarWithSafeAreaViewController.self)
     }
 }
 
