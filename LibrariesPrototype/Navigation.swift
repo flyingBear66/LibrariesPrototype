@@ -75,6 +75,10 @@ extension Navigation {
         viewModel.showRxSwiftScreens = { [unowned self] in
             self.openRxSwiftAlamofireScreens()
         }
+
+        viewModel.showGradientProgressBarScreens = { [unowned self] in
+            self.openGradientProgressBarScreens()
+        }
         
         currentViewController = MainViewController(withViewModel: viewModel)
         navigateTo(viewContoller: currentViewController!, MainViewController.self)
@@ -159,9 +163,10 @@ extension Navigation {
     }
 
     // MARK: GradientProgressBar
-    private func openRxSwiftAlamofireScreens() {
-        currentViewController = ReposViewController()
-        pushTo(viewContoller: currentViewController, ReposViewController.self)
+    private func openGradientProgressBarScreens() {
+        let viewModel = GradientProgressMainViewModel()
+        currentViewController = GradientProgressMainViewController(withViewModel: viewModel)
+        pushTo(viewContoller: currentViewController, GradientProgressMainViewController.self)
     }
 }
 
