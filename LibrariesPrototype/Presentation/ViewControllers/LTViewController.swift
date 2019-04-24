@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import GradientLoadingBar
 
 class LTViewController: UIViewController {
     
     // MARK: - UIControls
-    
+    let gradientLoadingBar = GradientLoadingBar(height: GradientProgressbarConstants.height,
+                                                isRelativeToSafeArea: false)
+
     // MARK: - View LifeCycle
     init() {
         super.init(nibName: nil, bundle: nil)
