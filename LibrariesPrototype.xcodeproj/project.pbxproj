@@ -102,6 +102,7 @@
 		9EEA0FCF226A89A0008595CC /* EmptyDataSetListWithImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA0FCE226A89A0008595CC /* EmptyDataSetListWithImageViewController.swift */; };
 		9EEA0FD1226A89EB008595CC /* BaseEmptyDataSetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA0FD0226A89EB008595CC /* BaseEmptyDataSetListViewController.swift */; };
 		ABDE27FEA19C25945F82AB08 /* Pods_LibrariesPrototypeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFAA968927402D631B262A8 /* Pods_LibrariesPrototypeUITests.framework */; };
+		B60255D222711806005D31B8 /* LTGradientBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60255D122711806005D31B8 /* LTGradientBarButton.swift */; };
 		F22E94A131A902D1727629A8 /* Pods_LibrariesPrototype.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F2A9BBB640BE5DCB529C15 /* Pods_LibrariesPrototype.framework */; };
 		FB3271EA226F662900B94AE6 /* GradientProgressMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3271E9226F662900B94AE6 /* GradientProgressMainViewController.swift */; };
 		FB3271EC226F663500B94AE6 /* GradientProgressMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3271EB226F663500B94AE6 /* GradientProgressMainViewModel.swift */; };
@@ -113,7 +114,6 @@
 		FB3271F8226F697F00B94AE6 /* GradientProgressButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3271F7226F697F00B94AE6 /* GradientProgressButtonViewController.swift */; };
 		FBAD4756226F7A6600DFE2A2 /* GradientProgressbarConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD4755226F7A6600DFE2A2 /* GradientProgressbarConstants.swift */; };
 		FBAD4758226F7B4E00DFE2A2 /* LTViewController+GradientProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD4757226F7B4E00DFE2A2 /* LTViewController+GradientProgressBar.swift */; };
-		FBAD475A226F7D8D00DFE2A2 /* LTBottomGradientBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD4759226F7D8D00DFE2A2 /* LTBottomGradientBarButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -243,6 +243,7 @@
 		9EEA0FCE226A89A0008595CC /* EmptyDataSetListWithImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDataSetListWithImageViewController.swift; sourceTree = "<group>"; };
 		9EEA0FD0226A89EB008595CC /* BaseEmptyDataSetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEmptyDataSetListViewController.swift; sourceTree = "<group>"; };
 		A641A8D8E78C9E8B21CB0487 /* Pods-LibrariesPrototypeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototypeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototypeTests/Pods-LibrariesPrototypeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B60255D122711806005D31B8 /* LTGradientBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTGradientBarButton.swift; sourceTree = "<group>"; };
 		C0F2A9BBB640BE5DCB529C15 /* Pods_LibrariesPrototype.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibrariesPrototype.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0101268CB92B19951DB637D /* Pods-LibrariesPrototypeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototypeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototypeTests/Pods-LibrariesPrototypeTests.release.xcconfig"; sourceTree = "<group>"; };
 		FB3271E9226F662900B94AE6 /* GradientProgressMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientProgressMainViewController.swift; sourceTree = "<group>"; };
@@ -255,7 +256,6 @@
 		FB3271F7226F697F00B94AE6 /* GradientProgressButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientProgressButtonViewController.swift; sourceTree = "<group>"; };
 		FBAD4755226F7A6600DFE2A2 /* GradientProgressbarConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GradientProgressbarConstants.swift; path = LibrariesPrototype/Screens/GradientProgressBar/ViewControllers/GradientProgressbarConstants.swift; sourceTree = SOURCE_ROOT; };
 		FBAD4757226F7B4E00DFE2A2 /* LTViewController+GradientProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LTViewController+GradientProgressBar.swift"; sourceTree = "<group>"; };
-		FBAD4759226F7D8D00DFE2A2 /* LTBottomGradientBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTBottomGradientBarButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -498,8 +498,8 @@
 		9E94B40F2030C19000B8BA18 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				B60255D122711806005D31B8 /* LTGradientBarButton.swift */,
 				9EE91FB0226A36DC0079827F /* LTButton.swift */,
-				FBAD4759226F7D8D00DFE2A2 /* LTBottomGradientBarButton.swift */,
 				9EE91FB2226A36E70079827F /* LTLabel.swift */,
 			);
 			path = Controls;
@@ -1277,7 +1277,7 @@
 				9EEA0F97226A498A008595CC /* GetHeroComics.swift in Sources */,
 				9EE91FDA226A3E5B0079827F /* Serie.swift in Sources */,
 				9EEA0F96226A498A008595CC /* GetHeroSeries.swift in Sources */,
-				FBAD475A226F7D8D00DFE2A2 /* LTBottomGradientBarButton.swift in Sources */,
+				B60255D222711806005D31B8 /* LTGradientBarButton.swift in Sources */,
 				9EA1EC3C226BE6E800AC5F88 /* Application.swift in Sources */,
 				9EEA0F90226A498A008595CC /* HeroComicViewModel.swift in Sources */,
 				9EEA0F8D226A498A008595CC /* HeroListService.swift in Sources */,
