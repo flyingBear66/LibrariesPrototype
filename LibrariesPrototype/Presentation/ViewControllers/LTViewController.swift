@@ -6,8 +6,9 @@
 //  Copyright © 2019 Ozgun Zor. All rights reserved.
 //
 
-import UIKit
+import CocoaLumberjack
 import GradientLoadingBar
+import UIKit
 
 class LTViewController: UIViewController {
     
@@ -22,6 +23,11 @@ class LTViewController: UIViewController {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        DDLogInfo("\(String(describing: self)) viewDidLoad")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
