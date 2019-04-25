@@ -13,6 +13,7 @@ PODS:
   - RxSwift (4.4.2):
     - RxAtomic (>= 4.4.2, ~> 4.4)
   - SVProgressHUD (2.2.5)
+  - Swinject (2.6.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -23,6 +24,7 @@ DEPENDENCIES:
   - RxCocoa
   - RxSwift
   - SVProgressHUD
+  - Swinject
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -35,6 +37,7 @@ SPEC REPOS:
     - RxCocoa
     - RxSwift
     - SVProgressHUD
+    - Swinject
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
@@ -46,7 +49,8 @@ SPEC CHECKSUMS:
   RxCocoa: 477990dc3b4c3ff55fb0ac77e1cc06244e0aaec8
   RxSwift: 74c29b693c8e42b0f64400e8b06564575742d649
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  Swinject: 48a96cda93633cf2860697b4ce76ab5db9ebaca2
 
-PODFILE CHECKSUM: 5483efbb27cba5f3fa3f6930e5dc67d9b11eb9e2
+PODFILE CHECKSUM: 755f0c7bd9f085edc636be406d1978fedaecee3f
 
 COCOAPODS: 1.6.1
