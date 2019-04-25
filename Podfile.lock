@@ -1,3 +1,52 @@
-PODFILE CHECKSUM: f5445cf8ff2f81a072b346cc73dc44d6dd4ee251
+PODS:
+  - Alamofire (4.8.1)
+  - AlamofireNetworkActivityLogger (2.4.0):
+    - Alamofire (~> 4.8)
+  - CocoaLumberjack/Core (3.5.3)
+  - CocoaLumberjack/Swift (3.5.3):
+    - CocoaLumberjack/Core
+  - EmptyDataSet-Swift (4.2.0)
+  - GradientLoadingBar (1.1.15)
+  - RxAtomic (4.4.2)
+  - RxCocoa (4.4.2):
+    - RxSwift (>= 4.4.2, ~> 4.4)
+  - RxSwift (4.4.2):
+    - RxAtomic (>= 4.4.2, ~> 4.4)
+  - SVProgressHUD (2.2.5)
 
-COCOAPODS: 1.4.0
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireNetworkActivityLogger (~> 2.4)
+  - CocoaLumberjack/Swift
+  - EmptyDataSet-Swift (~> 4.2.0)
+  - GradientLoadingBar (~> 1.0)
+  - RxCocoa
+  - RxSwift
+  - SVProgressHUD
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireNetworkActivityLogger
+    - CocoaLumberjack
+    - EmptyDataSet-Swift
+    - GradientLoadingBar
+    - RxAtomic
+    - RxCocoa
+    - RxSwift
+    - SVProgressHUD
+
+SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  AlamofireNetworkActivityLogger: 6d3398c692d2c5d83b0c58793537860aca1e383d
+  CocoaLumberjack: 2f44e60eb91c176d471fdba43b9e3eae6a721947
+  EmptyDataSet-Swift: 1fa0b35f530a35f852ecb2b53564728b0c300aaf
+  GradientLoadingBar: 7d390dbfc3ead827a71a6af39a79533aa432eb37
+  RxAtomic: d00e97c10db88c6f08540e0bf2752fc5a2404167
+  RxCocoa: 477990dc3b4c3ff55fb0ac77e1cc06244e0aaec8
+  RxSwift: 74c29b693c8e42b0f64400e8b06564575742d649
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: 5483efbb27cba5f3fa3f6930e5dc67d9b11eb9e2
+
+COCOAPODS: 1.6.1

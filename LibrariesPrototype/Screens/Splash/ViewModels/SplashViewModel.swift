@@ -8,13 +8,20 @@
 
 import UIKit
 
-class SplashViewModel: LTViewModel {
+protocol SplashViewModelEvents {
+    var showMainMenu: (() -> Void)? {get set}
+}
+    
+class SplashViewModel: LTViewModel, SplashViewModelEvents {
 
+    // MARK: - Events
+    var showMainMenu: (() -> Void)?
+    
     // MARK: - Variables
     private let service: SplashService!
     
     // MARK: - Init
-    init(with service: SplashService) {
+    init(withService service: SplashService) {
         self.service = service
     }
     

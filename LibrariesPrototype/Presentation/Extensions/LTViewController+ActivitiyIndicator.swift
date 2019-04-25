@@ -6,22 +6,18 @@
 //  Copyright © 2019 Ozgun Zor. All rights reserved.
 //
 
+import SVProgressHUD
 import UIKit
 
 extension LTViewController {
         
     public func showLoadingIndicator() {
-        activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
-        activityIndicator?.center = (view?.center)!
-        view?.addSubview(activityIndicator!)
-        activityIndicator?.startAnimating()
+        SVProgressHUD.show()
         UIApplication.shared.beginIgnoringInteractionEvents()
     }
     
     public func hideLoadingIndicator() {
-        activityIndicator?.stopAnimating()
-        activityIndicator?.removeFromSuperview()
-        activityIndicator = nil
+        SVProgressHUD.dismiss()
         UIApplication.shared.endIgnoringInteractionEvents()
     }
     

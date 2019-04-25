@@ -8,10 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		56BAB5147F27307C82592834 /* Pods_LibrariesPrototypeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0A85CE7564EA861DE44C07 /* Pods_LibrariesPrototypeTests.framework */; };
+		9E62CD40226C81560078AAC6 /* RepositoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E62CD3B226C81560078AAC6 /* RepositoryCollectionViewCell.swift */; };
+		9E62CD41226C81560078AAC6 /* ReposService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E62CD3C226C81560078AAC6 /* ReposService.swift */; };
+		9E62CD42226C81560078AAC6 /* ReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E62CD3D226C81560078AAC6 /* ReposViewController.swift */; };
+		9E62CD43226C81560078AAC6 /* RepositoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E62CD3E226C81560078AAC6 /* RepositoryViewModel.swift */; };
+		9E62CD44226C81560078AAC6 /* ReposViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E62CD3F226C81560078AAC6 /* ReposViewModel.swift */; };
+		9E62CD48226C8E3F0078AAC6 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E62CD46226C8E3F0078AAC6 /* Repository.swift */; };
+		9E62CD49226C8E3F0078AAC6 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E62CD47226C8E3F0078AAC6 /* Owner.swift */; };
+		9E62CD51226C904F0078AAC6 /* AlamofireHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E62CD4F226C904F0078AAC6 /* AlamofireHTTPClient.swift */; };
+		9E62CD52226C904F0078AAC6 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E62CD50226C904F0078AAC6 /* Endpoint.swift */; };
+		9E62CD56226C907A0078AAC6 /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E62CD55226C907A0078AAC6 /* GithubAPI.swift */; };
+		9E62CD58226C911A0078AAC6 /* LTRXViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E62CD57226C911A0078AAC6 /* LTRXViewModel.swift */; };
+		9E62CD5A226C91BD0078AAC6 /* LTRXViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E62CD59226C91BD0078AAC6 /* LTRXViewController.swift */; };
+		9E62CD5C226C92CE0078AAC6 /* LTCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E62CD5B226C92CE0078AAC6 /* LTCollectionViewFlowLayout.swift */; };
 		9E94B3DD2030BEC000B8BA18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E94B3DC2030BEC000B8BA18 /* AppDelegate.swift */; };
 		9E94B3E42030BEC000B8BA18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E94B3E32030BEC000B8BA18 /* Assets.xcassets */; };
 		9E94B3F22030BEC000B8BA18 /* LibrariesPrototypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E94B3F12030BEC000B8BA18 /* LibrariesPrototypeTests.swift */; };
 		9E94B3FD2030BEC000B8BA18 /* LibrariesPrototypeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E94B3FC2030BEC000B8BA18 /* LibrariesPrototypeUITests.swift */; };
+		9EA1EC38226BE5A100AC5F88 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA1EC37226BE5A100AC5F88 /* Navigation.swift */; };
+		9EA1EC3A226BE60000AC5F88 /* LTWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA1EC39226BE60000AC5F88 /* LTWindow.swift */; };
+		9EA1EC3C226BE6E800AC5F88 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA1EC3B226BE6E800AC5F88 /* Application.swift */; };
+		9EA1EC3F226BFDF600AC5F88 /* MainEmptyDataSetListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA1EC3E226BFDF600AC5F88 /* MainEmptyDataSetListViewModel.swift */; };
+		9EB35A0F226A8F8C0024FDEC /* MainEmptyDataSetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB35A0E226A8F8C0024FDEC /* MainEmptyDataSetListViewController.swift */; };
 		9EE91FAF226A36CD0079827F /* LTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE91FAE226A36CD0079827F /* LTView.swift */; };
 		9EE91FB1226A36DC0079827F /* LTButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE91FB0226A36DC0079827F /* LTButton.swift */; };
 		9EE91FB3226A36E70079827F /* LTLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE91FB2226A36E70079827F /* LTLabel.swift */; };
@@ -79,8 +97,27 @@
 		9EEA0FB5226A5BB1008595CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EEA0FB4226A5BB1008595CC /* LaunchScreen.storyboard */; };
 		9EEA0FB9226A615D008595CC /* LTNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA0FB8226A615D008595CC /* LTNavigationController.swift */; };
 		9EEA0FBC226A63F5008595CC /* Codextended.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA0FBB226A63F5008595CC /* Codextended.swift */; };
+		9EEA0FCB226A8988008595CC /* EmptyDataSetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA0FCA226A8988008595CC /* EmptyDataSetListViewController.swift */; };
+		9EEA0FCD226A8995008595CC /* EmptyDataSetListWithButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA0FCC226A8995008595CC /* EmptyDataSetListWithButtonViewController.swift */; };
+		9EEA0FCF226A89A0008595CC /* EmptyDataSetListWithImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA0FCE226A89A0008595CC /* EmptyDataSetListWithImageViewController.swift */; };
+		9EEA0FD1226A89EB008595CC /* BaseEmptyDataSetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA0FD0226A89EB008595CC /* BaseEmptyDataSetListViewController.swift */; };
 		ABDE27FEA19C25945F82AB08 /* Pods_LibrariesPrototypeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFAA968927402D631B262A8 /* Pods_LibrariesPrototypeUITests.framework */; };
+		B60255D222711806005D31B8 /* LTGradientBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60255D122711806005D31B8 /* LTGradientBarButton.swift */; };
+		B60255D42271FBAE005D31B8 /* LTGradientLoadingBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60255D32271FBAE005D31B8 /* LTGradientLoadingBarViewController.swift */; };
+		B65865062272033D00773E35 /* GradientLoadingBarConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65865052272033D00773E35 /* GradientLoadingBarConstants.swift */; };
+		B6586508227221C300773E35 /* AppDelegateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6586507227221C300773E35 /* AppDelegateHelper.swift */; };
+		B658650A2272223C00773E35 /* EnvironmentInfoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65865092272223C00773E35 /* EnvironmentInfoHelper.swift */; };
+		B658650C227222A200773E35 /* EnvironmentInfoConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B658650B227222A200773E35 /* EnvironmentInfoConstants.swift */; };
 		F22E94A131A902D1727629A8 /* Pods_LibrariesPrototype.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F2A9BBB640BE5DCB529C15 /* Pods_LibrariesPrototype.framework */; };
+		FB3271EA226F662900B94AE6 /* GradientLoadingMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3271E9226F662900B94AE6 /* GradientLoadingMainViewController.swift */; };
+		FB3271EC226F663500B94AE6 /* GradientLoadingMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3271EB226F663500B94AE6 /* GradientLoadingMainViewModel.swift */; };
+		FB3271EE226F693C00B94AE6 /* GradientLoadingButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3271ED226F693C00B94AE6 /* GradientLoadingButtonViewModel.swift */; };
+		FB3271F0226F694B00B94AE6 /* GradientLoadingStatusBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3271EF226F694B00B94AE6 /* GradientLoadingStatusBarViewModel.swift */; };
+		FB3271F2226F695600B94AE6 /* GradientLoadingStatusBarWithSafeAreaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3271F1226F695600B94AE6 /* GradientLoadingStatusBarWithSafeAreaViewModel.swift */; };
+		FB3271F4226F696600B94AE6 /* GradientLoadingStatusBarWithSafeAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3271F3226F696600B94AE6 /* GradientLoadingStatusBarWithSafeAreaViewController.swift */; };
+		FB3271F6226F697500B94AE6 /* GradientLoadingStatusBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3271F5226F697500B94AE6 /* GradientLoadingStatusBarViewController.swift */; };
+		FB3271F8226F697F00B94AE6 /* GradientLoadingButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3271F7226F697F00B94AE6 /* GradientLoadingButtonViewController.swift */; };
+		FBAD4758226F7B4E00DFE2A2 /* LTViewController+GradientLoadingBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD4757226F7B4E00DFE2A2 /* LTViewController+GradientLoadingBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +144,19 @@
 		6CFAA968927402D631B262A8 /* Pods_LibrariesPrototypeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibrariesPrototypeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BEA3E3759B09962CA71FCB7 /* Pods-LibrariesPrototype.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototype.release.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototype/Pods-LibrariesPrototype.release.xcconfig"; sourceTree = "<group>"; };
 		9E28B3B21F6C7D640CFA7D7F /* Pods-LibrariesPrototype.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototype.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototype/Pods-LibrariesPrototype.debug.xcconfig"; sourceTree = "<group>"; };
+		9E62CD3B226C81560078AAC6 /* RepositoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		9E62CD3C226C81560078AAC6 /* ReposService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReposService.swift; sourceTree = "<group>"; };
+		9E62CD3D226C81560078AAC6 /* ReposViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReposViewController.swift; sourceTree = "<group>"; };
+		9E62CD3E226C81560078AAC6 /* RepositoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryViewModel.swift; sourceTree = "<group>"; };
+		9E62CD3F226C81560078AAC6 /* ReposViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReposViewModel.swift; sourceTree = "<group>"; };
+		9E62CD46226C8E3F0078AAC6 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		9E62CD47226C8E3F0078AAC6 /* Owner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		9E62CD4F226C904F0078AAC6 /* AlamofireHTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireHTTPClient.swift; sourceTree = "<group>"; };
+		9E62CD50226C904F0078AAC6 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		9E62CD55226C907A0078AAC6 /* GithubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPI.swift; sourceTree = "<group>"; };
+		9E62CD57226C911A0078AAC6 /* LTRXViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTRXViewModel.swift; sourceTree = "<group>"; };
+		9E62CD59226C91BD0078AAC6 /* LTRXViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTRXViewController.swift; sourceTree = "<group>"; };
+		9E62CD5B226C92CE0078AAC6 /* LTCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		9E94B3D92030BEC000B8BA18 /* LibrariesPrototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LibrariesPrototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E94B3DC2030BEC000B8BA18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E94B3E32030BEC000B8BA18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -120,6 +170,11 @@
 		9E94B58A2030DCAB00B8BA18 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		9E94B58B2030DCB900B8BA18 /* Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Test.xcconfig; sourceTree = "<group>"; };
 		9E94B58C2030DCD300B8BA18 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
+		9EA1EC37226BE5A100AC5F88 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		9EA1EC39226BE60000AC5F88 /* LTWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTWindow.swift; sourceTree = "<group>"; };
+		9EA1EC3B226BE6E800AC5F88 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		9EA1EC3E226BFDF600AC5F88 /* MainEmptyDataSetListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainEmptyDataSetListViewModel.swift; sourceTree = "<group>"; };
+		9EB35A0E226A8F8C0024FDEC /* MainEmptyDataSetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainEmptyDataSetListViewController.swift; sourceTree = "<group>"; };
 		9EE91FAE226A36CD0079827F /* LTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTView.swift; sourceTree = "<group>"; };
 		9EE91FB0226A36DC0079827F /* LTButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTButton.swift; sourceTree = "<group>"; };
 		9EE91FB2226A36E70079827F /* LTLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTLabel.swift; sourceTree = "<group>"; };
@@ -187,9 +242,28 @@
 		9EEA0FB4226A5BB1008595CC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9EEA0FB8226A615D008595CC /* LTNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTNavigationController.swift; sourceTree = "<group>"; };
 		9EEA0FBB226A63F5008595CC /* Codextended.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Codextended.swift; sourceTree = "<group>"; };
+		9EEA0FCA226A8988008595CC /* EmptyDataSetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDataSetListViewController.swift; sourceTree = "<group>"; };
+		9EEA0FCC226A8995008595CC /* EmptyDataSetListWithButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDataSetListWithButtonViewController.swift; sourceTree = "<group>"; };
+		9EEA0FCE226A89A0008595CC /* EmptyDataSetListWithImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDataSetListWithImageViewController.swift; sourceTree = "<group>"; };
+		9EEA0FD0226A89EB008595CC /* BaseEmptyDataSetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEmptyDataSetListViewController.swift; sourceTree = "<group>"; };
 		A641A8D8E78C9E8B21CB0487 /* Pods-LibrariesPrototypeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototypeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototypeTests/Pods-LibrariesPrototypeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B60255D122711806005D31B8 /* LTGradientBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTGradientBarButton.swift; sourceTree = "<group>"; };
+		B60255D32271FBAE005D31B8 /* LTGradientLoadingBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTGradientLoadingBarViewController.swift; sourceTree = "<group>"; };
+		B65865052272033D00773E35 /* GradientLoadingBarConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLoadingBarConstants.swift; sourceTree = "<group>"; };
+		B6586507227221C300773E35 /* AppDelegateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateHelper.swift; sourceTree = "<group>"; };
+		B65865092272223C00773E35 /* EnvironmentInfoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentInfoHelper.swift; sourceTree = "<group>"; };
+		B658650B227222A200773E35 /* EnvironmentInfoConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EnvironmentInfoConstants.swift; path = LibrariesPrototype/Common/Helpers/EnvironmentInfoConstants.swift; sourceTree = SOURCE_ROOT; };
 		C0F2A9BBB640BE5DCB529C15 /* Pods_LibrariesPrototype.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibrariesPrototype.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0101268CB92B19951DB637D /* Pods-LibrariesPrototypeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototypeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototypeTests/Pods-LibrariesPrototypeTests.release.xcconfig"; sourceTree = "<group>"; };
+		FB3271E9226F662900B94AE6 /* GradientLoadingMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLoadingMainViewController.swift; sourceTree = "<group>"; };
+		FB3271EB226F663500B94AE6 /* GradientLoadingMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLoadingMainViewModel.swift; sourceTree = "<group>"; };
+		FB3271ED226F693C00B94AE6 /* GradientLoadingButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLoadingButtonViewModel.swift; sourceTree = "<group>"; };
+		FB3271EF226F694B00B94AE6 /* GradientLoadingStatusBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLoadingStatusBarViewModel.swift; sourceTree = "<group>"; };
+		FB3271F1226F695600B94AE6 /* GradientLoadingStatusBarWithSafeAreaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLoadingStatusBarWithSafeAreaViewModel.swift; sourceTree = "<group>"; };
+		FB3271F3226F696600B94AE6 /* GradientLoadingStatusBarWithSafeAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLoadingStatusBarWithSafeAreaViewController.swift; sourceTree = "<group>"; };
+		FB3271F5226F697500B94AE6 /* GradientLoadingStatusBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLoadingStatusBarViewController.swift; sourceTree = "<group>"; };
+		FB3271F7226F697F00B94AE6 /* GradientLoadingButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLoadingButtonViewController.swift; sourceTree = "<group>"; };
+		FBAD4757226F7B4E00DFE2A2 /* LTViewController+GradientLoadingBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LTViewController+GradientLoadingBar.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +307,96 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9E62CD39226C811C0078AAC6 /* RxSwift */ = {
+			isa = PBXGroup;
+			children = (
+				9E62CD3A226C81560078AAC6 /* ReactiveMain */,
+			);
+			path = RxSwift;
+			sourceTree = "<group>";
+		};
+		9E62CD3A226C81560078AAC6 /* ReactiveMain */ = {
+			isa = PBXGroup;
+			children = (
+				9E62CD45226C8E2D0078AAC6 /* Models */,
+				9E62CD4D226C8E610078AAC6 /* Services */,
+				9E62CD4A226C8E420078AAC6 /* ViewControllers */,
+				9E62CD4B226C8E510078AAC6 /* ViewModels */,
+				9E62CD4C226C8E580078AAC6 /* Views */,
+			);
+			path = ReactiveMain;
+			sourceTree = "<group>";
+		};
+		9E62CD45226C8E2D0078AAC6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9E62CD47226C8E3F0078AAC6 /* Owner.swift */,
+				9E62CD46226C8E3F0078AAC6 /* Repository.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9E62CD4A226C8E420078AAC6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9E62CD3D226C81560078AAC6 /* ReposViewController.swift */,
+				9E62CD59226C91BD0078AAC6 /* LTRXViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9E62CD4B226C8E510078AAC6 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9E62CD3E226C81560078AAC6 /* RepositoryViewModel.swift */,
+				9E62CD3F226C81560078AAC6 /* ReposViewModel.swift */,
+				9E62CD57226C911A0078AAC6 /* LTRXViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9E62CD4C226C8E580078AAC6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9E62CD3B226C81560078AAC6 /* RepositoryCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9E62CD4D226C8E610078AAC6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9E62CD3C226C81560078AAC6 /* ReposService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9E62CD4E226C901B0078AAC6 /* Alamofire+RxSwift */ = {
+			isa = PBXGroup;
+			children = (
+				9E62CD54226C905C0078AAC6 /* Models */,
+				9E62CD53226C90560078AAC6 /* HTTPClient */,
+			);
+			path = "Alamofire+RxSwift";
+			sourceTree = "<group>";
+		};
+		9E62CD53226C90560078AAC6 /* HTTPClient */ = {
+			isa = PBXGroup;
+			children = (
+				9E62CD4F226C904F0078AAC6 /* AlamofireHTTPClient.swift */,
+			);
+			path = HTTPClient;
+			sourceTree = "<group>";
+		};
+		9E62CD54226C905C0078AAC6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9E62CD50226C904F0078AAC6 /* Endpoint.swift */,
+				9E62CD55226C907A0078AAC6 /* GithubAPI.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		9E94B3D02030BEC000B8BA18 = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +427,8 @@
 				9E94B40B2030C19000B8BA18 /* Presentation */,
 				9E94B4122030C19000B8BA18 /* Screens */,
 				9E94B3DC2030BEC000B8BA18 /* AppDelegate.swift */,
+				9EA1EC3B226BE6E800AC5F88 /* Application.swift */,
+				9EA1EC37226BE5A100AC5F88 /* Navigation.swift */,
 				9E94B3E32030BEC000B8BA18 /* Assets.xcassets */,
 				9E94B3E82030BEC000B8BA18 /* Info.plist */,
 				9E94B5892030DC7B00B8BA18 /* Configurations */,
@@ -300,7 +466,6 @@
 		9E94B40B2030C19000B8BA18 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				9E94B40D2030C19000B8BA18 /* Constants */,
 				9E94B40F2030C19000B8BA18 /* Controls */,
 				9E94B40E2030C19000B8BA18 /* Extensions */,
 				9EEA0F9E226A4BD5008595CC /* ViewControllers */,
@@ -318,17 +483,11 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		9E94B40D2030C19000B8BA18 /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Constants;
-			sourceTree = "<group>";
-		};
 		9E94B40E2030C19000B8BA18 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				9EEA0FB0226A586A008595CC /* LTViewController+ActivitiyIndicator.swift */,
+				FBAD4757226F7B4E00DFE2A2 /* LTViewController+GradientLoadingBar.swift */,
 				9EEA0FAC226A573D008595CC /* UIImageView+AsyncLoadingFromURL.swift */,
 				9EEA0F9C226A4A51008595CC /* UIView+Constraints.swift */,
 			);
@@ -339,6 +498,7 @@
 			isa = PBXGroup;
 			children = (
 				9EE91FB0226A36DC0079827F /* LTButton.swift */,
+				B60255D122711806005D31B8 /* LTGradientBarButton.swift */,
 				9EE91FB2226A36E70079827F /* LTLabel.swift */,
 			);
 			path = Controls;
@@ -349,11 +509,13 @@
 			children = (
 				9EE91FB6226A372B0079827F /* LTCollectionView.swift */,
 				9EEA0FA3226A4D42008595CC /* LTCollectionViewCell.swift */,
+				9E62CD5B226C92CE0078AAC6 /* LTCollectionViewFlowLayout.swift */,
+				9EEA0FA7226A52DD008595CC /* LTImageView.swift */,
+				9EEA0FAE226A57F1008595CC /* LTScrollView.swift */,
 				9EE91FB4226A371C0079827F /* LTTableView.swift */,
 				9EEA0FA5226A4D56008595CC /* LTTableViewCell.swift */,
 				9EE91FAE226A36CD0079827F /* LTView.swift */,
-				9EEA0FA7226A52DD008595CC /* LTImageView.swift */,
-				9EEA0FAE226A57F1008595CC /* LTScrollView.swift */,
+				9EA1EC39226BE60000AC5F88 /* LTWindow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -361,8 +523,11 @@
 		9E94B4122030C19000B8BA18 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				FB3271E6226F65FD00B94AE6 /* GradientLoadingBar */,
+				9E62CD39226C811C0078AAC6 /* RxSwift */,
+				9EEA0FBE226A88C1008595CC /* EmptyDataSet */,
 				9EEA0F3C226A3F3C008595CC /* Main */,
-				9EEA0F50226A4958008595CC /* NativeAPITestScreens */,
+				9EEA0F50226A4958008595CC /* NativeAPI */,
 				9EEA0F3D226A3F46008595CC /* Splash */,
 			);
 			path = Screens;
@@ -383,6 +548,7 @@
 		9E94B4142030C19000B8BA18 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				B658650B227222A200773E35 /* EnvironmentInfoConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -397,7 +563,9 @@
 		9E94B4162030C19000B8BA18 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				B6586507227221C300773E35 /* AppDelegateHelper.swift */,
 				9EEA0FA1226A4C81008595CC /* Bindable.swift */,
+				B65865092272223C00773E35 /* EnvironmentInfoHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -412,9 +580,18 @@
 			path = Configurations;
 			sourceTree = "<group>";
 		};
+		9EA1EC3D226BFDDA00AC5F88 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9EA1EC3E226BFDF600AC5F88 /* MainEmptyDataSetListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		9EE91FBA226A37CE0079827F /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				9E62CD4E226C901B0078AAC6 /* Alamofire+RxSwift */,
 				9EE91FCF226A3C570079827F /* Service */,
 				9EE91FBB226A37D80079827F /* Native */,
 			);
@@ -543,14 +720,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		9EEA0F50226A4958008595CC /* NativeAPITestScreens */ = {
+		9EEA0F50226A4958008595CC /* NativeAPI */ = {
 			isa = PBXGroup;
 			children = (
 				9EEA0FB6226A5DBB008595CC /* Shared */,
 				9EEA0F69226A498A008595CC /* HeroDetail */,
 				9EEA0F51226A498A008595CC /* HeroList */,
 			);
-			path = NativeAPITestScreens;
+			path = NativeAPI;
 			sourceTree = "<group>";
 		};
 		9EEA0F51226A498A008595CC /* HeroList */ = {
@@ -721,6 +898,35 @@
 			path = Libraries;
 			sourceTree = "<group>";
 		};
+		9EEA0FBE226A88C1008595CC /* EmptyDataSet */ = {
+			isa = PBXGroup;
+			children = (
+				9EA1EC3D226BFDDA00AC5F88 /* ViewModels */,
+				9EEA0FC3226A891B008595CC /* ViewControllers */,
+			);
+			path = EmptyDataSet;
+			sourceTree = "<group>";
+		};
+		9EEA0FC3226A891B008595CC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9EEA0FD0226A89EB008595CC /* BaseEmptyDataSetListViewController.swift */,
+				9EEA0FCA226A8988008595CC /* EmptyDataSetListViewController.swift */,
+				9EEA0FCE226A89A0008595CC /* EmptyDataSetListWithImageViewController.swift */,
+				9EEA0FCC226A8995008595CC /* EmptyDataSetListWithButtonViewController.swift */,
+				9EB35A0E226A8F8C0024FDEC /* MainEmptyDataSetListViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B65865022272018800773E35 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				B65865052272033D00773E35 /* GradientLoadingBarConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		C6F8907B2D6825A6BB6D03AC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -729,6 +935,39 @@
 				6CFAA968927402D631B262A8 /* Pods_LibrariesPrototypeUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB3271E6226F65FD00B94AE6 /* GradientLoadingBar */ = {
+			isa = PBXGroup;
+			children = (
+				B65865022272018800773E35 /* Constants */,
+				FB3271E7226F660500B94AE6 /* ViewControllers */,
+				FB3271E8226F660A00B94AE6 /* ViewModels */,
+			);
+			path = GradientLoadingBar;
+			sourceTree = "<group>";
+		};
+		FB3271E7226F660500B94AE6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FB3271F7226F697F00B94AE6 /* GradientLoadingButtonViewController.swift */,
+				FB3271E9226F662900B94AE6 /* GradientLoadingMainViewController.swift */,
+				FB3271F5226F697500B94AE6 /* GradientLoadingStatusBarViewController.swift */,
+				FB3271F3226F696600B94AE6 /* GradientLoadingStatusBarWithSafeAreaViewController.swift */,
+				B60255D32271FBAE005D31B8 /* LTGradientLoadingBarViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FB3271E8226F660A00B94AE6 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FB3271ED226F693C00B94AE6 /* GradientLoadingButtonViewModel.swift */,
+				FB3271EB226F663500B94AE6 /* GradientLoadingMainViewModel.swift */,
+				FB3271EF226F694B00B94AE6 /* GradientLoadingStatusBarViewModel.swift */,
+				FB3271F1226F695600B94AE6 /* GradientLoadingStatusBarWithSafeAreaViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -743,7 +982,7 @@
 				9E94B3D62030BEC000B8BA18 /* Frameworks */,
 				9E94B3D72030BEC000B8BA18 /* Resources */,
 				6D4E126E540F348DB9BD7198 /* [CP] Embed Pods Frameworks */,
-				C5F0B9B86BCDA8657F29F98F /* [CP] Copy Pods Resources */,
+				9E62CD5D226D07A80078AAC6 /* [LT] SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -762,8 +1001,6 @@
 				9E94B3E92030BEC000B8BA18 /* Sources */,
 				9E94B3EA2030BEC000B8BA18 /* Frameworks */,
 				9E94B3EB2030BEC000B8BA18 /* Resources */,
-				0CA40583A65640EF6E4F8D6B /* [CP] Embed Pods Frameworks */,
-				4FAF271BACB1D17CE2C946FF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -783,8 +1020,6 @@
 				9E94B3F42030BEC000B8BA18 /* Sources */,
 				9E94B3F52030BEC000B8BA18 /* Frameworks */,
 				9E94B3F62030BEC000B8BA18 /* Resources */,
-				67EFF41136F767E0FC4B4468 /* [CP] Embed Pods Frameworks */,
-				4C62D51E5F24924B7D26BA2C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -808,6 +1043,7 @@
 				TargetAttributes = {
 					9E94B3D82030BEC000B8BA18 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Manual;
 					};
 					9E94B3EC2030BEC000B8BA18 = {
@@ -869,21 +1105,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0CA40583A65640EF6E4F8D6B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LibrariesPrototypeTests/Pods-LibrariesPrototypeTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		48871C4B3A7A87DBDB773A25 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -902,64 +1123,38 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4C62D51E5F24924B7D26BA2C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LibrariesPrototypeUITests/Pods-LibrariesPrototypeUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4FAF271BACB1D17CE2C946FF /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LibrariesPrototypeTests/Pods-LibrariesPrototypeTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		67EFF41136F767E0FC4B4468 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LibrariesPrototypeUITests/Pods-LibrariesPrototypeUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6D4E126E540F348DB9BD7198 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LibrariesPrototype/Pods-LibrariesPrototype-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityLogger/AlamofireNetworkActivityLogger.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+				"${BUILT_PRODUCTS_DIR}/EmptyDataSet-Swift/EmptyDataSet_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/GradientLoadingBar/GradientLoadingBar.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityLogger.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EmptyDataSet_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GradientLoadingBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LibrariesPrototype/Pods-LibrariesPrototype-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LibrariesPrototype/Pods-LibrariesPrototype-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8E957ECFA09DA55786149081 /* [CP] Check Pods Manifest.lock */ = {
@@ -998,20 +1193,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C5F0B9B86BCDA8657F29F98F /* [CP] Copy Pods Resources */ = {
+		9E62CD5D226D07A80078AAC6 /* [LT] SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
 			inputPaths = (
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[LT] SwiftLint";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LibrariesPrototype/Pods-LibrariesPrototype-resources.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1020,71 +1218,108 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EB35A0F226A8F8C0024FDEC /* MainEmptyDataSetListViewController.swift in Sources */,
 				9EE91FB9226A37410079827F /* LTViewModel.swift in Sources */,
 				9EE91FC0226A3A040079827F /* DataContainer.swift in Sources */,
+				FB3271F6226F697500B94AE6 /* GradientLoadingStatusBarViewController.swift in Sources */,
 				9EEA0F95226A498A008595CC /* GetHeroStories.swift in Sources */,
 				9EE91FDB226A3E5B0079827F /* Story.swift in Sources */,
 				9EE91FC6226A3A2E0079827F /* APIRequest.swift in Sources */,
+				FB3271F4226F696600B94AE6 /* GradientLoadingStatusBarWithSafeAreaViewController.swift in Sources */,
 				9EEA0FAD226A573E008595CC /* UIImageView+AsyncLoadingFromURL.swift in Sources */,
 				9EEA0F9D226A4A51008595CC /* UIView+Constraints.swift in Sources */,
+				9EEA0FCF226A89A0008595CC /* EmptyDataSetListWithImageViewController.swift in Sources */,
+				FB3271EC226F663500B94AE6 /* GradientLoadingMainViewModel.swift in Sources */,
 				9EEA0FA0226A4BF6008595CC /* LTViewController.swift in Sources */,
+				B658650A2272223C00773E35 /* EnvironmentInfoHelper.swift in Sources */,
 				9EEA0F7F226A498A008595CC /* HeroSearchViewModel.swift in Sources */,
 				9EE91FDC226A3E5B0079827F /* Event.swift in Sources */,
 				9EE91FB3226A36E70079827F /* LTLabel.swift in Sources */,
+				9E62CD56226C907A0078AAC6 /* GithubAPI.swift in Sources */,
 				9EEA0F8E226A498A008595CC /* HeroStoryViewModel.swift in Sources */,
+				9EEA0FD1226A89EB008595CC /* BaseEmptyDataSetListViewController.swift in Sources */,
 				9EEA0FA6226A4D56008595CC /* LTTableViewCell.swift in Sources */,
 				9EE91FB5226A371C0079827F /* LTTableView.swift in Sources */,
+				FB3271EE226F693C00B94AE6 /* GradientLoadingButtonViewModel.swift in Sources */,
+				9E62CD44226C81560078AAC6 /* ReposViewModel.swift in Sources */,
 				9EEA0F49226A3FBD008595CC /* SplashViewModel.swift in Sources */,
 				9EE91FAF226A36CD0079827F /* LTView.swift in Sources */,
 				9EE91FC4226A3A180079827F /* MarvelError.swift in Sources */,
 				9EE91FDE226A3E5B0079827F /* Image.swift in Sources */,
 				9EEA0F8C226A498A008595CC /* GetCharacters.swift in Sources */,
+				9E62CD51226C904F0078AAC6 /* AlamofireHTTPClient.swift in Sources */,
 				9EEA0F8A226A498A008595CC /* HeroListCollectionViewLayout.swift in Sources */,
 				9EE91FB1226A36DC0079827F /* LTButton.swift in Sources */,
+				9EEA0FCB226A8988008595CC /* EmptyDataSetListViewController.swift in Sources */,
 				9EE91FCB226A3B9E0079827F /* URLQueryItemEncoder.swift in Sources */,
 				9EEA0FA4226A4D42008595CC /* LTCollectionViewCell.swift in Sources */,
+				FB3271F8226F697F00B94AE6 /* GradientLoadingButtonViewController.swift in Sources */,
 				9EEA0FAF226A57F1008595CC /* LTScrollView.swift in Sources */,
 				9EE91FC2226A3A0C0079827F /* MarvelResponse.swift in Sources */,
 				9EEA0F8B226A498A008595CC /* HeroSearchService.swift in Sources */,
+				B658650C227222A200773E35 /* EnvironmentInfoConstants.swift in Sources */,
+				FB3271F0226F694B00B94AE6 /* GradientLoadingStatusBarViewModel.swift in Sources */,
+				9E62CD5C226C92CE0078AAC6 /* LTCollectionViewFlowLayout.swift in Sources */,
+				9E62CD42226C81560078AAC6 /* ReposViewController.swift in Sources */,
 				9EEA0F9A226A498A008595CC /* HeroDetailView.swift in Sources */,
+				9E62CD43226C81560078AAC6 /* RepositoryViewModel.swift in Sources */,
+				B65865062272033D00773E35 /* GradientLoadingBarConstants.swift in Sources */,
 				9EEA0F80226A498A008595CC /* HeroListConstants.swift in Sources */,
+				9E62CD58226C911A0078AAC6 /* LTRXViewModel.swift in Sources */,
 				9EE91FCD226A3BA90079827F /* md5.swift in Sources */,
 				9EEA0F82226A498A008595CC /* BaseHeroViewController.swift in Sources */,
 				9EEA0F89226A498A008595CC /* HeroCollectionViewCell.swift in Sources */,
 				9EEA0F7E226A498A008595CC /* HeroListViewModel.swift in Sources */,
 				9EEA0F83226A498A008595CC /* HeroSearchViewController.swift in Sources */,
 				9EEA0F43226A3F8B008595CC /* MainViewController.swift in Sources */,
+				9E62CD5A226C91BD0078AAC6 /* LTRXViewController.swift in Sources */,
+				FB3271EA226F662900B94AE6 /* GradientLoadingMainViewController.swift in Sources */,
+				B6586508227221C300773E35 /* AppDelegateHelper.swift in Sources */,
+				9E62CD41226C81560078AAC6 /* ReposService.swift in Sources */,
 				9EEA0F87226A498A008595CC /* HeroCollectionView.swift in Sources */,
 				9EEA0F4F226A401F008595CC /* SplashService.swift in Sources */,
 				9EEA0F94226A498A008595CC /* HeroDetailViewController.swift in Sources */,
+				9E62CD48226C8E3F0078AAC6 /* Repository.swift in Sources */,
 				9EEA0F9B226A498A008595CC /* HeroDetailContainerView.swift in Sources */,
 				9EE91FD1226A3C630079827F /* LTService.swift in Sources */,
+				9E62CD52226C904F0078AAC6 /* Endpoint.swift in Sources */,
 				9EEA0F98226A498A008595CC /* GetHeroEvents.swift in Sources */,
+				9EA1EC3F226BFDF600AC5F88 /* MainEmptyDataSetListViewModel.swift in Sources */,
+				B60255D42271FBAE005D31B8 /* LTGradientLoadingBarViewController.swift in Sources */,
+				9E62CD40226C81560078AAC6 /* RepositoryCollectionViewCell.swift in Sources */,
 				9EEA0F8F226A498A008595CC /* HeroDetailViewModel.swift in Sources */,
 				9EEA0F93226A498A008595CC /* HeroDetailConstants.swift in Sources */,
 				9EE91FDF226A3E5B0079827F /* ComicCharacter.swift in Sources */,
 				9EE91FB7226A372B0079827F /* LTCollectionView.swift in Sources */,
+				FB3271F2226F695600B94AE6 /* GradientLoadingStatusBarWithSafeAreaViewModel.swift in Sources */,
 				9EEA0FA2226A4C81008595CC /* Bindable.swift in Sources */,
 				9EEA0F91226A498A008595CC /* HeroSerieViewModel.swift in Sources */,
 				9EE91FDD226A3E5B0079827F /* Comic.swift in Sources */,
 				9EEA0F97226A498A008595CC /* GetHeroComics.swift in Sources */,
 				9EE91FDA226A3E5B0079827F /* Serie.swift in Sources */,
 				9EEA0F96226A498A008595CC /* GetHeroSeries.swift in Sources */,
+				B60255D222711806005D31B8 /* LTGradientBarButton.swift in Sources */,
+				9EA1EC3C226BE6E800AC5F88 /* Application.swift in Sources */,
 				9EEA0F90226A498A008595CC /* HeroComicViewModel.swift in Sources */,
 				9EEA0F8D226A498A008595CC /* HeroListService.swift in Sources */,
 				9EE91FBD226A37F90079827F /* MarvelAPIClient.swift in Sources */,
 				9EEA0FB9226A615D008595CC /* LTNavigationController.swift in Sources */,
 				9EEA0F92226A498A008595CC /* HeroEventViewModel.swift in Sources */,
+				9EEA0FCD226A8995008595CC /* EmptyDataSetListWithButtonViewController.swift in Sources */,
 				9EEA0FBC226A63F5008595CC /* Codextended.swift in Sources */,
 				9E94B3DD2030BEC000B8BA18 /* AppDelegate.swift in Sources */,
+				9E62CD49226C8E3F0078AAC6 /* Owner.swift in Sources */,
 				9EEA0F81226A498A008595CC /* HeroListViewController.swift in Sources */,
+				9EA1EC3A226BE60000AC5F88 /* LTWindow.swift in Sources */,
 				9EEA0F99226A498A008595CC /* HeroDetailService.swift in Sources */,
+				9EA1EC38226BE5A100AC5F88 /* Navigation.swift in Sources */,
 				9EEA0F45226A3F9B008595CC /* SplashViewController.swift in Sources */,
 				9EEA0FA8226A52DD008595CC /* LTImageView.swift in Sources */,
 				9EEA0F7D226A498A008595CC /* HeroCellViewModel.swift in Sources */,
 				9EEA0F47226A3FB2008595CC /* MainViewModel.swift in Sources */,
 				9EEA0FB1226A586B008595CC /* LTViewController+ActivitiyIndicator.swift in Sources */,
 				9EEA0FAB226A530A008595CC /* FavoriteButton.swift in Sources */,
+				FBAD4758226F7B4E00DFE2A2 /* LTViewController+GradientLoadingBar.swift in Sources */,
 				9EEA0F4D226A400B008595CC /* MainService.swift in Sources */,
 				9EE91FC9226A3B920079827F /* HTTPParameter.swift in Sources */,
 			);

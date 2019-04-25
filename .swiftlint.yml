@@ -1,0 +1,224 @@
+# Swift Stlye Guide Rules
+
+disabled_rules: # rule identifiers to exclude from running
+  - colon
+  # - comma
+  - control_statement
+  - force_cast
+  - force_unwrapping
+  - trailing_whitespace
+  - identifier_name
+  - implicit_getter
+  - line_length
+  - void_return
+  - trailing_newline
+  - unused_optional_binding
+  - unused_closure_parameter
+  - vertical_whitespace
+  - discouraged_direct_init
+  - weak_delegate
+opt_in_rules: # some rules are only opt-in
+  - empty_count
+  - array_init
+  # - attributes
+  - closure_end_indentation
+  # - closure_spacing #
+  # - conditional_returns_on_newline
+  - contains_over_first_not_nil
+  # - discouraged_object_literal
+  # - discouraged_optional_boolean
+  # - discouraged_optional_collection
+  - empty_string
+  # - explicit_acl
+  - explicit_enum_raw_value
+  - explicit_init
+  # - explicit_top_level_acl
+  # - explicit_type_interface
+  # - extension_access_modifier
+  - fatal_error_message
+  - file_header
+  - first_where
+  - force_unwrapping
+  - implicit_return
+  # - implicitly_unwrapped_optional #
+  - joined_default_parameter
+  # - let_var_whitespace
+  - literal_expression_end_indentation
+  # - lower_acl_than_parent
+  # - multiline_parameters
+  # - multiline_arguments
+  - nimble_operator
+  - no_extension_access_modifier
+  # - no_grouping_extension
+  # - number_separator
+  # - object_literal
+  - operator_usage_whitespace
+  - overridden_super_call
+  - override_in_extension
+  - pattern_matching_keywords
+  # - prefixed_toplevel_constant
+  # - private_action #
+  # - private_outlet #
+  - prohibited_super_call
+  - quick_discouraged_call
+  - quick_discouraged_focused_test
+  - quick_discouraged_pending_test
+  - redundant_nil_coalescing
+  - required_enum_case
+  - single_test_class
+  - sorted_first_last
+  - sorted_imports
+  # - strict_fileprivate
+  # - switch_case_on_newline
+  # - trailing_closure
+  - unneeded_parentheses_in_closure_argument
+  - untyped_error_in_catch
+  - vertical_parameter_alignment_on_call
+  - yoda_condition
+
+  # Find all the available rules by running:
+  # swiftlint rules
+included: # paths to include during linting. `--path` is ignored if present.
+  - LibrariesPrototype
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - LibrariesPrototype/Common/Libraries
+  - LibrariesPrototype/Infrastructure/Networking/Native/Helpers/md5.swift
+#   - Source/ExcludedFile.swift
+
+
+# configurable rules can be customized from this configuration file
+# binary rules can set their severity level
+force_cast: warning # implicitly
+force_try:
+  severity: warning # explicitly
+# rules that have both warning and error levels, can set just the warning level
+# implicitly
+line_length: 110
+# they can set both implicitly with an array
+type_body_length:
+  - 600 # warning
+  - 620 # error
+# or they can set both explicitly
+file_length:
+  warning: 500
+  error: 1200
+# opening_brace
+opening_brace: error
+#
+closure_spacing: error
+#
+syntactic_sugar: error 
+#
+comma: error
+# 
+large_tuple:
+  warning: 3
+  error: 4
+# 
+statement_position: error
+#
+sorted_imports: error
+#
+for_where: error
+#
+array_init: error 
+#
+# vertical_whitespace: warning
+# 
+# explicit_enum_raw_value: error
+#
+implicit_return: error
+#
+explicit_init: error
+#
+unneeded_parentheses_in_closure_argument: error
+#
+return_arrow_whitespace: error
+#
+operator_usage_whitespace: error 
+#
+mark: error
+# 
+cyclomatic_complexity:
+  warning: 20
+  error: 30
+# 
+function_body_length:
+  warning: 80
+  error: 100
+# naming rules can set warnings/errors for min_length and max_length
+# additionally they can set excluded names
+type_name:
+  min_length: 4 # only warning
+  max_length: # warning and error
+    warning: 50
+    error: 60
+  excluded: iPhone # excluded via string
+identifier_name:
+  min_length: # only min_length
+    warning: 2 # only warning
+  excluded: # excluded via string array
+    - id
+    - URL
+    - GlobalAPIKey
+reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, junit, html, emoji)
+
+file_header:
+  severity: warning
+  required_pattern: |
+                    \/\/
+                    \/\/  .*?\.swift
+                    \/\/  LibrariesPrototype
+                    \/\/
+                    \/\/  Created by .*? on \d{1,2}\/\d{1,2}\/\d{2}\.
+                    \/\/  Copyright © \d{4} Ozgun Zor\. All rights reserved\.
+                    \/\/
+
+
+custom_rules:
+  comma_space_rule:
+    regex: ",[ ]{2,}"
+    message: "Expected only one space after ',"
+    severity: error
+  comments_space: # From https://github.com/brandenr/swiftlintconfig
+    name: "Space After Comment"
+    regex: '(^ *//\w+)'
+    message: "There should be a space after //"
+    severity: error
+  multiple_empty_lines:
+    name: "Multiple Empty Lines"
+    regex: '((?:\s*\n){3,})'
+    message: "There are too many line breaks"
+    severity: warning
+  explicit_failure_calls:
+    name: “Avoid asserting ‘false’”
+    regex: ‘((assert|precondition)\(false)’
+    message: “Use assertionFailure() or preconditionFailure() instead.”
+    severity: error
+  force_https: # From github/Twigz/Game
+    name: "Force HTTPS over HTTP"
+    regex: "((?i)http(?!s))"
+    match_kinds: string
+    message: "HTTPS should be favored over HTTP"
+    severity: error
+  # double_space: # From github/IBM-Swift/Package-Builder
+  #   name: "Double Space"
+  #   regex: "([a-z,A-Z] \s+)"
+  #   message: "Double space between keywords"
+  #   match_kinds: keyword
+  #   severity: error
+  space_after_colon: 
+    name: "Space After Colon"
+    regex: "(:Base)"
+    message: "Space is required when you write a type after colon"
+    severity: error
+  space_after_colon_2: 
+    name: "Space After Colon2"
+    regex: "(:Bindable)"
+    message: "Space is required when you write a type after colon"
+    severity: error
+  space_after_colon_3: 
+    name: "Space After Colon3"
+    regex: "(:[)"
+    message: "Space is required when you write a type after colon"
+    severity: error

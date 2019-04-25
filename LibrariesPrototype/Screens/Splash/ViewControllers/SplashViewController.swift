@@ -14,7 +14,7 @@ class SplashViewController: LTViewController {
     private var viewModel: SplashViewModel!
     
     // MARK: - View LifeCycle
-    init(with viewModel: SplashViewModel) {
+    init(withViewModel viewModel: SplashViewModel) {
         super.init()
         self.viewModel = viewModel
         setupViews()
@@ -45,11 +45,13 @@ class SplashViewController: LTViewController {
     }
     
     func updateUI() {
-
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: { [weak self] in
+            self?.viewModel.showMainMenu!()
+        })
     }
     
     func bindViewModel() {
-
+        // TODO: When needed
     }
     
 }
