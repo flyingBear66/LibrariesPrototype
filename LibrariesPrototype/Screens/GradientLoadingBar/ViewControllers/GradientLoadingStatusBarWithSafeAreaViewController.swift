@@ -1,5 +1,5 @@
 //
-//  GradientProgressStatusBarWithSafeAreaViewController.swift
+//  GradientLoadingStatusBarWithSafeAreaViewController.swift
 //  LibrariesPrototype
 //
 //  Created by Ozgun Emre Zor on 23/04/2019.
@@ -7,15 +7,17 @@
 //
 
 import UIKit
+import GradientLoadingBar
 
-class GradientProgressStatusBarWithSafeAreaViewController: LTViewController {
-    // MARK: - UIControls
+class GradientLoadingStatusBarWithSafeAreaViewController: LTGradientLoadingBarViewController {
+    private let safeAreaGradientLoadingBarSafe = GradientLoadingBar(height: GradientLoadingBarConstants.height,
+                                                                    isRelativeToSafeArea: true)
 
     // MARK: - Variables
-    private var viewModel: GradientProgressStatusBarWithSafeAreaViewModel!
+    private var viewModel: GradientLoadingStatusBarWithSafeAreaViewModel!
 
     // MARK: - View LifeCycle
-    init(withViewModel viewModel: GradientProgressStatusBarWithSafeAreaViewModel) {
+    init(withViewModel viewModel: GradientLoadingStatusBarWithSafeAreaViewModel) {
         super.init()
         self.viewModel = viewModel
         setupViews()
@@ -37,6 +39,7 @@ class GradientProgressStatusBarWithSafeAreaViewController: LTViewController {
     }
 
     func updateUI() {
+        showGradientLoadingBarRelativeToSafeArea()
     }
     // MARK: - UI Actions
 }

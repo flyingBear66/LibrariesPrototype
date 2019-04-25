@@ -1,5 +1,5 @@
 //
-//  GradientProgressMainViewController.swift
+//  GradientLoadingMainViewController.swift
 //  LibrariesPrototype
 //
 //  Created by Ozgun Emre Zor on 23/04/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GradientProgressMainViewController: LTViewController {
+class GradientLoadingMainViewController: LTViewController {
 
     // MARK: - UIControls
     let tableView: LTTableView = {
@@ -17,10 +17,10 @@ class GradientProgressMainViewController: LTViewController {
     }()
 
     // MARK: - Variables
-    private var viewModel: GradientProgressMainViewModel!
+    private var viewModel: GradientLoadingMainViewModel!
 
     // MARK: - View LifeCycle
-    init(withViewModel viewModel: GradientProgressMainViewModel) {
+    init(withViewModel viewModel: GradientLoadingMainViewModel) {
         super.init()
         self.viewModel = viewModel
         setupViews()
@@ -50,7 +50,7 @@ class GradientProgressMainViewController: LTViewController {
     // MARK: - UI Actions
 }
 
-extension GradientProgressMainViewController: UITableViewDataSource, UITableViewDelegate {
+extension GradientLoadingMainViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.menus.count

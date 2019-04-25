@@ -1,5 +1,5 @@
 //
-//  GradientProgressMainViewModel.swift
+//  GradientLoadingMainViewModel.swift
 //  LibrariesPrototype
 //
 //  Created by Ozgun Emre Zor on 23/04/2019.
@@ -8,20 +8,20 @@
 
 import UIKit
 
-enum GradientProgressBarMenuCase: Int {
+enum GradientLoadingBarMenuCase: Int {
     case button = 0
     case statusBar = 1
     case statusBarWithSafe = 2
     case none = -1
 }
 
-protocol GradientProgressMainViewModelEvents {
+protocol GradientLoadingMainViewModelEvents {
     var showButtonScreens: (() -> Void)? {get set}
     var showStatusBarScreens: (() -> Void)? {get set}
     var showStatusBarWithSafeAreaScreens: (() -> Void)? {get set}
 }
 
-class GradientProgressMainViewModel: LTViewModel {
+class GradientLoadingMainViewModel: LTViewModel {
 
     // MARK: - Events
     var showButtonScreens: (() -> Void)?
@@ -44,7 +44,7 @@ class GradientProgressMainViewModel: LTViewModel {
 
     // MARK: - Helpers
     func openScreen(withIndexPath indexPath: IndexPath) {
-        let menuIndex = GradientProgressBarMenuCase(rawValue: indexPath.row) ?? .none
+        let menuIndex = GradientLoadingBarMenuCase(rawValue: indexPath.row) ?? .none
         switch menuIndex {
         case .button:
             showButtonScreens!()

@@ -1,5 +1,5 @@
 //
-//  LTViewController+GradientProgressBar.swift
+//  LTViewController+GradientLoadingBar.swift
 //  LibrariesPrototype
 //
 //  Created by Ozgun Emre Zor on 23/04/2019.
@@ -10,15 +10,15 @@ import Foundation
 
 extension LTViewController {
 
-    func showGradientProgressBar() {
+    func showGradientLoadingBar() {
         gradientLoadingBar.show()
     }
 
-    func hideGradientProgressBar() {
+    func hideGradientLoadingBar() {
         gradientLoadingBar.hide()
     }
 
-    func toggleGradientProgressBar() {
+    func toggleGradientLoadingBar() {
         gradientLoadingBar.toggle()
     }
 }

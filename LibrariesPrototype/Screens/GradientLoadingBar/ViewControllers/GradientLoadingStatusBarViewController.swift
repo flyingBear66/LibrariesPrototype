@@ -1,5 +1,5 @@
 //
-//  GradientProgressStatusBarViewController.swift
+//  GradientLoadingStatusBarViewController.swift
 //  LibrariesPrototype
 //
 //  Created by Ozgun Emre Zor on 23/04/2019.
@@ -7,15 +7,15 @@
 //
 
 import UIKit
+import GradientLoadingBar
 
-class GradientProgressStatusBarViewController: LTViewController {
-    // MARK: - UIControls
-
+class GradientLoadingStatusBarViewController: LTViewController {
+    
     // MARK: - Variables
-    private var viewModel: GradientProgressStatusBarViewModel!
+    private var viewModel: GradientLoadingStatusBarViewModel!
 
     // MARK: - View LifeCycle
-    init(withViewModel viewModel: GradientProgressStatusBarViewModel) {
+    init(withViewModel viewModel: GradientLoadingStatusBarViewModel) {
         super.init()
         self.viewModel = viewModel
         setupViews()
@@ -37,6 +37,7 @@ class GradientProgressStatusBarViewController: LTViewController {
     }
 
     func updateUI() {
+        showGradientLoadingBar()
     }
     // MARK: - UI Actions
 }

@@ -1,5 +1,5 @@
 //
-//  GradientProgressStatusBarViewModel.swift
+//  GradientLoadingStatusBarViewModel.swift
 //  LibrariesPrototype
 //
 //  Created by Ozgun Emre Zor on 23/04/2019.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-class GradientProgressStatusBarViewModel: LTViewModel {
+class GradientLoadingStatusBarViewModel: LTViewModel {
 
 }

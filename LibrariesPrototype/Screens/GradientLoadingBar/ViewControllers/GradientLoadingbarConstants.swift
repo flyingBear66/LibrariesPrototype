@@ -1,5 +1,5 @@
 //
-//  GradientProgressbarConstants.swift
+//  GradientLoadingbarConstants.swift
 //  LibrariesPrototype
 //
 //  Created by Ozgun Emre Zor on 23/04/2019.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct GradientProgressbarConstants {
-    static let height = 3.0
+struct GradientLoadingBarConstants {
+    static let height = 5.0
 }

@@ -20,7 +20,7 @@ protocol MainViewModelEvents {
     var showNativeNetworkingScreens: (() -> Void)? {get set}
     var showEmptyDataSet: (() -> Void)? {get set}
     var showRxSwiftScreens: (() -> Void)? {get set}
-    var showGradientProgressBarScreens: (() -> Void)? {get set}
+    var showGradientLoadingBarScreens: (() -> Void)? {get set}
 }
 
 class MainViewModel: LTViewModel, MainViewModelEvents {
@@ -29,7 +29,7 @@ class MainViewModel: LTViewModel, MainViewModelEvents {
     var showNativeNetworkingScreens: (() -> Void)?
     var showEmptyDataSet: (() -> Void)?
     var showRxSwiftScreens: (() -> Void)?
-    var showGradientProgressBarScreens: (() -> Void)?
+    var showGradientLoadingBarScreens: (() -> Void)?
 
     // MARK: - Variables
     private let service: MainService!
@@ -60,7 +60,7 @@ class MainViewModel: LTViewModel, MainViewModelEvents {
         case .rxSwift:
             showRxSwiftScreens!()
         case .gradeintProgressBar:
-            showGradientProgressBarScreens!()
+            showGradientLoadingBarScreens!()
         case .none:
             print("Default case. Error happened or index not exist")            
         }

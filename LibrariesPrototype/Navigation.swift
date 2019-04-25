@@ -76,8 +76,8 @@ extension Navigation {
             self.openRxSwiftAlamofireScreens()
         }
 
-        viewModel.showGradientProgressBarScreens = { [unowned self] in
-            self.openGradientProgressBarScreens()
+        viewModel.showGradientLoadingBarScreens = { [unowned self] in
+            self.openGradientLoadingBarScreens()
         }
         
         currentViewController = MainViewController(withViewModel: viewModel)
@@ -162,42 +162,42 @@ extension Navigation {
         pushTo(viewContoller: currentViewController, ReposViewController.self)
     }
 
-    // MARK: GradientProgressBar
-    private func openGradientProgressBarScreens() {
-        let viewModel = GradientProgressMainViewModel()
+    // MARK: GradientLoadingBar
+    private func openGradientLoadingBarScreens() {
+        let viewModel = GradientLoadingMainViewModel()
 
         viewModel.showButtonScreens = { [unowned self] in
-            self.openGradientProgressButton()
+            self.openGradientLoadingButton()
         }
 
         viewModel.showStatusBarScreens = { [unowned self] in
-            self.openGradientProgressStatusBar()
+            self.openGradientLoadingStatusBar()
         }
 
         viewModel.showStatusBarWithSafeAreaScreens = { [unowned self] in
-            self.openGradientProgressStatusBarWithSafeArea()
+            self.openGradientLoadingStatusBarWithSafeArea()
         }
 
-        currentViewController = GradientProgressMainViewController(withViewModel: viewModel)
-        pushTo(viewContoller: currentViewController, GradientProgressMainViewController.self)
+        currentViewController = GradientLoadingMainViewController(withViewModel: viewModel)
+        pushTo(viewContoller: currentViewController, GradientLoadingMainViewController.self)
     }
 
-    private func openGradientProgressButton() {
-        let viewModel = GradientProgressButtonViewModel()
-        currentViewController = GradientProgressButtonViewController(withViewModel: viewModel)
-        pushTo(viewContoller: currentViewController, GradientProgressButtonViewController.self)
+    private func openGradientLoadingButton() {
+        let viewModel = GradientLoadingButtonViewModel()
+        currentViewController = GradientLoadingButtonViewController(withViewModel: viewModel)
+        pushTo(viewContoller: currentViewController, GradientLoadingButtonViewController.self)
     }
 
-    private func openGradientProgressStatusBar() {
-        let viewModel = GradientProgressStatusBarViewModel()
-        currentViewController = GradientProgressStatusBarViewController(withViewModel: viewModel)
-        pushTo(viewContoller: currentViewController, GradientProgressStatusBarViewController.self)
+    private func openGradientLoadingStatusBar() {
+        let viewModel = GradientLoadingStatusBarViewModel()
+        currentViewController = GradientLoadingStatusBarViewController(withViewModel: viewModel)
+        pushTo(viewContoller: currentViewController, GradientLoadingStatusBarViewController.self)
     }
 
-    private func openGradientProgressStatusBarWithSafeArea() {
-        let viewModel = GradientProgressStatusBarWithSafeAreaViewModel()
-        currentViewController = GradientProgressStatusBarWithSafeAreaViewController(withViewModel: viewModel)
-        pushTo(viewContoller: currentViewController, GradientProgressStatusBarWithSafeAreaViewController.self)
+    private func openGradientLoadingStatusBarWithSafeArea() {
+        let viewModel = GradientLoadingStatusBarWithSafeAreaViewModel()
+        currentViewController = GradientLoadingStatusBarWithSafeAreaViewController(withViewModel: viewModel)
+        pushTo(viewContoller: currentViewController, GradientLoadingStatusBarWithSafeAreaViewController.self)
     }
 }
 

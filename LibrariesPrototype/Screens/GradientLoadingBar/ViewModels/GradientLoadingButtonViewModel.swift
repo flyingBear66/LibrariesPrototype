@@ -1,5 +1,5 @@
 //
-//  GradientProgressStatusBarWithSafeAreaViewModel.swift
+//  GradientLoadingButtonViewModel.swift
 //  LibrariesPrototype
 //
 //  Created by Ozgun Emre Zor on 23/04/2019.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-class GradientProgressStatusBarWithSafeAreaViewModel: LTViewModel {
+class GradientLoadingButtonViewModel: LTViewModel {
 
 }
