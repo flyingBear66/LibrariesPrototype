@@ -9,10 +9,20 @@
 import Foundation
 
 class LTService {
-    // TODO:
-    let marvelAPIClient = MarvelAPIClient(publicKey: "8b588a7a6c43e67b5a8baea03512f8db",
-                                          privateKey: "c1fdb043e31867a447e8b1cb9232e649ae7ebf8f")
+
+    let marvelAPIClient: MarvelAPIClient
+    let githubAPIClient: AlamofireHTTPClient
     
-    // TODO:
-    let githubAPIClient = AlamofireHTTPClient()
+    init() {
+        self.marvelAPIClient = MarvelAPIClient(publicKey: "8b588a7a6c43e67b5a8baea03512f8db",
+                                              privateKey: "c1fdb043e31867a447e8b1cb9232e649ae7ebf8f")
+        
+        // TODO:
+        self.githubAPIClient = AlamofireHTTPClient()
+    }
+    
+    init(withMarvelAPIClient marvelAPIClient: MarvelAPIClient, githubAPIClient: AlamofireHTTPClient) {
+        self.marvelAPIClient = marvelAPIClient
+        self.githubAPIClient = githubAPIClient
+    }
 }

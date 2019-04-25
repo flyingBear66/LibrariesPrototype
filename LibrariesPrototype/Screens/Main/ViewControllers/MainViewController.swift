@@ -17,7 +17,7 @@ class MainViewController: LTViewController {
     }()
     
     // MARK: - Variables
-    private var viewModel: MainViewModel!
+    var viewModel: MainViewModel!
     
     // MARK: - View LifeCycle
     init(withViewModel viewModel: MainViewModel) {

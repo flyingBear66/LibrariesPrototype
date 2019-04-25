@@ -6,6 +6,7 @@
 //  Copyright © 2019 Ozgun Zor. All rights reserved.
 //
 
+import Swinject
 import UIKit
 
 class Navigation {
@@ -19,13 +20,49 @@ class Navigation {
     private var window: LTWindow
     private var currentViewController: LTViewController!
     
+    lazy var container = Container() { container in
+        // Networking Clients
+        container.register(MarvelAPIClient.self) { _ in MarvelAPIClient(publicKey: "8b588a7a6c43e67b5a8baea03512f8db",
+                                                                        privateKey: "c1fdb043e31867a447e8b1cb9232e649ae7ebf8f")}
+        container.register(AlamofireHTTPClient.self) { _ in AlamofireHTTPClient()}
+        
+        // Services
+        container.register(MainService.self) { r in MainService(withMarvelAPIClient: r.resolve(MarvelAPIClient.self)!,
+                                                                githubAPIClient: r.resolve(AlamofireHTTPClient.self)!)}
+        
+        // ViewModels
+        container.register(MainViewModel.self) { r in
+            let viewModel = MainViewModel(withService: r.resolve(MainService.self)!)
+            viewModel.showNativeNetworkingScreens = { [unowned self] in
+                self.openNativeNetworkingTestScreens()
+            }
+            
+            viewModel.showEmptyDataSet = { [unowned self] in
+                self.openEmptyDataSetScreens()
+            }
+            
+            viewModel.showRxSwiftScreens = { [unowned self] in
+                self.openRxSwiftAlamofireScreens()
+            }
+            
+            viewModel.showGradientLoadingBarScreens = { [unowned self] in
+                self.openGradientLoadingBarScreens()
+            }
+            return viewModel
+        }
+        
+        // ViewController
+        container.register(MainViewController.self) { r in MainViewController(withViewModel: r.resolve(MainViewModel.self)!)}
+    }
+
+    
     // MARK: - Lifecycle
     init(window: LTWindow) {
         self.navigationController = LTNavigationController()
         self.window = window
     }
-    
 }
+
 // MARK: - Public
 extension Navigation {
     func getCurrentView() -> UIView {
@@ -61,26 +98,7 @@ extension Navigation {
     
     // MARK: Native Networking Test with Marvel API
     private func openMainMenu() {
-        let service = MainService()
-        let viewModel = MainViewModel(withService: service)
-        
-        viewModel.showNativeNetworkingScreens = { [unowned self] in
-            self.openNativeNetworkingTestScreens()
-        }
-        
-        viewModel.showEmptyDataSet = { [unowned self] in
-            self.openEmptyDataSetScreens()
-        }
-        
-        viewModel.showRxSwiftScreens = { [unowned self] in
-            self.openRxSwiftAlamofireScreens()
-        }
-
-        viewModel.showGradientLoadingBarScreens = { [unowned self] in
-            self.openGradientLoadingBarScreens()
-        }
-        
-        currentViewController = MainViewController(withViewModel: viewModel)
+        currentViewController = container.resolve(MainViewController.self)!
         navigateTo(viewContoller: currentViewController!, MainViewController.self)
     }
     
