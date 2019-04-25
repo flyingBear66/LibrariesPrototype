@@ -21,6 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.application = Application(window: window)
         self.window = window
         
+        
+        // Libraries to set up
+        AppDelegateHelper.setupLibrariesOnLaunch()
+
         // Start app first Screen
         self.application?.navigation.firstScreenAsSplash()
         
