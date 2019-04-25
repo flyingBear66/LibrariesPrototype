@@ -8,6 +8,7 @@ target 'LibrariesPrototype' do
   # Pods for LibrariesPrototype
   pod 'Alamofire'
   pod 'AlamofireNetworkActivityLogger', '~> 2.4'
+  pod 'CocoaLumberjack/Swift'
   pod 'GradientLoadingBar', '~> 1.0'
   pod 'EmptyDataSet-Swift', '~> 4.2.0'
   pod 'RxCocoa'
