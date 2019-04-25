@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import GradientLoadingBar
 
 class LTViewController: UIViewController {
     
     // MARK: - UIControls
-    
+    let gradientLoadingBar = GradientLoadingBar(height: GradientLoadingBarConstants.height,
+                                                isRelativeToSafeArea: false)
+
     // MARK: - View LifeCycle
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -19,6 +22,11 @@ class LTViewController: UIViewController {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        hideGradientLoadingBar()
     }
     
 }

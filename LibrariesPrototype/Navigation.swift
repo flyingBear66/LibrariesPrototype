@@ -75,6 +75,10 @@ extension Navigation {
         viewModel.showRxSwiftScreens = { [unowned self] in
             self.openRxSwiftAlamofireScreens()
         }
+
+        viewModel.showGradientLoadingBarScreens = { [unowned self] in
+            self.openGradientLoadingBarScreens()
+        }
         
         currentViewController = MainViewController(withViewModel: viewModel)
         navigateTo(viewContoller: currentViewController!, MainViewController.self)
@@ -157,7 +161,44 @@ extension Navigation {
         currentViewController = ReposViewController()
         pushTo(viewContoller: currentViewController, ReposViewController.self)
     }
-    
+
+    // MARK: GradientLoadingBar
+    private func openGradientLoadingBarScreens() {
+        let viewModel = GradientLoadingMainViewModel()
+
+        viewModel.showButtonScreens = { [unowned self] in
+            self.openGradientLoadingButton()
+        }
+
+        viewModel.showStatusBarScreens = { [unowned self] in
+            self.openGradientLoadingStatusBar()
+        }
+
+        viewModel.showStatusBarWithSafeAreaScreens = { [unowned self] in
+            self.openGradientLoadingStatusBarWithSafeArea()
+        }
+
+        currentViewController = GradientLoadingMainViewController(withViewModel: viewModel)
+        pushTo(viewContoller: currentViewController, GradientLoadingMainViewController.self)
+    }
+
+    private func openGradientLoadingButton() {
+        let viewModel = GradientLoadingButtonViewModel()
+        currentViewController = GradientLoadingButtonViewController(withViewModel: viewModel)
+        pushTo(viewContoller: currentViewController, GradientLoadingButtonViewController.self)
+    }
+
+    private func openGradientLoadingStatusBar() {
+        let viewModel = GradientLoadingStatusBarViewModel()
+        currentViewController = GradientLoadingStatusBarViewController(withViewModel: viewModel)
+        pushTo(viewContoller: currentViewController, GradientLoadingStatusBarViewController.self)
+    }
+
+    private func openGradientLoadingStatusBarWithSafeArea() {
+        let viewModel = GradientLoadingStatusBarWithSafeAreaViewModel()
+        currentViewController = GradientLoadingStatusBarWithSafeAreaViewController(withViewModel: viewModel)
+        pushTo(viewContoller: currentViewController, GradientLoadingStatusBarWithSafeAreaViewController.self)
+    }
 }
 
 // MARK: - Navigate methods
