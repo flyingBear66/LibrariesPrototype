@@ -20,46 +20,14 @@ class Navigation {
     private var window: LTWindow
     private var currentViewController: LTViewController!
     
-    lazy var container = Container() { container in
-        // Networking Clients
-        container.register(MarvelAPIClient.self) { _ in MarvelAPIClient(publicKey: "8b588a7a6c43e67b5a8baea03512f8db",
-                                                                        privateKey: "c1fdb043e31867a447e8b1cb9232e649ae7ebf8f")}
-        container.register(AlamofireHTTPClient.self) { _ in AlamofireHTTPClient()}
-        
-        // Services
-        container.register(MainService.self) { r in MainService(withMarvelAPIClient: r.resolve(MarvelAPIClient.self)!,
-                                                                githubAPIClient: r.resolve(AlamofireHTTPClient.self)!)}
-        
-        // ViewModels
-        container.register(MainViewModel.self) { r in
-            let viewModel = MainViewModel(withService: r.resolve(MainService.self)!)
-            viewModel.showNativeNetworkingScreens = { [unowned self] in
-                self.openNativeNetworkingTestScreens()
-            }
-            
-            viewModel.showEmptyDataSet = { [unowned self] in
-                self.openEmptyDataSetScreens()
-            }
-            
-            viewModel.showRxSwiftScreens = { [unowned self] in
-                self.openRxSwiftAlamofireScreens()
-            }
-            
-            viewModel.showGradientLoadingBarScreens = { [unowned self] in
-                self.openGradientLoadingBarScreens()
-            }
-            return viewModel
-        }
-        
-        // ViewController
-        container.register(MainViewController.self) { r in MainViewController(withViewModel: r.resolve(MainViewModel.self)!)}
-    }
-
+    let container = Container()
     
     // MARK: - Lifecycle
     init(window: LTWindow) {
         self.navigationController = LTNavigationController()
         self.window = window
+        
+        registerApp()
     }
 }
 
@@ -104,18 +72,7 @@ extension Navigation {
     
     // MARK: Native Networking Test with Marvel API
     private func openNativeNetworkingTestScreens() {
-        let service = HeroListService()
-        let viewModel = HeroListViewModel(withService: service)
-        
-        viewModel.showHeroSearch = { [unowned self] in
-            self.openHeroSearchScreen()
-        }
-        
-        viewModel.showHeroDetail = { [unowned self] heroId in
-            self.openHeroDetailScreen(withHeroId: heroId)
-        }
-            
-        currentViewController = HeroListViewController(withViewModel: viewModel)
+        currentViewController = container.resolve(HeroListViewController.self)!
         pushTo(viewContoller: currentViewController, HeroListViewController.self)
     }
     
@@ -140,81 +97,50 @@ extension Navigation {
     
     // MARK: Empty Data Set
     private func openEmptyDataSetScreens() {
-        let viewModel = MainEmptyDataSetListViewModel()
-        
-        viewModel.showEmptyDataSetList = { [unowned self] in
-            self.openEmptyDataSetList()
-        }
-        
-        viewModel.showEmptyDataSetListWithImage = { [unowned self] in
-            self.openEmptyDataSetListWithImage()
-        }
-        
-        viewModel.showEmptyDataSetListWithButton = { [unowned self] in
-            self.openEmptyDataSetListWithButton()
-        }
-        
-        currentViewController = MainEmptyDataSetListViewController(withViewModel: viewModel)
+        currentViewController = container.resolve(MainEmptyDataSetListViewController.self)
         pushTo(viewContoller: currentViewController, MainEmptyDataSetListViewController.self)
     }
     
     private func openEmptyDataSetList() {
-        currentViewController = EmptyDataSetListViewController()
+        currentViewController = container.resolve(EmptyDataSetListViewController.self)
         pushTo(viewContoller: currentViewController, EmptyDataSetListViewController.self)
     }
     
     private func openEmptyDataSetListWithButton() {
-        currentViewController = EmptyDataSetListWithButtonViewController()
+        currentViewController = container.resolve(EmptyDataSetListWithButtonViewController.self)
         pushTo(viewContoller: currentViewController, EmptyDataSetListWithButtonViewController.self)
     }
     
     private func openEmptyDataSetListWithImage() {
-        currentViewController = EmptyDataSetListWithImageViewController()
+        currentViewController = container.resolve(EmptyDataSetListWithImageViewController.self)
         pushTo(viewContoller: currentViewController, EmptyDataSetListWithImageViewController.self)
     }
     
     // MARK: RxSwift+Alamofire
 
     private func openRxSwiftAlamofireScreens() {
-        currentViewController = ReposViewController()
+        currentViewController = container.resolve(ReposViewController.self)
         pushTo(viewContoller: currentViewController, ReposViewController.self)
     }
 
     // MARK: GradientLoadingBar
     private func openGradientLoadingBarScreens() {
-        let viewModel = GradientLoadingMainViewModel()
-
-        viewModel.showButtonScreens = { [unowned self] in
-            self.openGradientLoadingButton()
-        }
-
-        viewModel.showStatusBarScreens = { [unowned self] in
-            self.openGradientLoadingStatusBar()
-        }
-
-        viewModel.showStatusBarWithSafeAreaScreens = { [unowned self] in
-            self.openGradientLoadingStatusBarWithSafeArea()
-        }
-
-        currentViewController = GradientLoadingMainViewController(withViewModel: viewModel)
+        currentViewController = container.resolve(GradientLoadingMainViewController.self)
         pushTo(viewContoller: currentViewController, GradientLoadingMainViewController.self)
     }
 
     private func openGradientLoadingButton() {
-        let viewModel = GradientLoadingButtonViewModel()
-        currentViewController = GradientLoadingButtonViewController(withViewModel: viewModel)
+        currentViewController = container.resolve(GradientLoadingButtonViewController.self)
         pushTo(viewContoller: currentViewController, GradientLoadingButtonViewController.self)
     }
 
     private func openGradientLoadingStatusBar() {
-        let viewModel = GradientLoadingStatusBarViewModel()
-        currentViewController = GradientLoadingStatusBarViewController(withViewModel: viewModel)
+        currentViewController = container.resolve(GradientLoadingStatusBarViewController.self)
         pushTo(viewContoller: currentViewController, GradientLoadingStatusBarViewController.self)
     }
 
     private func openGradientLoadingStatusBarWithSafeArea() {
-        let viewModel = GradientLoadingStatusBarWithSafeAreaViewModel()
-        currentViewController = GradientLoadingStatusBarWithSafeAreaViewController(withViewModel: viewModel)
+        currentViewController = container.resolve(GradientLoadingStatusBarWithSafeAreaViewController.self)
         pushTo(viewContoller: currentViewController, GradientLoadingStatusBarWithSafeAreaViewController.self)
     }
 }
@@ -252,3 +178,179 @@ extension Navigation {
         }
     }
 }
+
+// MARK: - Swifject methods
+extension Navigation {
+    
+    private func registerApp() {
+        registerHTTPClients()
+        registerGradientLoadingBar()
+        registerEmptyDataSetScreens()
+        registerMainScreen()
+        registerNativeNetworkingScreens()
+        registerRxSwiftScreens()
+    }
+    
+    private func registerHTTPClients() {
+        // Networking Clients
+        container.register(MarvelAPIClient.self) { _ in MarvelAPIClient(publicKey: "8b588a7a6c43e67b5a8baea03512f8db",
+                                                                        privateKey: "c1fdb043e31867a447e8b1cb9232e649ae7ebf8f")}
+        container.register(AlamofireHTTPClient.self) { _ in AlamofireHTTPClient()}
+    }
+    
+    private func registerGradientLoadingBar() {
+        // ViewModels
+        container.register(GradientLoadingMainViewModel.self) { _ in
+            let viewModel = GradientLoadingMainViewModel()
+            
+            viewModel.showButtonScreens = { [unowned self] in
+                self.openGradientLoadingButton()
+            }
+            
+            viewModel.showStatusBarScreens = { [unowned self] in
+                self.openGradientLoadingStatusBar()
+            }
+            
+            viewModel.showStatusBarWithSafeAreaScreens = { [unowned self] in
+                self.openGradientLoadingStatusBarWithSafeArea()
+            }
+            return viewModel
+        }
+        
+        container.register(GradientLoadingButtonViewModel.self) { _ in
+            GradientLoadingButtonViewModel()
+        }
+        
+        container.register(GradientLoadingStatusBarViewModel.self) { _ in
+            GradientLoadingStatusBarViewModel()
+        }
+        
+        container.register(GradientLoadingStatusBarWithSafeAreaViewModel.self) { _ in
+            GradientLoadingStatusBarWithSafeAreaViewModel()
+        }
+        
+        // ViewControllers
+        container.register(GradientLoadingMainViewController.self) { r in
+            GradientLoadingMainViewController(withViewModel: r.resolve(GradientLoadingMainViewModel.self)!)
+        }
+        
+        container.register(GradientLoadingButtonViewController.self) { r in
+            GradientLoadingButtonViewController(withViewModel: r.resolve(GradientLoadingButtonViewModel.self)!)
+        }
+        
+        container.register(GradientLoadingStatusBarViewController.self) { r in
+            GradientLoadingStatusBarViewController(withViewModel: r.resolve(GradientLoadingStatusBarViewModel.self)!)
+        }
+        
+        container.register(GradientLoadingStatusBarWithSafeAreaViewController.self) { r in
+            GradientLoadingStatusBarWithSafeAreaViewController(withViewModel: r.resolve(GradientLoadingStatusBarWithSafeAreaViewModel.self)!)
+        }
+    }
+    
+    private func registerNativeNetworkingScreens() {
+        // Services
+        container.register(HeroListService.self) { r in
+            HeroListService(githubAPIClient: r.resolve(AlamofireHTTPClient.self)!)
+        }
+        
+        // ViewModel
+        container.register(HeroListViewModel.self) { r in
+            let viewModel = HeroListViewModel(withService: r.resolve(HeroListService.self)!)
+            
+            viewModel.showHeroSearch = { [unowned self] in
+                self.openHeroSearchScreen()
+            }
+            
+            viewModel.showHeroDetail = { [unowned self] heroId in
+                self.openHeroDetailScreen(withHeroId: heroId)
+            }
+            return viewModel
+        }
+        
+        // ViewControllers
+        container.register(HeroListViewController.self) { r in
+            HeroListViewController(withViewModel: r.resolve(HeroListViewModel.self)!)
+        }
+    }
+    
+    private func registerEmptyDataSetScreens() {
+        // ViewModels
+        container.register(MainEmptyDataSetListViewModel.self) { r in
+            let viewModel = MainEmptyDataSetListViewModel()
+
+            viewModel.showEmptyDataSetList = { [unowned self] in
+                self.openEmptyDataSetList()
+            }
+            
+            viewModel.showEmptyDataSetListWithImage = { [unowned self] in
+                self.openEmptyDataSetListWithImage()
+            }
+            
+            viewModel.showEmptyDataSetListWithButton = { [unowned self] in
+                self.openEmptyDataSetListWithButton()
+            }
+            return viewModel
+        }
+        
+        // ViewControllers
+        container.register(MainEmptyDataSetListViewController.self) { r in
+            MainEmptyDataSetListViewController(withViewModel: r.resolve(MainEmptyDataSetListViewModel.self)!)
+        }
+        container.register(EmptyDataSetListViewController.self) { _ in
+            EmptyDataSetListViewController()
+        }
+        container.register(EmptyDataSetListWithButtonViewController.self) { _ in
+            EmptyDataSetListWithButtonViewController()
+        }
+        container.register(EmptyDataSetListWithImageViewController.self) { _ in
+            EmptyDataSetListWithImageViewController()
+        }
+    }
+    
+    private func registerMainScreen() {
+        // Services
+        container.register(MainService.self) { r in MainService(marvelAPIClient: r.resolve(MarvelAPIClient.self)!,
+                                                                githubAPIClient: r.resolve(AlamofireHTTPClient.self)!)}
+        
+        // ViewModels
+        container.register(MainViewModel.self) { r in
+            let viewModel = MainViewModel(withService: r.resolve(MainService.self)!)
+            viewModel.showNativeNetworkingScreens = { [unowned self] in
+                self.openNativeNetworkingTestScreens()
+            }
+            
+            viewModel.showEmptyDataSet = { [unowned self] in
+                self.openEmptyDataSetScreens()
+            }
+            
+            viewModel.showRxSwiftScreens = { [unowned self] in
+                self.openRxSwiftAlamofireScreens()
+            }
+            
+            viewModel.showGradientLoadingBarScreens = { [unowned self] in
+                self.openGradientLoadingBarScreens()
+            }
+            return viewModel
+        }
+        
+        // ViewController
+        container.register(MainViewController.self) { r in MainViewController(withViewModel: r.resolve(MainViewModel.self)!)}
+    }
+    
+    func registerRxSwiftScreens() {
+        // Services
+        container.register(ReposService.self) { r in
+            ReposService(githubAPIClient: r.resolve(AlamofireHTTPClient.self)!)
+        }
+        
+        // ViewModels
+        container.register(ReposViewModel.self) { r in
+            ReposViewModel(service: r.resolve(ReposService.self)!)
+        }
+        // ViewControllers
+        container.register(ReposViewController.self) { r in
+            ReposViewController(viewModel: r.resolve(ReposViewModel.self)!)
+        }
+    }
+}
+

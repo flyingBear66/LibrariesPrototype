@@ -30,7 +30,16 @@ class ReposViewController: LTRXViewController {
     var viewModel = ReposViewModel()
 
     // MARK: - View LifeCycle
-
+    
+    init(viewModel: ReposViewModel) {
+        super.init()
+        self.viewModel = viewModel
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupViews()
