@@ -53,14 +53,7 @@ extension Navigation {
     
     // MARK: Native Networking Test with Marvel API
     private func openSplash() {
-        let service = SplashService()
-        let viewModel = SplashViewModel(withService: service)
-        
-        viewModel.showMainMenu = { [unowned self] in
-            self.openMainMenu()
-        }
-        
-        currentViewController = SplashViewController(withViewModel: viewModel)
+        currentViewController = container.resolve(SplashViewController.self)
         navigateTo(viewContoller: currentViewController!, SplashViewController.self)
     }
     
@@ -77,70 +70,62 @@ extension Navigation {
     }
     
     private func openHeroDetailScreen(withHeroId heroId: Int) {
-        let heroDetailService = HeroDetailService()
-        let heroDetailViewModel = HeroDetailViewModel(withService: heroDetailService, heroId: heroId)
-        
-        // TODO: make it work with favorited closures.
-//        heroDetailViewModel.favorited.bind { favorited in
-//            favoritedClosure(favorited)
-//        }
-        currentViewController = HeroDetailViewController(withViewModel: heroDetailViewModel)
+        let viewController: HeroDetailViewController = container.resolve(HeroDetailViewController.self)!
+        viewController.heroId = heroId
+        currentViewController = viewController
         pushTo(viewContoller: currentViewController, HeroDetailViewController.self)
     }
 
     private func openHeroSearchScreen() {
-        let heroSearchService = HeroSearchService()
-        let heroSearchViewModel = HeroSearchViewModel(withService: heroSearchService)
-        currentViewController = HeroSearchViewController(withViewModel: heroSearchViewModel)
+        currentViewController = container.resolve(HeroSearchViewController.self)!
         pushTo(viewContoller: currentViewController, HeroSearchViewController.self)
     }
     
     // MARK: Empty Data Set
     private func openEmptyDataSetScreens() {
-        currentViewController = container.resolve(MainEmptyDataSetListViewController.self)
+        currentViewController = container.resolve(MainEmptyDataSetListViewController.self)!
         pushTo(viewContoller: currentViewController, MainEmptyDataSetListViewController.self)
     }
     
     private func openEmptyDataSetList() {
-        currentViewController = container.resolve(EmptyDataSetListViewController.self)
+        currentViewController = container.resolve(EmptyDataSetListViewController.self)!
         pushTo(viewContoller: currentViewController, EmptyDataSetListViewController.self)
     }
     
     private func openEmptyDataSetListWithButton() {
-        currentViewController = container.resolve(EmptyDataSetListWithButtonViewController.self)
+        currentViewController = container.resolve(EmptyDataSetListWithButtonViewController.self)!
         pushTo(viewContoller: currentViewController, EmptyDataSetListWithButtonViewController.self)
     }
     
     private func openEmptyDataSetListWithImage() {
-        currentViewController = container.resolve(EmptyDataSetListWithImageViewController.self)
+        currentViewController = container.resolve(EmptyDataSetListWithImageViewController.self)!
         pushTo(viewContoller: currentViewController, EmptyDataSetListWithImageViewController.self)
     }
     
     // MARK: RxSwift+Alamofire
-
     private func openRxSwiftAlamofireScreens() {
-        currentViewController = container.resolve(ReposViewController.self)
+        currentViewController = container.resolve(ReposViewController.self)!
         pushTo(viewContoller: currentViewController, ReposViewController.self)
     }
 
     // MARK: GradientLoadingBar
     private func openGradientLoadingBarScreens() {
-        currentViewController = container.resolve(GradientLoadingMainViewController.self)
+        currentViewController = container.resolve(GradientLoadingMainViewController.self)!
         pushTo(viewContoller: currentViewController, GradientLoadingMainViewController.self)
     }
 
     private func openGradientLoadingButton() {
-        currentViewController = container.resolve(GradientLoadingButtonViewController.self)
+        currentViewController = container.resolve(GradientLoadingButtonViewController.self)!
         pushTo(viewContoller: currentViewController, GradientLoadingButtonViewController.self)
     }
 
     private func openGradientLoadingStatusBar() {
-        currentViewController = container.resolve(GradientLoadingStatusBarViewController.self)
+        currentViewController = container.resolve(GradientLoadingStatusBarViewController.self)!
         pushTo(viewContoller: currentViewController, GradientLoadingStatusBarViewController.self)
     }
 
     private func openGradientLoadingStatusBarWithSafeArea() {
-        currentViewController = container.resolve(GradientLoadingStatusBarWithSafeAreaViewController.self)
+        currentViewController = container.resolve(GradientLoadingStatusBarWithSafeAreaViewController.self)!
         pushTo(viewContoller: currentViewController, GradientLoadingStatusBarWithSafeAreaViewController.self)
     }
 }
@@ -188,7 +173,31 @@ extension Navigation {
         registerEmptyDataSetScreens()
         registerMainScreen()
         registerNativeNetworkingScreens()
+        registerSplash()
         registerRxSwiftScreens()
+    }
+    
+    private func registerSplash() {
+        // Services
+        container.register(SplashService.self) { _ in
+            SplashService()
+        }
+        
+        // ViewModels
+        container.register(SplashViewModel.self) { r in
+            let viewModel = SplashViewModel(withService: r.resolve(SplashService.self)!)
+            
+            viewModel.showMainMenu = { [unowned self] in
+                self.openMainMenu()
+            }
+            
+            return viewModel
+        }
+    
+        // ViewControllers
+        container.register(SplashViewController.self) { r in
+            SplashViewController(withViewModel: r.resolve(SplashViewModel.self)!)
+        }
     }
     
     private func registerHTTPClients() {
@@ -250,11 +259,21 @@ extension Navigation {
     private func registerNativeNetworkingScreens() {
         // Services
         container.register(HeroListService.self) { r in
-            HeroListService(githubAPIClient: r.resolve(AlamofireHTTPClient.self)!)
+            HeroListService(marvelAPIClient: r.resolve(MarvelAPIClient.self)!)
+        }
+        container.register(HeroDetailService.self) { r in
+            HeroDetailService(marvelAPIClient: r.resolve(MarvelAPIClient.self)!)
+        }
+        container.register(HeroSearchService.self) { r in
+            HeroSearchService(marvelAPIClient: r.resolve(MarvelAPIClient.self)!)
         }
         
         // ViewModel
         container.register(HeroListViewModel.self) { r in
+            // TODO: make it work with favorited closures.
+            //        heroDetailViewModel.favorited.bind { favorited in
+            //            favoritedClosure(favorited)
+            //        }
             let viewModel = HeroListViewModel(withService: r.resolve(HeroListService.self)!)
             
             viewModel.showHeroSearch = { [unowned self] in
@@ -266,10 +285,25 @@ extension Navigation {
             }
             return viewModel
         }
+        container.register(HeroDetailViewModel.self) { r in
+            HeroDetailViewModel(withService: r.resolve(HeroDetailService.self)!)
+        }
+        container.register(HeroDetailViewModel.self) { r in
+            HeroDetailViewModel(withService: r.resolve(HeroDetailService.self)!)
+        }
+        container.register(HeroSearchViewModel.self) { r in
+            HeroSearchViewModel(withService: r.resolve(HeroSearchService.self)!)
+        }
         
         // ViewControllers
         container.register(HeroListViewController.self) { r in
             HeroListViewController(withViewModel: r.resolve(HeroListViewModel.self)!)
+        }
+        container.register(HeroDetailViewController.self) { r in
+            HeroDetailViewController(withViewModel: r.resolve(HeroDetailViewModel.self)!)
+        }
+        container.register(HeroSearchViewController.self) { r in
+            HeroSearchViewController(withViewModel: r.resolve(HeroSearchViewModel.self)!)
         }
     }
     

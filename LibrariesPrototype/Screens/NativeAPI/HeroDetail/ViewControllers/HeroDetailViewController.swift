@@ -10,10 +10,7 @@ import UIKit
 
 class HeroDetailViewController: LTViewController {
     
-    static let cardCornerRadius: CGFloat = 5
-
     // MARK: - UIControls
-
     let heroNameLabel: LTLabel = {
         let label = LTLabel()
         label.font = UIFont.systemFont(ofSize: 30, weight: .heavy)
@@ -74,9 +71,18 @@ class HeroDetailViewController: LTViewController {
         view.backgroundColor = .green
         return view
     }()
+    
+    static let cardCornerRadius: CGFloat = 5
 
     // MARK: - Variables
     private var viewModel: HeroDetailViewModel!
+    public var heroId: Int? {
+        didSet {
+            if let heroId = heroId {
+                viewModel.setHeroId(heroId)
+            }
+        }
+    }
     
     // MARK: - View LifeCycle
     required init(withViewModel viewModel: LTViewModel) {
@@ -93,6 +99,10 @@ class HeroDetailViewController: LTViewController {
         super.viewDidLoad()
         updateUI()
         bindViewModel()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         viewModel.getHeroDetail()
     }
     
