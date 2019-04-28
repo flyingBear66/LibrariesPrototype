@@ -1,8 +1,8 @@
 //
-//  MainViewController.swift
-//  testiOSOzgunEmreZor
+//  MainStretchyHeaderViewController.swift
+//  LibrariesPrototype
 //
-//  Created by Ozgun Zor on 3/30/19.
+//  Created by Ozgun Zor Personal on 28/04/2019.
 //  Copyright © 2019 Ozgun Zor. All rights reserved.
 //
 
@@ -12,23 +12,29 @@ import RxSwift
 import SVProgressHUD
 import UIKit
 
-class ReposViewController: LTRXViewController {
+class MainStretchyHeaderViewController: LTRXViewController {
     
     // MARK: - UIControls
-    
     let collectionView: LTCollectionView = {
-        let layout = LTCollectionViewFlowLayout()
-        layout.minimumLineSpacing = 5
-        layout.scrollDirection = .vertical
-        let newCollectionView = LTCollectionView(frame: .zero, collectionViewLayout: layout)
-        newCollectionView.backgroundColor = .clear
-        newCollectionView.register(RepositoryCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
-        return newCollectionView
+        let layout = StretchyHeaderLayout()
+//        layout.minimumLineSpacing = 5
+//        layout.scrollDirection = .vertical
+        let collectionView = LTCollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.backgroundColor = .clear
+        collectionView.register(RepositoryCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.register(StretchyHeaderView.self,
+                                forSupplementaryViewOfKind: UICollectionElementKindSectionHeader,
+                                withReuseIdentifier: "header")
+        return collectionView
     }()
+    
+    var headerView: StretchyHeaderView?
     
     // MARK: - Variables
     var viewModel = ReposViewModel()
+    
 
+    
     // MARK: - View LifeCycle
     
     init(viewModel: ReposViewModel) {
@@ -49,7 +55,7 @@ class ReposViewController: LTRXViewController {
     // MARK: - Helpers
     private func setupViews() {
         // View
-        title = "FlyingBear Public Repos"
+        title = "StretchyHeader"
         view.backgroundColor = .white
         
         // CollectionView
@@ -104,12 +110,10 @@ class ReposViewController: LTRXViewController {
         viewModel.getRepos()
     }
 
-    // MARK: - UIActions
 }
 
 // MARK: - CollectionView DataSource
-
-extension ReposViewController: UICollectionViewDataSource {
+extension MainStretchyHeaderViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.viewModel.repositoryViewModels.value.count
     }
@@ -123,24 +127,35 @@ extension ReposViewController: UICollectionViewDataSource {
         cell.viewModel = cellViewModel
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath) as? StretchyHeaderView
+        
+        return headerView!
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return .init(width: view.frame.width, height: 200)
+    }
 }
 
-extension ReposViewController: UICollectionViewDelegateFlowLayout {
-    
+extension MainStretchyHeaderViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let kWhateverHeightYouWant = 100
-        return CGSize(width: collectionView.bounds.size.width, height: CGFloat(kWhateverHeightYouWant))
+        return .init(width: view.frame.width, height: 100)
     }
     
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if indexPath.row == viewModel.repositoryViewModels.value.count - 2 {
-//            viewModel.getReposMore()
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let contentOffsetY = scrollView.contentOffset.y
+        if contentOffsetY > 0 {
+            return  
         }
+        
+        headerView?.animator.fractionComplete = abs(contentOffsetY) / 100
     }
-
+    
 }
 
-extension ReposViewController: EmptyDataSetSource {
+extension MainStretchyHeaderViewController: EmptyDataSetSource {
     func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
         return NSAttributedString(string: "No Public Repos :(")
     }
