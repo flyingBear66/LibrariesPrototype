@@ -14,6 +14,7 @@ target 'LibrariesPrototype' do
   pod 'RxCocoa'
   pod 'RxSwift'
   pod 'SVProgressHUD'
+  pod 'Swinject'
 
   target 'LibrariesPrototypeTests' do
     inherit! :search_paths
