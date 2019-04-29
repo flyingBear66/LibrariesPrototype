@@ -128,6 +128,13 @@ extension Navigation {
         currentViewController = container.resolve(GradientLoadingStatusBarWithSafeAreaViewController.self)!
         pushTo(viewContoller: currentViewController, GradientLoadingStatusBarWithSafeAreaViewController.self)
     }
+    
+    // MARK: Stretchy Header
+    private func openMainStretchyHeaderViewController() {
+        currentViewController = container.resolve(MainStretchyHeaderViewController.self)!
+        pushTo(viewContoller: currentViewController, MainStretchyHeaderViewController.self)
+    }
+
 }
 
 // MARK: - Navigate methods
@@ -175,6 +182,7 @@ extension Navigation {
         registerNativeNetworkingScreens()
         registerSplash()
         registerRxSwiftScreens()
+        registerStretchyHeaderScreens()
     }
     
     private func registerSplash() {
@@ -364,6 +372,11 @@ extension Navigation {
             viewModel.showGradientLoadingBarScreens = { [unowned self] in
                 self.openGradientLoadingBarScreens()
             }
+            
+            viewModel.showStretchyHeaderScreens = { [unowned self] in
+                self.openMainStretchyHeaderViewController()
+            }
+            
             return viewModel
         }
         
@@ -371,7 +384,7 @@ extension Navigation {
         container.register(MainViewController.self) { r in MainViewController(withViewModel: r.resolve(MainViewModel.self)!)}
     }
     
-    func registerRxSwiftScreens() {
+    private func registerRxSwiftScreens() {
         // Services
         container.register(ReposService.self) { r in
             ReposService(githubAPIClient: r.resolve(AlamofireHTTPClient.self)!)
@@ -384,6 +397,13 @@ extension Navigation {
         // ViewControllers
         container.register(ReposViewController.self) { r in
             ReposViewController(viewModel: r.resolve(ReposViewModel.self)!)
+        }
+    }
+    
+    private func registerStretchyHeaderScreens() {
+        // ViewControllers
+        container.register(MainStretchyHeaderViewController.self) { r in
+            MainStretchyHeaderViewController(viewModel: r.resolve(ReposViewModel.self)!)
         }
     }
 }

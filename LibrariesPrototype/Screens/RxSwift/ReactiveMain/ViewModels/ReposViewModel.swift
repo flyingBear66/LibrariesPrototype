@@ -12,19 +12,16 @@ import RxSwift
 class ReposViewModel: LTRXViewModel {
     
     // MARK: - Variables
-    
     public let repositoryViewModels: Variable<[RepositoryViewModel]> = Variable([])
 
     internal var service: ReposServiceProtocol?
     
     // MARK: - Init
-    
     init(service: ReposServiceProtocol = ReposService.shared()) {
         self.service = service
     }
     
     // MARK: - Service Calls
-    
     func getRepos() {
         self.loading.onNext(true)
         guard let service = service else {

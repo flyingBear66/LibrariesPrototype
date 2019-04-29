@@ -6,8 +6,8 @@
 //  Copyright © 2019 Ozgun Zor. All rights reserved.
 //
 
-import UIKit
 import GradientLoadingBar
+import UIKit
 
 class GradientLoadingButtonViewController: LTViewController {
     
@@ -219,8 +219,8 @@ class GradientLoadingButtonViewController: LTViewController {
         view.backgroundColor = .white
         title = "Button"
     }
-
-    func updateUI() {
+    
+    func addSubviews() {
         view.addSubview(leftTop3GradientButton)
         view.addSubview(top3GradientButton)
         view.addSubview(rightTop3GradientButton)
@@ -242,6 +242,12 @@ class GradientLoadingButtonViewController: LTViewController {
         view.addSubview(leftBottom3GradientButton)
         view.addSubview(bottom3GradientButton)
         view.addSubview(rightBottom3GradientButton)
+    }
+
+    func updateUI() {
+        addSubviews()
+        
+        // TODO: Remove lines for Swiftlint
 
         //
         centerGradientButton.addConstraints([equal(self.view, \.heightAnchor, \.heightAnchor, ratio: 0.1),

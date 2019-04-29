@@ -108,6 +108,13 @@
 		B6586508227221C300773E35 /* AppDelegateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6586507227221C300773E35 /* AppDelegateHelper.swift */; };
 		B658650A2272223C00773E35 /* EnvironmentInfoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65865092272223C00773E35 /* EnvironmentInfoHelper.swift */; };
 		B658650C227222A200773E35 /* EnvironmentInfoConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B658650B227222A200773E35 /* EnvironmentInfoConstants.swift */; };
+		B68EE6B4227605AC00749D62 /* MainStretchyHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68EE6B3227605AC00749D62 /* MainStretchyHeaderViewController.swift */; };
+		B68EE6BB22760B3E00749D62 /* StretchyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68EE6BA22760B3E00749D62 /* StretchyHeaderView.swift */; };
+		B68EE6BD227615B600749D62 /* StretchyHeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68EE6BC227615B600749D62 /* StretchyHeaderLayout.swift */; };
+		B68EE6BF227640DC00749D62 /* LTCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68EE6BE227640DC00749D62 /* LTCollectionReusableView.swift */; };
+		B68EE6C22276410600749D62 /* LTViewPropertyAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68EE6C12276410600749D62 /* LTViewPropertyAnimator.swift */; };
+		B6E319F82276416000AD34F6 /* LTHeavyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E319F72276416000AD34F6 /* LTHeavyLabel.swift */; };
+		B6E319FA2276416E00AD34F6 /* LTLightLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E319F92276416E00AD34F6 /* LTLightLabel.swift */; };
 		F22E94A131A902D1727629A8 /* Pods_LibrariesPrototype.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F2A9BBB640BE5DCB529C15 /* Pods_LibrariesPrototype.framework */; };
 		FB3271EA226F662900B94AE6 /* GradientLoadingMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3271E9226F662900B94AE6 /* GradientLoadingMainViewController.swift */; };
 		FB3271EC226F663500B94AE6 /* GradientLoadingMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3271EB226F663500B94AE6 /* GradientLoadingMainViewModel.swift */; };
@@ -253,6 +260,13 @@
 		B6586507227221C300773E35 /* AppDelegateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateHelper.swift; sourceTree = "<group>"; };
 		B65865092272223C00773E35 /* EnvironmentInfoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentInfoHelper.swift; sourceTree = "<group>"; };
 		B658650B227222A200773E35 /* EnvironmentInfoConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EnvironmentInfoConstants.swift; path = LibrariesPrototype/Common/Helpers/EnvironmentInfoConstants.swift; sourceTree = SOURCE_ROOT; };
+		B68EE6B3227605AC00749D62 /* MainStretchyHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStretchyHeaderViewController.swift; sourceTree = "<group>"; };
+		B68EE6BA22760B3E00749D62 /* StretchyHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyHeaderView.swift; sourceTree = "<group>"; };
+		B68EE6BC227615B600749D62 /* StretchyHeaderLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyHeaderLayout.swift; sourceTree = "<group>"; };
+		B68EE6BE227640DC00749D62 /* LTCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTCollectionReusableView.swift; sourceTree = "<group>"; };
+		B68EE6C12276410600749D62 /* LTViewPropertyAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTViewPropertyAnimator.swift; sourceTree = "<group>"; };
+		B6E319F72276416000AD34F6 /* LTHeavyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTHeavyLabel.swift; sourceTree = "<group>"; };
+		B6E319F92276416E00AD34F6 /* LTLightLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTLightLabel.swift; sourceTree = "<group>"; };
 		C0F2A9BBB640BE5DCB529C15 /* Pods_LibrariesPrototype.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibrariesPrototype.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0101268CB92B19951DB637D /* Pods-LibrariesPrototypeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototypeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototypeTests/Pods-LibrariesPrototypeTests.release.xcconfig"; sourceTree = "<group>"; };
 		FB3271E9226F662900B94AE6 /* GradientLoadingMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLoadingMainViewController.swift; sourceTree = "<group>"; };
@@ -468,6 +482,7 @@
 			children = (
 				9E94B40F2030C19000B8BA18 /* Controls */,
 				9E94B40E2030C19000B8BA18 /* Extensions */,
+				B68EE6C0227640F000749D62 /* Models */,
 				9EEA0F9E226A4BD5008595CC /* ViewControllers */,
 				9E94B40C2030C19000B8BA18 /* ViewModels */,
 				9E94B4112030C19000B8BA18 /* Views */,
@@ -499,7 +514,9 @@
 			children = (
 				9EE91FB0226A36DC0079827F /* LTButton.swift */,
 				B60255D122711806005D31B8 /* LTGradientBarButton.swift */,
+				B6E319F72276416000AD34F6 /* LTHeavyLabel.swift */,
 				9EE91FB2226A36E70079827F /* LTLabel.swift */,
+				B6E319F92276416E00AD34F6 /* LTLightLabel.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -516,6 +533,7 @@
 				9EEA0FA5226A4D56008595CC /* LTTableViewCell.swift */,
 				9EE91FAE226A36CD0079827F /* LTView.swift */,
 				9EA1EC39226BE60000AC5F88 /* LTWindow.swift */,
+				B68EE6BE227640DC00749D62 /* LTCollectionReusableView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -523,12 +541,13 @@
 		9E94B4122030C19000B8BA18 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				FB3271E6226F65FD00B94AE6 /* GradientLoadingBar */,
-				9E62CD39226C811C0078AAC6 /* RxSwift */,
 				9EEA0FBE226A88C1008595CC /* EmptyDataSet */,
+				FB3271E6226F65FD00B94AE6 /* GradientLoadingBar */,
 				9EEA0F3C226A3F3C008595CC /* Main */,
 				9EEA0F50226A4958008595CC /* NativeAPI */,
+				9E62CD39226C811C0078AAC6 /* RxSwift */,
 				9EEA0F3D226A3F46008595CC /* Splash */,
+				B675303D2276050C00BD9AFA /* StretchyHeader */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -927,6 +946,40 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		B675303D2276050C00BD9AFA /* StretchyHeader */ = {
+			isa = PBXGroup;
+			children = (
+				B675303E2276052200BD9AFA /* ViewControllers */,
+				B68EE6B922760B0B00749D62 /* Views */,
+			);
+			path = StretchyHeader;
+			sourceTree = "<group>";
+		};
+		B675303E2276052200BD9AFA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B68EE6B3227605AC00749D62 /* MainStretchyHeaderViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B68EE6B922760B0B00749D62 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B68EE6BC227615B600749D62 /* StretchyHeaderLayout.swift */,
+				B68EE6BA22760B3E00749D62 /* StretchyHeaderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B68EE6C0227640F000749D62 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B68EE6C12276410600749D62 /* LTViewPropertyAnimator.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		C6F8907B2D6825A6BB6D03AC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1226,6 +1279,7 @@
 				FB3271F6226F697500B94AE6 /* GradientLoadingStatusBarViewController.swift in Sources */,
 				9EEA0F95226A498A008595CC /* GetHeroStories.swift in Sources */,
 				9EE91FDB226A3E5B0079827F /* Story.swift in Sources */,
+				B68EE6BD227615B600749D62 /* StretchyHeaderLayout.swift in Sources */,
 				9EE91FC6226A3A2E0079827F /* APIRequest.swift in Sources */,
 				FB3271F4226F696600B94AE6 /* GradientLoadingStatusBarWithSafeAreaViewController.swift in Sources */,
 				9EEA0FAD226A573E008595CC /* UIImageView+AsyncLoadingFromURL.swift in Sources */,
@@ -1233,6 +1287,7 @@
 				9EEA0FCF226A89A0008595CC /* EmptyDataSetListWithImageViewController.swift in Sources */,
 				FB3271EC226F663500B94AE6 /* GradientLoadingMainViewModel.swift in Sources */,
 				9EEA0FA0226A4BF6008595CC /* LTViewController.swift in Sources */,
+				B6E319FA2276416E00AD34F6 /* LTLightLabel.swift in Sources */,
 				B658650A2272223C00773E35 /* EnvironmentInfoHelper.swift in Sources */,
 				9EEA0F7F226A498A008595CC /* HeroSearchViewModel.swift in Sources */,
 				9EE91FDC226A3E5B0079827F /* Event.swift in Sources */,
@@ -1251,6 +1306,8 @@
 				9EEA0F8C226A498A008595CC /* GetCharacters.swift in Sources */,
 				9E62CD51226C904F0078AAC6 /* AlamofireHTTPClient.swift in Sources */,
 				9EEA0F8A226A498A008595CC /* HeroListCollectionViewLayout.swift in Sources */,
+				B68EE6B4227605AC00749D62 /* MainStretchyHeaderViewController.swift in Sources */,
+				B68EE6C22276410600749D62 /* LTViewPropertyAnimator.swift in Sources */,
 				9EE91FB1226A36DC0079827F /* LTButton.swift in Sources */,
 				9EEA0FCB226A8988008595CC /* EmptyDataSetListViewController.swift in Sources */,
 				9EE91FCB226A3B9E0079827F /* URLQueryItemEncoder.swift in Sources */,
@@ -1271,6 +1328,7 @@
 				9EE91FCD226A3BA90079827F /* md5.swift in Sources */,
 				9EEA0F82226A498A008595CC /* BaseHeroViewController.swift in Sources */,
 				9EEA0F89226A498A008595CC /* HeroCollectionViewCell.swift in Sources */,
+				B68EE6BB22760B3E00749D62 /* StretchyHeaderView.swift in Sources */,
 				9EEA0F7E226A498A008595CC /* HeroListViewModel.swift in Sources */,
 				9EEA0F83226A498A008595CC /* HeroSearchViewController.swift in Sources */,
 				9EEA0F43226A3F8B008595CC /* MainViewController.swift in Sources */,
@@ -1288,6 +1346,7 @@
 				9EEA0F98226A498A008595CC /* GetHeroEvents.swift in Sources */,
 				9EA1EC3F226BFDF600AC5F88 /* MainEmptyDataSetListViewModel.swift in Sources */,
 				B60255D42271FBAE005D31B8 /* LTGradientLoadingBarViewController.swift in Sources */,
+				B6E319F82276416000AD34F6 /* LTHeavyLabel.swift in Sources */,
 				9E62CD40226C81560078AAC6 /* RepositoryCollectionViewCell.swift in Sources */,
 				9EEA0F8F226A498A008595CC /* HeroDetailViewModel.swift in Sources */,
 				9EEA0F93226A498A008595CC /* HeroDetailConstants.swift in Sources */,
@@ -1316,6 +1375,7 @@
 				9EEA0F99226A498A008595CC /* HeroDetailService.swift in Sources */,
 				9EA1EC38226BE5A100AC5F88 /* Navigation.swift in Sources */,
 				9EEA0F45226A3F9B008595CC /* SplashViewController.swift in Sources */,
+				B68EE6BF227640DC00749D62 /* LTCollectionReusableView.swift in Sources */,
 				9EEA0FA8226A52DD008595CC /* LTImageView.swift in Sources */,
 				9EEA0F7D226A498A008595CC /* HeroCellViewModel.swift in Sources */,
 				9EEA0F47226A3FB2008595CC /* MainViewModel.swift in Sources */,
