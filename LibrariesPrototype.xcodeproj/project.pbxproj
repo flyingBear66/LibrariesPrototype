@@ -104,6 +104,7 @@
 		ABDE27FEA19C25945F82AB08 /* Pods_LibrariesPrototypeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFAA968927402D631B262A8 /* Pods_LibrariesPrototypeUITests.framework */; };
 		B60255D222711806005D31B8 /* LTGradientBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60255D122711806005D31B8 /* LTGradientBarButton.swift */; };
 		B60255D42271FBAE005D31B8 /* LTGradientLoadingBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60255D32271FBAE005D31B8 /* LTGradientLoadingBarViewController.swift */; };
+		B6253E36227F818D00342A94 /* UIImageView+AlamofireImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6253E35227F818D00342A94 /* UIImageView+AlamofireImage.swift */; };
 		B65865062272033D00773E35 /* GradientLoadingBarConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65865052272033D00773E35 /* GradientLoadingBarConstants.swift */; };
 		B6586508227221C300773E35 /* AppDelegateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6586507227221C300773E35 /* AppDelegateHelper.swift */; };
 		B658650A2272223C00773E35 /* EnvironmentInfoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65865092272223C00773E35 /* EnvironmentInfoHelper.swift */; };
@@ -256,6 +257,7 @@
 		A641A8D8E78C9E8B21CB0487 /* Pods-LibrariesPrototypeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototypeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototypeTests/Pods-LibrariesPrototypeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B60255D122711806005D31B8 /* LTGradientBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTGradientBarButton.swift; sourceTree = "<group>"; };
 		B60255D32271FBAE005D31B8 /* LTGradientLoadingBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTGradientLoadingBarViewController.swift; sourceTree = "<group>"; };
+		B6253E35227F818D00342A94 /* UIImageView+AlamofireImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+AlamofireImage.swift"; sourceTree = "<group>"; };
 		B65865052272033D00773E35 /* GradientLoadingBarConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLoadingBarConstants.swift; sourceTree = "<group>"; };
 		B6586507227221C300773E35 /* AppDelegateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateHelper.swift; sourceTree = "<group>"; };
 		B65865092272223C00773E35 /* EnvironmentInfoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentInfoHelper.swift; sourceTree = "<group>"; };
@@ -503,6 +505,7 @@
 			children = (
 				9EEA0FB0226A586A008595CC /* LTViewController+ActivitiyIndicator.swift */,
 				FBAD4757226F7B4E00DFE2A2 /* LTViewController+GradientLoadingBar.swift */,
+				B6253E35227F818D00342A94 /* UIImageView+AlamofireImage.swift */,
 				9EEA0FAC226A573D008595CC /* UIImageView+AsyncLoadingFromURL.swift */,
 				9EEA0F9C226A4A51008595CC /* UIView+Constraints.swift */,
 			);
@@ -1381,6 +1384,7 @@
 				9EEA0FA8226A52DD008595CC /* LTImageView.swift in Sources */,
 				9EEA0F7D226A498A008595CC /* HeroCellViewModel.swift in Sources */,
 				9EEA0F47226A3FB2008595CC /* MainViewModel.swift in Sources */,
+				B6253E36227F818D00342A94 /* UIImageView+AlamofireImage.swift in Sources */,
 				9EEA0FB1226A586B008595CC /* LTViewController+ActivitiyIndicator.swift in Sources */,
 				9EEA0FAB226A530A008595CC /* FavoriteButton.swift in Sources */,
 				FBAD4758226F7B4E00DFE2A2 /* LTViewController+GradientLoadingBar.swift in Sources */,
