@@ -1,0 +1,24 @@
+//
+//  UAT.xcconfig
+//  LibrariesPrototype
+//
+//  Created by Ozgun Zor Personal on 05/05/2019.
+//  Copyright © 2019 Ozgun Zor. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Pods/Target Support Files/Pods-LibrariesPrototype/Pods-LibrariesPrototype.uat.xcconfig"
+
+GENERAL_ENVIRONMENT = UAT
+
+HOCKEY_APP_IDENTIFIER =
+HOCKEY_DEBUG_LOG_ENABLED = 1
+
+NETWORKING_API_SCHEME = http
+NETWORKING_API_HOST = uat.com
+NETWORKING_API_PATH = api
+NETWORKING_API_VERSION = v1
+
+THEME_NAME = Default
