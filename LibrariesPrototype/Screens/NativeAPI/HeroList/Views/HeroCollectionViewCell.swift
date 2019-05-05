@@ -79,8 +79,11 @@ class HeroCollectionViewCell: LTCollectionViewCell {
             .strokeWidth : -2.0
         ]
         self.heroNameLabel.attributedText = NSAttributedString(string: self.viewModel.heroName, attributes: strokeTextAttributes)
-        self.heroImageView.imageFromServerURL(self.viewModel.heroImageURLString, placeHolder: nil)
         
+//        self.heroImageView.imageFromServerURL(self.viewModel.heroImageURLString, placeHolder: nil) // Native
+        self.heroImageView.zor_setImageWith(self.viewModel.heroImageURLString) // AlamofireImage
+//        self.heroImageView.zor_setBlurredImageWith(self.viewModel.heroImageURLString) // AlamofireImage Blurred
+
         viewModel.favorited.bindAndFire { [weak self] favorited in
             DispatchQueue.main.async {
                 self?.favoriteButton.isSelected = favorited
