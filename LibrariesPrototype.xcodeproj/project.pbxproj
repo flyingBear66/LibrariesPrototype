@@ -1100,7 +1100,7 @@
 					9E94B3D82030BEC000B8BA18 = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 1020;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					9E94B3EC2030BEC000B8BA18 = {
 						CreatedOnToolsVersion = 9.2;
@@ -1537,8 +1537,9 @@
 			baseConfigurationReference = 9E28B3B21F6C7D640CFA7D7F /* Pods-LibrariesPrototype.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W4ZH3N445U;
 				INFOPLIST_FILE = LibrariesPrototype/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ozgunzor.LibrariesPrototype;
@@ -1554,8 +1555,9 @@
 			baseConfigurationReference = 9BEA3E3759B09962CA71FCB7 /* Pods-LibrariesPrototype.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W4ZH3N445U;
 				INFOPLIST_FILE = LibrariesPrototype/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ozgunzor.LibrariesPrototype;
