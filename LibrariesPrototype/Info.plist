@@ -46,5 +46,7 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>Networking.ApiURL</key>
+	<string>$(NETWORKING_API_SCHEME)://$(NETWORKING_API_HOST)/$(NETWORKING_API_PATH)/$(NETWORKING_API_VERSION)/</string>
 </dict>
 </plist>

@@ -12,7 +12,6 @@ import Foundation
 
 struct AppDelegateHelper {
     
-    
     static func setupLibrariesOnLaunch() {
         AppDelegateHelper.setupCocoaLumberjackLogger()
         DDLogInfo("Setting Up Libraies on Launch")
