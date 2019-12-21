@@ -14,7 +14,7 @@ class StretchyHeaderLayout: LTCollectionViewFlowLayout {
         let layoutAttributes = super.layoutAttributesForElements(in: rect)
         
         layoutAttributes?.forEach({ attributes in
-            if attributes.representedElementKind == UICollectionElementKindSectionHeader &&
+            if attributes.representedElementKind == UICollectionView.elementKindSectionHeader &&
                 attributes.indexPath.section == 0 {
                 
                 guard let collectionView = collectionView else {
