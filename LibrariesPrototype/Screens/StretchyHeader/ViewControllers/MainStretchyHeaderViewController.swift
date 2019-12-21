@@ -23,7 +23,7 @@ class MainStretchyHeaderViewController: LTRXViewController {
         collectionView.backgroundColor = .clear
         collectionView.register(RepositoryCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         collectionView.register(StretchyHeaderView.self,
-                                forSupplementaryViewOfKind: UICollectionElementKindSectionHeader,
+                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                                 withReuseIdentifier: "header")
         return collectionView
     }()
