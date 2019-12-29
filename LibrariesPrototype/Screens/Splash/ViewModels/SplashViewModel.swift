@@ -13,7 +13,6 @@ protocol SplashViewModelEvents {
 }
     
 class SplashViewModel: LTViewModel, SplashViewModelEvents {
-
     // MARK: - Events
     var showMainMenu: (() -> Void)?
     

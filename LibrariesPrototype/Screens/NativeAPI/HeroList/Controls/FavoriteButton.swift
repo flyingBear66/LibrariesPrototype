@@ -9,7 +9,6 @@
 import UIKit
 
 class FavoriteButton: LTButton {
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setTitle("Star", for: .normal)
@@ -17,9 +16,9 @@ class FavoriteButton: LTButton {
 //        setImage(UIImage(named: "StarImage"), for: .normal)
 //        setImage(UIImage(named: "StarFilledImage"), for: .selected)
     }
-    
+
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }

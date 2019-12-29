@@ -10,9 +10,7 @@ import AlamofireNetworkActivityLogger
 import CocoaLumberjack
 import Foundation
 
-struct AppDelegateHelper {
-    
-    
+enum AppDelegateHelper {
     static func setupLibrariesOnLaunch() {
         AppDelegateHelper.setupCocoaLumberjackLogger()
         DDLogInfo("Setting Up Libraies on Launch")
@@ -23,7 +21,7 @@ struct AppDelegateHelper {
         DDLog.add(DDOSLogger.sharedInstance) // Uses os_log
         DDLogInfo("Setting Up Cocoa Lumber Jack Logger")
 
-        let fileLogger: DDFileLogger = DDFileLogger() // File Logger
+        let fileLogger = DDFileLogger() // File Logger
         fileLogger.rollingFrequency = 60 * 60 * 24 // 24 hours
         fileLogger.logFileManager.maximumNumberOfLogFiles = 7
         DDLog.add(fileLogger)
@@ -33,6 +31,4 @@ struct AppDelegateHelper {
         DDLogInfo("Setting Up Alamofire Network Activity Logger")
         NetworkActivityLogger.shared.startLogging()
     }
-    
-
 }

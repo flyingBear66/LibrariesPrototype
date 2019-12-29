@@ -9,7 +9,6 @@
 import UIKit
 
 class HeroDetailViewController: LTViewController {
-    
     // MARK: - UIControls
     let heroNameLabel: LTLabel = {
         let label = LTLabel()
@@ -90,7 +89,8 @@ class HeroDetailViewController: LTViewController {
         self.viewModel = (viewModel as! HeroDetailViewModel)
         setupViews()
     }
-    
+
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -262,5 +262,4 @@ class HeroDetailViewController: LTViewController {
     @objc func favoriteTapped() {
         viewModel.favoriteTapped()
     }
-
 }

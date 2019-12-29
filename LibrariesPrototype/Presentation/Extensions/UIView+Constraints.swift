@@ -14,7 +14,6 @@ typealias Constraint = (_ layoutView: UIView) -> NSLayoutConstraint
 // Solution based on http://chris.eidhof.nl/post/micro-autolayout-dsl/
 //
 extension UIView {
-
     /// Adds constraints using NSLayoutAnchors, based on description provided in params.
     /// Please refer to helper equal funtions for info how to generate constraints easily.
     ///
@@ -158,7 +157,6 @@ func equal<Axis, Anchor>(_ view: UIView, _ keyPath: KeyPath<UIView, Anchor>, con
 /// - Warning: This method uses force-unwrap on view's superview!
 /// - Warning: Pins top and bottom edges to `safeAreaLayoutGuide`!
 func equalToSuperview(with insets: UIEdgeInsets = .zero, pinBottomToSafeArea: Bool = true, pinTopToSafeArea: Bool = true) -> [Constraint] {
-
     let top: Constraint
     let bottom: Constraint
     if #available(iOS 11, *) {

@@ -13,7 +13,6 @@ import SVProgressHUD
 import UIKit
 
 class MainStretchyHeaderViewController: LTRXViewController {
-    
     // MARK: - UIControls
     let collectionView: LTCollectionView = {
         let layout = StretchyHeaderLayout()
@@ -33,15 +32,14 @@ class MainStretchyHeaderViewController: LTRXViewController {
     // MARK: - Variables
     var viewModel = ReposViewModel()
     
-
-    
     // MARK: - View LifeCycle
     
     init(viewModel: ReposViewModel) {
         super.init()
         self.viewModel = viewModel
     }
-    
+
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -105,11 +103,11 @@ class MainStretchyHeaderViewController: LTRXViewController {
             .subscribe(onNext: { _ in
                 print("repos Changed")
                 self.collectionView.reloadData()
-            }).disposed(by: disposeBag)
+            })
+            .disposed(by: disposeBag)
         
         viewModel.getRepos()
     }
-
 }
 
 // MARK: - CollectionView DataSource
@@ -152,7 +150,6 @@ extension MainStretchyHeaderViewController: UICollectionViewDelegateFlowLayout {
         
         headerView?.animator.fractionComplete = abs(contentOffsetY) / 100
     }
-    
 }
 
 extension MainStretchyHeaderViewController: EmptyDataSetSource {

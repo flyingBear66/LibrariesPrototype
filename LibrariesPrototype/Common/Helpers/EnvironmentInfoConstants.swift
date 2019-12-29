@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct EnvironmentInfoConstants {
+enum EnvironmentInfoConstants {
     static let infoPlistName = "Info"
     static let infoPlistTypeName = "plist"
     static let environment = "General.Environment"

@@ -6,11 +6,10 @@
 //  Copyright © 2019 Ozgun Zor. All rights reserved.
 //
 
-import UIKit
 import AlamofireImage
+import UIKit
 
 extension UIImageView {
-    
     public func zor_setImageWith(_ urlString: String) {
         if let url = URL(string: urlString) {
             self.zor_setImageWith(url)

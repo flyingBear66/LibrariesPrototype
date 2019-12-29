@@ -9,10 +9,9 @@
 import UIKit
 
 class Application {
-    
     // MARK: - Dependencies
     private let window: LTWindow
-    lazy var navigation: Navigation = Navigation(
+    lazy var navigation = Navigation(
         window: self.window
     )
 
@@ -21,5 +20,4 @@ class Application {
         self.window = window
         self.window.makeKeyAndVisible()
     }
-    
 }

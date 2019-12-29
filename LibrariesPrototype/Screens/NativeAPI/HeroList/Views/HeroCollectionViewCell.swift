@@ -9,7 +9,6 @@
 import UIKit
 
 class HeroCollectionViewCell: LTCollectionViewCell {
-
     // MARK: - UIControls
     let heroImageView: LTImageView = {
         let imageView = LTImageView()
@@ -46,13 +45,13 @@ class HeroCollectionViewCell: LTCollectionViewCell {
         setupViews()
     }
 
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
     // MARK: - Helpers
     func setupViews() {
-        
         backgroundColor = .blue
         clipsToBounds = true
         layer.cornerRadius = CGFloat(HeroCellViewConstants.cornerRadius)
@@ -63,9 +62,9 @@ class HeroCollectionViewCell: LTCollectionViewCell {
         favoriteButton.addConstraints([equal(self, \.topAnchor, constant: 8),
                                        equal(self, \.trailingAnchor, constant: -8)])
         heroImageView.addConstraints([equal(self, \.topAnchor),
-                                  equal(self, \.bottomAnchor),
-                                  equal(self, \.leadingAnchor),
-                                  equal(self, \.trailingAnchor)])
+                                      equal(self, \.bottomAnchor),
+                                      equal(self, \.leadingAnchor),
+                                      equal(self, \.trailingAnchor)])
         heroNameLabel.addConstraints([equal(self, \.centerXAnchor),
                                       equal(self, \.centerYAnchor, constant: frame.height / 5),
                                       equal(self, \.leadingAnchor, constant: 8),
@@ -96,5 +95,4 @@ class HeroCollectionViewCell: LTCollectionViewCell {
         print("Cell Favorite")
         viewModel.favoriteTapped()
     }
-    
 }

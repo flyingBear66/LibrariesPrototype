@@ -10,9 +10,7 @@ import UIKit
 let imageCache = NSCache<NSString, UIImage>()
 
 extension UIImageView {
-
     func imageFromServerURL(_ URLString: String, placeHolder: UIImage?) {
-
         self.image = nil
         if let cachedImage = imageCache.object(forKey: NSString(string: URLString)) {
             self.image = cachedImage
@@ -21,7 +19,6 @@ extension UIImageView {
 
         if let url = URL(string: URLString) {
             URLSession.shared.dataTask(with: url, completionHandler: { data, response, error in
-
                 if error != nil {
                     print("ERROR LOADING IMAGES FROM URL: \(error?.localizedDescription ?? "Unknown error")")
                     DispatchQueue.main.async {

@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct GradientLoadingBarConstants {
+enum GradientLoadingBarConstants {
     static let height = 5.0
 }

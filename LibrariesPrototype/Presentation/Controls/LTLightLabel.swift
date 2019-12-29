@@ -9,13 +9,13 @@
 import UIKit
 
 class LTLightLabel: LTLabel {
-
     override init(frame: CGRect) {
         super.init(frame: frame)
         font = UIFont.systemFont(ofSize: 15, weight: .light)
         textColor = .white
     }
-    
+
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

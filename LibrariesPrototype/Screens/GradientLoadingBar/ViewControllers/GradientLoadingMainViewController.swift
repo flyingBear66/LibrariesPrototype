@@ -9,7 +9,6 @@
 import UIKit
 
 class GradientLoadingMainViewController: LTViewController {
-
     // MARK: - UIControls
     let tableView: LTTableView = {
         let tableView = LTTableView()
@@ -26,6 +25,7 @@ class GradientLoadingMainViewController: LTViewController {
         setupViews()
     }
 
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -51,7 +51,6 @@ class GradientLoadingMainViewController: LTViewController {
 }
 
 extension GradientLoadingMainViewController: UITableViewDataSource, UITableViewDelegate {
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.menus.count
     }

@@ -9,7 +9,6 @@
 import UIKit
 
 class HeroListCollectionViewLayout: UICollectionViewLayout {
-
     // Configurable properties
     fileprivate var numberOfColumns = 2
     fileprivate var cellPadding: CGFloat = 6
@@ -53,7 +52,6 @@ class HeroListCollectionViewLayout: UICollectionViewLayout {
 
         // Iterates through the list of items in the first section
         for item in 0 ..< collectionView.numberOfItems(inSection: 0) {
-
             let indexPath = IndexPath(item: item, section: 0)
 
             // Calculate cell frame
@@ -76,7 +74,6 @@ class HeroListCollectionViewLayout: UICollectionViewLayout {
     }
 
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-
         var visibleLayoutAttributes = [UICollectionViewLayoutAttributes]()
 
         // Loop through the cache and look for items in the rect

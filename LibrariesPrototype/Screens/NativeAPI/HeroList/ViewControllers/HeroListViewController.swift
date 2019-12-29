@@ -9,7 +9,6 @@
 import UIKit
 
 class HeroListViewController: BaseHeroViewController {
-
     // MARK: - Variables
     private var viewModel: HeroListViewModel!
     
@@ -19,7 +18,8 @@ class HeroListViewController: BaseHeroViewController {
         self.viewModel = viewModel
         setupViews()
     }
-    
+
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -81,7 +81,6 @@ class HeroListViewController: BaseHeroViewController {
 }
 
 extension HeroListViewController: UICollectionViewDataSource, UICollectionViewDelegate {
-
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.heroCellViewModels.value.count
     }
@@ -102,6 +101,5 @@ extension HeroListViewController: UICollectionViewDataSource, UICollectionViewDe
             viewModel.getMoreHeros()
         }
     }
-
 }
 
