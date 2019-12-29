@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		56BAB5147F27307C82592834 /* Pods_LibrariesPrototypeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0A85CE7564EA861DE44C07 /* Pods_LibrariesPrototypeTests.framework */; };
+		87C70A0323AEB634004E90E4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C70A0223AEB634004E90E4 /* ContentView.swift */; };
+		87C70A0523AEB64E004E90E4 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C70A0423AEB64E004E90E4 /* Models.swift */; };
+		87C70A0723AEB65F004E90E4 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C70A0623AEB65F004E90E4 /* RootView.swift */; };
 		9E62CD40226C81560078AAC6 /* RepositoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E62CD3B226C81560078AAC6 /* RepositoryCollectionViewCell.swift */; };
 		9E62CD41226C81560078AAC6 /* ReposService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E62CD3C226C81560078AAC6 /* ReposService.swift */; };
 		9E62CD42226C81560078AAC6 /* ReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E62CD3D226C81560078AAC6 /* ReposViewController.swift */; };
@@ -150,6 +153,9 @@
 		2C0A85CE7564EA861DE44C07 /* Pods_LibrariesPrototypeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibrariesPrototypeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32FFCE63D7B019D3EAD96C73 /* Pods-LibrariesPrototypeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototypeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototypeUITests/Pods-LibrariesPrototypeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6CFAA968927402D631B262A8 /* Pods_LibrariesPrototypeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibrariesPrototypeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87C70A0223AEB634004E90E4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		87C70A0423AEB64E004E90E4 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		87C70A0623AEB65F004E90E4 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		9BEA3E3759B09962CA71FCB7 /* Pods-LibrariesPrototype.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototype.release.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototype/Pods-LibrariesPrototype.release.xcconfig"; sourceTree = "<group>"; };
 		9E28B3B21F6C7D640CFA7D7F /* Pods-LibrariesPrototype.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototype.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototype/Pods-LibrariesPrototype.debug.xcconfig"; sourceTree = "<group>"; };
 		9E62CD3B226C81560078AAC6 /* RepositoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -321,6 +327,16 @@
 				1767AD9BE0E14BBDBFA132F2 /* Pods-LibrariesPrototypeUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		87C70A0123AEB5CA004E90E4 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				87C70A0223AEB634004E90E4 /* ContentView.swift */,
+				87C70A0423AEB64E004E90E4 /* Models.swift */,
+				87C70A0623AEB65F004E90E4 /* RootView.swift */,
+			);
+			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 		9E62CD39226C811C0078AAC6 /* RxSwift */ = {
@@ -545,6 +561,7 @@
 		9E94B4122030C19000B8BA18 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				87C70A0123AEB5CA004E90E4 /* SwiftUI */,
 				9EEA0FBE226A88C1008595CC /* EmptyDataSet */,
 				FB3271E6226F65FD00B94AE6 /* GradientLoadingBar */,
 				9EEA0F3C226A3F3C008595CC /* Main */,
@@ -1317,6 +1334,7 @@
 				B6253E38227F8AD800342A94 /* AppDelegateViewModel.swift in Sources */,
 				9EEA0FA0226A4BF6008595CC /* LTViewController.swift in Sources */,
 				B6E319FA2276416E00AD34F6 /* LTLightLabel.swift in Sources */,
+				87C70A0523AEB64E004E90E4 /* Models.swift in Sources */,
 				B658650A2272223C00773E35 /* EnvironmentInfoHelper.swift in Sources */,
 				9EEA0F7F226A498A008595CC /* HeroSearchViewModel.swift in Sources */,
 				9EE91FDC226A3E5B0079827F /* Event.swift in Sources */,
@@ -1325,6 +1343,7 @@
 				9EEA0F8E226A498A008595CC /* HeroStoryViewModel.swift in Sources */,
 				9EEA0FD1226A89EB008595CC /* BaseEmptyDataSetListViewController.swift in Sources */,
 				9EEA0FA6226A4D56008595CC /* LTTableViewCell.swift in Sources */,
+				87C70A0723AEB65F004E90E4 /* RootView.swift in Sources */,
 				9EE91FB5226A371C0079827F /* LTTableView.swift in Sources */,
 				FB3271EE226F693C00B94AE6 /* GradientLoadingButtonViewModel.swift in Sources */,
 				9E62CD44226C81560078AAC6 /* ReposViewModel.swift in Sources */,
@@ -1357,6 +1376,7 @@
 				9EE91FCD226A3BA90079827F /* md5.swift in Sources */,
 				9EEA0F82226A498A008595CC /* BaseHeroViewController.swift in Sources */,
 				9EEA0F89226A498A008595CC /* HeroCollectionViewCell.swift in Sources */,
+				87C70A0323AEB634004E90E4 /* ContentView.swift in Sources */,
 				B68EE6BB22760B3E00749D62 /* StretchyHeaderView.swift in Sources */,
 				9EEA0F7E226A498A008595CC /* HeroListViewModel.swift in Sources */,
 				9EEA0F83226A498A008595CC /* HeroSearchViewController.swift in Sources */,
@@ -1498,7 +1518,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1551,7 +1571,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
