@@ -13,7 +13,6 @@ import SVProgressHUD
 import UIKit
 
 class ReposViewController: LTRXViewController {
-    
     // MARK: - UIControls
     
     let collectionView: LTCollectionView = {
@@ -35,7 +34,8 @@ class ReposViewController: LTRXViewController {
         super.init()
         self.viewModel = viewModel
     }
-    
+
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -99,7 +99,8 @@ class ReposViewController: LTRXViewController {
             .subscribe(onNext: { _ in
                 print("repos Changed")
                 self.collectionView.reloadData()
-            }).disposed(by: disposeBag)
+            })
+            .disposed(by: disposeBag)
         
         viewModel.getRepos()
     }
@@ -126,7 +127,6 @@ extension ReposViewController: UICollectionViewDataSource {
 }
 
 extension ReposViewController: UICollectionViewDelegateFlowLayout {
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let kWhateverHeightYouWant = 100
         return CGSize(width: collectionView.bounds.size.width, height: CGFloat(kWhateverHeightYouWant))
@@ -137,7 +137,6 @@ extension ReposViewController: UICollectionViewDelegateFlowLayout {
 //            viewModel.getReposMore()
         }
     }
-
 }
 
 extension ReposViewController: EmptyDataSetSource {

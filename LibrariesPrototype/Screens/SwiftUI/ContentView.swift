@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-
+// swiftlint:disable file_types_order
 class User: ObservableObject {
     @Published var state: UserState = .loggedOut
 }
@@ -57,3 +57,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+// swiftlint:enable file_types_order

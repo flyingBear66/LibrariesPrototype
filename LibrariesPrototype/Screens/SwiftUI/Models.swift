@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-
+// swiftlint:disable file_types_order
 class Room: ObservableObject {
     var name: String
     @Published var events: [EventUI]
@@ -70,7 +70,6 @@ class Room: ObservableObject {
         let newEvent = EventUI(name: currentEvent.name, start: currentEvent.start, end: currentEvent.end.addingTimeInterval(100), owner: currentEvent.owner)
         events[0] = newEvent
     }
-
 }
 
 enum RoomStatus {
@@ -80,7 +79,6 @@ enum RoomStatus {
 }
 
 struct EventUI: Identifiable {
-
     var id = UUID()
     var name: String
     var start: Date
@@ -165,8 +163,8 @@ extension EventModel: Decodable {
         startDate = date
     } else {
         throw DecodingError.dataCorruptedError(forKey: .startDate,
-              in: container,
-              debugDescription: "Date string does not match format expected by formatter.")
+                                               in: container,
+                                               debugDescription: "Date string does not match format expected by formatter.")
     }
 
     let endDateSting = try container.decode(String.self, forKey: .endDate)
@@ -174,8 +172,8 @@ extension EventModel: Decodable {
         endDate = date
     } else {
         throw DecodingError.dataCorruptedError(forKey: .endDate,
-              in: container,
-              debugDescription: "Date string does not match format expected by formatter.")
+                                               in: container,
+                                               debugDescription: "Date string does not match format expected by formatter.")
     }
   }
 }
@@ -196,3 +194,4 @@ extension Date {
         return (min(date1, date2) ... max(date1, date2)).contains(self)
     }
 }
+// swiftlint:enable file_types_order

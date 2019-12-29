@@ -9,7 +9,6 @@
 import UIKit
 
 class BaseHeroViewController: LTViewController {
-    
     // MARK: - UIControls
     let collectionView: HeroCollectionView = {
         let collectionView = HeroCollectionView()

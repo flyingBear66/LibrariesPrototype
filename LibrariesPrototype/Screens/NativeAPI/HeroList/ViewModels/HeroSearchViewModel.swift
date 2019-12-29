@@ -9,7 +9,6 @@
 import UIKit
 
 class HeroSearchViewModel: LTViewModel {
-    
     // MARK: - Variables
     private let service: HeroSearchService!
     private var heros: [ComicCharacter]?

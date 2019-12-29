@@ -9,7 +9,6 @@
 import UIKit
 
 class HeroSearchService: LTService {
-
     func getHeros(with name: String, completion: @escaping (Result<[ComicCharacter], Error>) -> Void) {
         print("\ngetHeroswithName starting:")
         marvelAPIClient.send(GetCharacters(nameStartsWith: name)) { response in
@@ -22,5 +21,4 @@ class HeroSearchService: LTService {
             }
         }
     }
-    
 }

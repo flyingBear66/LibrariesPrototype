@@ -11,7 +11,6 @@ import GradientLoadingBar
 import UIKit
 
 class LTViewController: UIViewController {
-    
     // MARK: - UIControls
     let gradientLoadingBar = GradientLoadingBar(height: GradientLoadingBarConstants.height,
                                                 isRelativeToSafeArea: false)
@@ -34,5 +33,4 @@ class LTViewController: UIViewController {
         super.viewWillDisappear(animated)
         hideGradientLoadingBar()
     }
-    
 }

@@ -9,7 +9,6 @@
 import UIKit
 
 class HeroEventViewModel: LTViewModel {
-    
     // MARK: - Variables
     private let event: Event
     public let title: String

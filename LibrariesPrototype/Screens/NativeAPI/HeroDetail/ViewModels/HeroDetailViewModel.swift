@@ -9,7 +9,6 @@
 import UIKit
 
 class HeroDetailViewModel: LTViewModel {
-    
     // MARK: - Variables
     private let service: HeroDetailService!
     public var heroDetailDidError = Bindable<String>("")
@@ -135,5 +134,4 @@ class HeroDetailViewModel: LTViewModel {
             HeroStoryViewModel(story: story)
         })
     }
-
 }

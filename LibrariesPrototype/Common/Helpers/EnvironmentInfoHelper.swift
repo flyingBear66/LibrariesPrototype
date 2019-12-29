@@ -9,7 +9,6 @@
 import Foundation
 
 struct EnvironmentInfoHelper {
-    
     private var nsDictionary: NSDictionary
 
     var environment: String {

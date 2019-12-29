@@ -9,7 +9,6 @@
 import UIKit
 
 class HeroSearchViewController: BaseHeroViewController {
-    
     // MARK: - UIControls
         
     // MARK: - Variables
@@ -22,7 +21,8 @@ class HeroSearchViewController: BaseHeroViewController {
         self.viewModel = viewModel
         setupViews()
     }
-    
+
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -52,7 +52,6 @@ class HeroSearchViewController: BaseHeroViewController {
         navigationItem.hidesSearchBarWhenScrolling = false
         navigationItem.searchController = searchController
         definesPresentationContext = true
-        
     }
     
     func bindViewModel() {
@@ -97,7 +96,6 @@ extension HeroSearchViewController  : UISearchResultsUpdating {
 }
 
 extension HeroSearchViewController: UICollectionViewDataSource, UICollectionViewDelegate {
-
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.searchHeroCellViewModels.value.count
     }

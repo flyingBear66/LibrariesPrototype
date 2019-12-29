@@ -9,7 +9,6 @@
 import Foundation
 
 extension LTViewController {
-
     func showGradientLoadingBar() {
         gradientLoadingBar.show()
     }

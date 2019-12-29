@@ -6,12 +6,11 @@
 //  Copyright © 2019 Ozgun Zor. All rights reserved.
 //
 
+import SwiftUI
 import Swinject
 import UIKit
-import SwiftUI
 
 class Navigation {
-    
     enum Storyboard: String {
         case none = ""
     }
@@ -35,7 +34,6 @@ class Navigation {
 // MARK: - Public
 extension Navigation {
     func getCurrentView() -> UIView {
-        
         guard let topView = navigationController.topViewController?.view else {
             return LTView()
         }
@@ -46,12 +44,10 @@ extension Navigation {
     func firstScreenAsSplash() {
         openSplash()
     }
-    
 }
 
 // MARK: - Private
 extension Navigation {
-    
     // MARK: Native Networking Test with Marvel API
     private func openSplash() {
         currentViewController = container.resolve(SplashViewController.self)
@@ -79,7 +75,7 @@ extension Navigation {
 
     private func openHeroSearchScreen() {
         currentViewController = container.resolve(HeroSearchViewController.self)!
-        pushTo(viewContoller: currentViewController, HeroSearchViewController.self)
+        pushTo(viewContoller: currentViewController!, HeroSearchViewController.self)
     }
     
     // MARK: Empty Data Set
@@ -145,7 +141,6 @@ extension Navigation {
 
 // MARK: - Navigate methods
 extension Navigation {
-
     private func hostView(view: ContentView) {
         // Use a UIHostingController as window root view controller.
         self.window.rootViewController = UIHostingController(rootView: view)
@@ -162,7 +157,7 @@ extension Navigation {
         self.window.rootViewController = (viewContoller as! T).navigationController
     }
     
-    private func pushTo<T: LTViewController>(viewContoller: Any, _:T.Type) {
+    private func pushTo<T: LTViewController>(viewContoller: LTViewController, _:T.Type) {
         self.navigationController.pushViewController((viewContoller as! T), animated: true)
     }
     
@@ -185,7 +180,6 @@ extension Navigation {
 
 // MARK: - Swifject methods
 extension Navigation {
-    
     private func registerApp() {
         registerHTTPClients()
         registerGradientLoadingBar()

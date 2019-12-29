@@ -10,7 +10,6 @@ import Foundation
 import RxSwift
 
 class ReposViewModel: LTRXViewModel {
-    
     // MARK: - Variables
     public let repositoryViewModels: Variable<[RepositoryViewModel]> = Variable([])
 

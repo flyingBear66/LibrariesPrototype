@@ -28,7 +28,6 @@ protocol MainViewModelEvents {
 }
 
 class MainViewModel: LTViewModel, MainViewModelEvents {
-
     // MARK: - Events
     var showNativeNetworkingScreens: (() -> Void)?
     var showEmptyDataSet: (() -> Void)?
@@ -75,5 +74,4 @@ class MainViewModel: LTViewModel, MainViewModelEvents {
             print("Default case. Error happened or index not exist")            
         }
     }
-    
 }

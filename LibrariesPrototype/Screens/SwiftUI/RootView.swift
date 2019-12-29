@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+// swiftlint:disable file_types_order
 
 var event1 = EventUI(name: "Event1",
                      start: Date(timeIntervalSince1970: 100),
@@ -49,7 +50,6 @@ struct RootView: View {
             print("Invalid URL")
             return
         }
-
 
         let request = URLRequest(url: url)
 
@@ -168,7 +168,7 @@ struct TopStatusView: View {
 struct NextEventsView: View {
     @ObservedObject var room: Room
     @Binding var isEditEventShowed: Bool
-    @State var selectedEvent: EventUI = EventUI(name: "", start: Date(), end: Date(), owner: "")
+    @State var selectedEvent = EventUI(name: "", start: Date(), end: Date(), owner: "")
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -246,8 +246,8 @@ struct RoomStatusView: View {
 
 struct EditEventView: View {
     @Binding var isEditEventShowed: Bool
-    @State var selectedStartDate: Date = Date()
-    @State var selectedEndDate: Date = Date()
+    @State var selectedStartDate = Date()
+    @State var selectedEndDate = Date()
 
     var body: some View {
         NavigationView {
@@ -287,8 +287,8 @@ struct EditEventView: View {
 struct CreateEventView: View {
     @Binding var isCreateEventShowed: Bool
     @State var title: String = ""
-    @State var selectedStartDate: Date = Date()
-    @State var selectedEndDate: Date = Date()
+    @State var selectedStartDate = Date()
+    @State var selectedEndDate = Date()
 
     var body: some View {
         NavigationView {
@@ -328,3 +328,4 @@ struct CreateEventView: View {
         }
     }
 }
+// swiftlint:enable file_types_order

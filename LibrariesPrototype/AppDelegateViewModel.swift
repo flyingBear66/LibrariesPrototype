@@ -12,7 +12,6 @@ import Foundation
 import HockeySDK
 
 class AppDelegateViewModel: LTViewModel {
-
     func setupLibrariesOnLaunch() {
         self.setupCocoaLumberjackLogger()
         DDLogInfo("Setting Up Libraies on Launch")
@@ -24,7 +23,7 @@ class AppDelegateViewModel: LTViewModel {
         DDLog.add(DDOSLogger.sharedInstance) // Uses os_log
         DDLogInfo("Setting Up Cocoa Lumber Jack Logger")
         
-        let fileLogger: DDFileLogger = DDFileLogger() // File Logger
+        let fileLogger = DDFileLogger() // File Logger
         fileLogger.rollingFrequency = 60 * 60 * 24 // 24 hours
         fileLogger.logFileManager.maximumNumberOfLogFiles = 7
         DDLog.add(fileLogger)
@@ -40,5 +39,4 @@ class AppDelegateViewModel: LTViewModel {
         BITHockeyManager.shared().start()
         BITHockeyManager.shared().authenticator.authenticateInstallation()
     }
-    
 }

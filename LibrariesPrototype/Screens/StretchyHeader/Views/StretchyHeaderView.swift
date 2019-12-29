@@ -9,7 +9,6 @@
 import UIKit
 
 class StretchyHeaderView: LTCollectionReusableView {
-    
     let imageView: LTImageView = {
         let imageView = LTImageView(image: #imageLiteral(resourceName: "StretchyHeader"))
         imageView.contentMode = .scaleAspectFill
@@ -50,7 +49,8 @@ class StretchyHeaderView: LTCollectionReusableView {
         titleLabel.addConstraints([equal(self, \.leadingAnchor, constant: 8),
                                    equal(self, \.trailingAnchor, constant: -8)])
     }
-    
+
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

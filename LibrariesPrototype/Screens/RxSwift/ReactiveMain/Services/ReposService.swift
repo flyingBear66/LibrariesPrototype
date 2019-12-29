@@ -16,7 +16,6 @@ protocol ReposServiceProtocol {
 }
 
 class ReposService: LTService, ReposServiceProtocol {
-    
     let limit: Int = 10
     var offset: Int = 0
 
@@ -40,5 +39,4 @@ class ReposService: LTService, ReposServiceProtocol {
     func getRepos() -> Observable<[Repository]> {
         return githubAPIClient.request(GithubAPI.getFlyingBearPublicReposMore(limit: limit, offset: offset)).asObservable()
     }
-
 }

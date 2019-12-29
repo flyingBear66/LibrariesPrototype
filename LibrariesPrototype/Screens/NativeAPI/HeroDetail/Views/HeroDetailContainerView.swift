@@ -9,7 +9,6 @@
 import UIKit
 
 class HeroDetailContainerView: LTView {
-
     public let containerTitleLabel: LTLabel = {
         let label = LTLabel()
         label.font = UIFont.systemFont(ofSize: 25, weight: .heavy)
@@ -43,6 +42,7 @@ class HeroDetailContainerView: LTView {
         setupViews()
     }
 
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -64,8 +64,8 @@ class HeroDetailContainerView: LTView {
                                        equal(containerTitleLabel, \.topAnchor, \.bottomAnchor, constant: 0)])
 
         detailViews[1].addConstraints([equal(detailViews[2], \.bottomAnchor, \.topAnchor, constant: -8),
-                                         equal(self, \.leadingAnchor),
-                                         equal(self, \.trailingAnchor)])
+                                       equal(self, \.leadingAnchor),
+                                       equal(self, \.trailingAnchor)])
 
         detailViews[2].addConstraints([equal(self, \.bottomAnchor, constant: -20),
                                        equal(self, \.leadingAnchor),
@@ -82,10 +82,9 @@ class HeroDetailContainerView: LTView {
         
         addSubview(emptyStateLabel)
         emptyStateLabel.addConstraints([equal(self, \.bottomAnchor, constant: -8),
-                                       equal(self, \.leadingAnchor, constant:  8),
-                                       equal(self, \.trailingAnchor),
-                                       equal(containerTitleLabel, \.topAnchor, \.bottomAnchor, constant: 0)])
+                                        equal(self, \.leadingAnchor, constant:  8),
+                                        equal(self, \.trailingAnchor),
+                                        equal(containerTitleLabel, \.topAnchor, \.bottomAnchor, constant: 0)])
         self.layoutIfNeeded()
     }
-    
 }

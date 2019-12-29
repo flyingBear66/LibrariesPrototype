@@ -9,7 +9,6 @@
 import UIKit
 
 class HeroSerieViewModel: LTViewModel {
-
     // MARK: - Variables
     private let serie: Serie
     public let title: String
@@ -25,5 +24,4 @@ class HeroSerieViewModel: LTViewModel {
             self.serieDescription = EmptyStateStrings.heroDetail
         }
     }
-    
 }
