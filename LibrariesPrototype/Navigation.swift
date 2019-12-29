@@ -6,6 +6,7 @@
 //  Copyright © 2019 Ozgun Zor. All rights reserved.
 //
 
+import SwiftUI
 import Swinject
 import UIKit
 
@@ -130,10 +131,22 @@ extension Navigation {
         currentViewController = container.resolve(MainStretchyHeaderViewController.self)!
         pushTo(viewContoller: currentViewController, MainStretchyHeaderViewController.self)
     }
+
+    // MARK: SwiftUI Screens
+    private func openSwiftUIScreens() {
+        // Create the SwiftUI view that provides the window contents.
+        hostView(view: container.resolve(ContentView.self)!)
+    }
 }
 
 // MARK: - Navigate methods
 extension Navigation {
+    private func hostView(view: ContentView) {
+        // Use a UIHostingController as window root view controller.
+        self.window.rootViewController = UIHostingController(rootView: view)
+        self.window.makeKeyAndVisible()
+    }
+    
     private func showInWindow<T: LTViewController>(viewContoller: Any, _:T.Type) {
         self.window.rootViewController = (viewContoller as! T)
         self.window.makeKeyAndVisible()
@@ -176,6 +189,7 @@ extension Navigation {
         registerSplash()
         registerRxSwiftScreens()
         registerStretchyHeaderScreens()
+        registerSwiftUIScreens()
     }
     
     private func registerSplash() {
@@ -369,6 +383,10 @@ extension Navigation {
             viewModel.showStretchyHeaderScreens = { [unowned self] in
                 self.openMainStretchyHeaderViewController()
             }
+
+            viewModel.showSwiftUIScreens = { [unowned self] in
+                self.openSwiftUIScreens()
+            }
             
             return viewModel
         }
@@ -397,6 +415,13 @@ extension Navigation {
         // ViewControllers
         container.register(MainStretchyHeaderViewController.self) { r in
             MainStretchyHeaderViewController(viewModel: r.resolve(ReposViewModel.self)!)
+        }
+    }
+
+    private func registerSwiftUIScreens() {
+        // Views
+        container.register(ContentView.self) { r in
+            ContentView()
         }
     }
 }

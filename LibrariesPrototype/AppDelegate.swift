@@ -12,16 +12,21 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
+    fileprivate let viewModel = AppDelegateViewModel()
+    
     var application: Application?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let window = LTWindow(frame: UIScreen.main.bounds)
-        self.application = Application(window: window)
-        self.window = window
-        
         // Libraries to set up
-        AppDelegateHelper.setupLibrariesOnLaunch()
+        self.viewModel.setupLibrariesOnLaunch()
+        
+        // setup Window
+        let window = LTWindow(frame: UIScreen.main.bounds)
+        self.window = window
 
+        // Setup Application
+        self.application = Application(window: window)
+        
         // Start app first Screen
         self.application?.navigation.firstScreenAsSplash()
         
