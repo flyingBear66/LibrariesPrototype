@@ -104,9 +104,9 @@
 		ABDE27FEA19C25945F82AB08 /* Pods_LibrariesPrototypeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFAA968927402D631B262A8 /* Pods_LibrariesPrototypeUITests.framework */; };
 		B60255D222711806005D31B8 /* LTGradientBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60255D122711806005D31B8 /* LTGradientBarButton.swift */; };
 		B60255D42271FBAE005D31B8 /* LTGradientLoadingBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60255D32271FBAE005D31B8 /* LTGradientLoadingBarViewController.swift */; };
+		B6253E38227F8AD800342A94 /* AppDelegateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6253E37227F8AD800342A94 /* AppDelegateViewModel.swift */; };
 		B6253E36227F818D00342A94 /* UIImageView+AlamofireImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6253E35227F818D00342A94 /* UIImageView+AlamofireImage.swift */; };
 		B65865062272033D00773E35 /* GradientLoadingBarConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65865052272033D00773E35 /* GradientLoadingBarConstants.swift */; };
-		B6586508227221C300773E35 /* AppDelegateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6586507227221C300773E35 /* AppDelegateHelper.swift */; };
 		B658650A2272223C00773E35 /* EnvironmentInfoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65865092272223C00773E35 /* EnvironmentInfoHelper.swift */; };
 		B658650C227222A200773E35 /* EnvironmentInfoConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B658650B227222A200773E35 /* EnvironmentInfoConstants.swift */; };
 		B68EE6B4227605AC00749D62 /* MainStretchyHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68EE6B3227605AC00749D62 /* MainStretchyHeaderViewController.swift */; };
@@ -257,9 +257,9 @@
 		A641A8D8E78C9E8B21CB0487 /* Pods-LibrariesPrototypeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototypeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototypeTests/Pods-LibrariesPrototypeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B60255D122711806005D31B8 /* LTGradientBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTGradientBarButton.swift; sourceTree = "<group>"; };
 		B60255D32271FBAE005D31B8 /* LTGradientLoadingBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTGradientLoadingBarViewController.swift; sourceTree = "<group>"; };
+		B6253E37227F8AD800342A94 /* AppDelegateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateViewModel.swift; sourceTree = "<group>"; };
 		B6253E35227F818D00342A94 /* UIImageView+AlamofireImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+AlamofireImage.swift"; sourceTree = "<group>"; };
 		B65865052272033D00773E35 /* GradientLoadingBarConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLoadingBarConstants.swift; sourceTree = "<group>"; };
-		B6586507227221C300773E35 /* AppDelegateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateHelper.swift; sourceTree = "<group>"; };
 		B65865092272223C00773E35 /* EnvironmentInfoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentInfoHelper.swift; sourceTree = "<group>"; };
 		B658650B227222A200773E35 /* EnvironmentInfoConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EnvironmentInfoConstants.swift; path = LibrariesPrototype/Common/Helpers/EnvironmentInfoConstants.swift; sourceTree = SOURCE_ROOT; };
 		B68EE6B3227605AC00749D62 /* MainStretchyHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStretchyHeaderViewController.swift; sourceTree = "<group>"; };
@@ -443,6 +443,7 @@
 				9E94B40B2030C19000B8BA18 /* Presentation */,
 				9E94B4122030C19000B8BA18 /* Screens */,
 				9E94B3DC2030BEC000B8BA18 /* AppDelegate.swift */,
+				B6253E37227F8AD800342A94 /* AppDelegateViewModel.swift */,
 				9EA1EC3B226BE6E800AC5F88 /* Application.swift */,
 				9EA1EC37226BE5A100AC5F88 /* Navigation.swift */,
 				9E94B3E32030BEC000B8BA18 /* Assets.xcassets */,
@@ -585,7 +586,6 @@
 		9E94B4162030C19000B8BA18 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				B6586507227221C300773E35 /* AppDelegateHelper.swift */,
 				9EEA0FA1226A4C81008595CC /* Bindable.swift */,
 				B65865092272223C00773E35 /* EnvironmentInfoHelper.swift */,
 			);
@@ -1039,6 +1039,7 @@
 				9E94B3D72030BEC000B8BA18 /* Resources */,
 				6D4E126E540F348DB9BD7198 /* [CP] Embed Pods Frameworks */,
 				9E62CD5D226D07A80078AAC6 /* [LT] SwiftLint */,
+				E62FD7598EFD9E89FEFD28F5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1271,6 +1272,28 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
+		E62FD7598EFD9E89FEFD28F5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LibrariesPrototype/Pods-LibrariesPrototype-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/HockeySDK/HockeySDKResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/HockeySDKResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LibrariesPrototype/Pods-LibrariesPrototype-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1291,6 +1314,7 @@
 				9EEA0F9D226A4A51008595CC /* UIView+Constraints.swift in Sources */,
 				9EEA0FCF226A89A0008595CC /* EmptyDataSetListWithImageViewController.swift in Sources */,
 				FB3271EC226F663500B94AE6 /* GradientLoadingMainViewModel.swift in Sources */,
+				B6253E38227F8AD800342A94 /* AppDelegateViewModel.swift in Sources */,
 				9EEA0FA0226A4BF6008595CC /* LTViewController.swift in Sources */,
 				B6E319FA2276416E00AD34F6 /* LTLightLabel.swift in Sources */,
 				B658650A2272223C00773E35 /* EnvironmentInfoHelper.swift in Sources */,
@@ -1339,7 +1363,6 @@
 				9EEA0F43226A3F8B008595CC /* MainViewController.swift in Sources */,
 				9E62CD5A226C91BD0078AAC6 /* LTRXViewController.swift in Sources */,
 				FB3271EA226F662900B94AE6 /* GradientLoadingMainViewController.swift in Sources */,
-				B6586508227221C300773E35 /* AppDelegateHelper.swift in Sources */,
 				9E62CD41226C81560078AAC6 /* ReposService.swift in Sources */,
 				9EEA0F87226A498A008595CC /* HeroCollectionView.swift in Sources */,
 				9EEA0F4F226A401F008595CC /* SplashService.swift in Sources */,

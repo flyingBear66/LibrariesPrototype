@@ -9,6 +9,9 @@ PODS:
     - CocoaLumberjack/Core
   - EmptyDataSet-Swift (4.2.0)
   - GradientLoadingBar (1.1.15)
+  - HockeySDK (5.1.4):
+    - HockeySDK/DefaultLib (= 5.1.4)
+  - HockeySDK/DefaultLib (5.1.4)
   - RxAtomic (4.4.2)
   - RxCocoa (4.4.2):
     - RxSwift (>= 4.4.2, ~> 4.4)
@@ -24,6 +27,7 @@ DEPENDENCIES:
   - CocoaLumberjack/Swift
   - EmptyDataSet-Swift (~> 4.2.0)
   - GradientLoadingBar (~> 1.0)
+  - HockeySDK
   - RxCocoa
   - RxSwift
   - SVProgressHUD
@@ -37,6 +41,7 @@ SPEC REPOS:
     - CocoaLumberjack
     - EmptyDataSet-Swift
     - GradientLoadingBar
+    - HockeySDK
     - RxAtomic
     - RxCocoa
     - RxSwift
@@ -50,12 +55,13 @@ SPEC CHECKSUMS:
   CocoaLumberjack: 2f44e60eb91c176d471fdba43b9e3eae6a721947
   EmptyDataSet-Swift: 1fa0b35f530a35f852ecb2b53564728b0c300aaf
   GradientLoadingBar: 7d390dbfc3ead827a71a6af39a79533aa432eb37
+  HockeySDK: 15afe6bc0a5bfe3a531fd73dbf082095f37dac3b
   RxAtomic: d00e97c10db88c6f08540e0bf2752fc5a2404167
   RxCocoa: 477990dc3b4c3ff55fb0ac77e1cc06244e0aaec8
   RxSwift: 74c29b693c8e42b0f64400e8b06564575742d649
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   Swinject: 48a96cda93633cf2860697b4ce76ab5db9ebaca2
 
-PODFILE CHECKSUM: 15c2f618a4c9dd352fb5d546796244b163067ddf
+PODFILE CHECKSUM: f56c0ebab0fe56f6f384578a5fca97fcbec503c6
 
 COCOAPODS: 1.6.1
