@@ -107,8 +107,8 @@
 		ABDE27FEA19C25945F82AB08 /* Pods_LibrariesPrototypeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFAA968927402D631B262A8 /* Pods_LibrariesPrototypeUITests.framework */; };
 		B60255D222711806005D31B8 /* LTGradientBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60255D122711806005D31B8 /* LTGradientBarButton.swift */; };
 		B60255D42271FBAE005D31B8 /* LTGradientLoadingBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60255D32271FBAE005D31B8 /* LTGradientLoadingBarViewController.swift */; };
-		B6253E38227F8AD800342A94 /* AppDelegateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6253E37227F8AD800342A94 /* AppDelegateViewModel.swift */; };
 		B6253E36227F818D00342A94 /* UIImageView+AlamofireImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6253E35227F818D00342A94 /* UIImageView+AlamofireImage.swift */; };
+		B6253E38227F8AD800342A94 /* AppDelegateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6253E37227F8AD800342A94 /* AppDelegateViewModel.swift */; };
 		B65865062272033D00773E35 /* GradientLoadingBarConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65865052272033D00773E35 /* GradientLoadingBarConstants.swift */; };
 		B658650A2272223C00773E35 /* EnvironmentInfoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65865092272223C00773E35 /* EnvironmentInfoHelper.swift */; };
 		B658650C227222A200773E35 /* EnvironmentInfoConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B658650B227222A200773E35 /* EnvironmentInfoConstants.swift */; };
@@ -263,8 +263,8 @@
 		A641A8D8E78C9E8B21CB0487 /* Pods-LibrariesPrototypeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototypeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototypeTests/Pods-LibrariesPrototypeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B60255D122711806005D31B8 /* LTGradientBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTGradientBarButton.swift; sourceTree = "<group>"; };
 		B60255D32271FBAE005D31B8 /* LTGradientLoadingBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTGradientLoadingBarViewController.swift; sourceTree = "<group>"; };
-		B6253E37227F8AD800342A94 /* AppDelegateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateViewModel.swift; sourceTree = "<group>"; };
 		B6253E35227F818D00342A94 /* UIImageView+AlamofireImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+AlamofireImage.swift"; sourceTree = "<group>"; };
+		B6253E37227F8AD800342A94 /* AppDelegateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateViewModel.swift; sourceTree = "<group>"; };
 		B65865052272033D00773E35 /* GradientLoadingBarConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLoadingBarConstants.swift; sourceTree = "<group>"; };
 		B65865092272223C00773E35 /* EnvironmentInfoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentInfoHelper.swift; sourceTree = "<group>"; };
 		B658650B227222A200773E35 /* EnvironmentInfoConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EnvironmentInfoConstants.swift; path = LibrariesPrototype/Common/Helpers/EnvironmentInfoConstants.swift; sourceTree = SOURCE_ROOT; };
@@ -1209,9 +1209,11 @@
 				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityLogger/AlamofireNetworkActivityLogger.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
 				"${BUILT_PRODUCTS_DIR}/EmptyDataSet-Swift/EmptyDataSet_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/FoldingCell/FoldingCell.framework",
 				"${BUILT_PRODUCTS_DIR}/GradientLoadingBar/GradientLoadingBar.framework",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/LightweightObservable/LightweightObservable.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
@@ -1223,9 +1225,11 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityLogger.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EmptyDataSet_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FoldingCell.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GradientLoadingBar.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LightweightObservable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
@@ -1294,15 +1298,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-LibrariesPrototype/Pods-LibrariesPrototype-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/HockeySDK/HockeySDKResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/HockeySDKResources.bundle",
 			);
