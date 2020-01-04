@@ -1,3 +1,9 @@
+## PrototypeApp
+
+This is a project to test some popular libraries and as well as trending architectures. 
+
+There will be a menu when the app launches and you can navigate to other views to tryout libraries etc.
+
 ### Common
 
 - Constants
