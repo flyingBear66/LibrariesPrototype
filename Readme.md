@@ -118,6 +118,8 @@ There will be a menu when the app launches and you can navigate to other views t
 
 ### Configurations
 
+​	This directory has `.xcconfig` files with parameters for every environment such as below.
+
 * Development.xcconfig
 * Test.xcconfig
 * Production.xcconfig
