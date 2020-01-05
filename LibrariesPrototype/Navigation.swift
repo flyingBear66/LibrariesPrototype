@@ -137,6 +137,12 @@ extension Navigation {
         // Create the SwiftUI view that provides the window contents.
         hostView(view: container.resolve(ContentView.self)!)
     }
+
+    // MARK: Folding Cell Screens
+    private func openFoldingCell() {
+        currentViewController = container.resolve(FoldingCellMainViewController.self)!
+        pushTo(viewContoller: currentViewController, FoldingCellMainViewController.self)
+    }
 }
 
 // MARK: - Navigate methods
@@ -190,6 +196,7 @@ extension Navigation {
         registerRxSwiftScreens()
         registerStretchyHeaderScreens()
         registerSwiftUIScreens()
+        registerFoldingCellScreens()
     }
     
     private func registerSplash() {
@@ -387,6 +394,10 @@ extension Navigation {
             viewModel.showSwiftUIScreens = { [unowned self] in
                 self.openSwiftUIScreens()
             }
+
+            viewModel.showFoldingCell = { [unowned self] in
+                self.openFoldingCell()
+            }
             
             return viewModel
         }
@@ -424,5 +435,11 @@ extension Navigation {
             ContentView()
         }
     }
-}
 
+    private func registerFoldingCellScreens() {
+        // ViewControllers
+        container.register(FoldingCellMainViewController.self) { r in
+            FoldingCellMainViewController()
+        }
+    }
+}

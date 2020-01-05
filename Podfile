@@ -12,6 +12,7 @@ target 'LibrariesPrototype' do
   pod 'CocoaLumberjack/Swift'
   pod 'GradientLoadingBar', '~> 1.0'
   pod 'EmptyDataSet-Swift', '~> 4.2.0'
+  pod 'FoldingCell'
   pod 'HockeySDK'
   pod 'RxCocoa'
   pod 'RxSwift'
