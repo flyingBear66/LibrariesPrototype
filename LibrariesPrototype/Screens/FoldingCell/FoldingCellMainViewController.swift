@@ -10,7 +10,7 @@ import FoldingCell
 import UIKit
 
 class FoldingCellMainViewController: LTViewController {
-    struct CellHeight {
+    enum CellHeight {
         static let close: CGFloat = 75
         static let open: CGFloat = 200
         static let count: Int = 5
@@ -20,13 +20,12 @@ class FoldingCellMainViewController: LTViewController {
     let tableView: LTTableView = {
         let tableView = LTTableView()
         tableView.separatorStyle = .none
-        let nib = UINib(nibName: "LTFoldingCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "FoldingCell")
+        tableView.register(LTFoldingCell.self)
         return tableView
     }()
 
     // MARK: - Variables
-    var cellHeights = (0..<CellHeight.count).map { _ in CellHeight.close }
+    var cellHeights = [CGFloat](repeating: CellHeight.close, count: CellHeight.count)
 
     // MARK: - View LifeCycle
     override init() {
@@ -65,7 +64,7 @@ extension FoldingCellMainViewController: UITableViewDelegate, UITableViewDataSou
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FoldingCell", for: indexPath) as! LTFoldingCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LTFoldingCell", for: indexPath) as! LTFoldingCell
         let durations: [TimeInterval] = [0.26, 0.2, 0.2]
         cell.durationsForExpandedState = durations
         cell.durationsForCollapsedState = durations
@@ -77,9 +76,7 @@ extension FoldingCellMainViewController: UITableViewDelegate, UITableViewDataSou
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard case let cell as FoldingCell = tableView.cellForRow(at: indexPath) else {
-          return
-        }
+        guard case let cell as FoldingCell = tableView.cellForRow(at: indexPath) else { return }
 
         var duration = 0.0
         let cellIsCollapsed = cellHeights[indexPath.row] == CellHeight.close//Const.closeCellHeight
@@ -103,22 +100,9 @@ extension FoldingCellMainViewController: UITableViewDelegate, UITableViewDataSou
             }
         }, completion: nil)
     }
-
-//    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-//
-//          if case let cell as FoldingCell = cell {
-//              if cellHeights![indexPath.row] == C.CellHeight.close {
-//                  foldingCell.selectedAnimation(false, animated: false, completion:nil)
-//              } else {
-//                  foldingCell.selectedAnimation(true, animated: false, completion: nil)
-//              }
-//          }
-//      }
     
     func tableView(_: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        guard case let cell as LTFoldingCell = cell else {
-            return
-        }
+        guard case let cell as LTFoldingCell = cell else { return }
 
         cell.backgroundColor = .clear
 
