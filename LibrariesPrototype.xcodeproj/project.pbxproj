@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		56BAB5147F27307C82592834 /* Pods_LibrariesPrototypeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0A85CE7564EA861DE44C07 /* Pods_LibrariesPrototypeTests.framework */; };
+		87157FC823C0431900DA2AE3 /* LTFoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87157FC623C0431900DA2AE3 /* LTFoldingCell.swift */; };
+		87157FC923C0431900DA2AE3 /* LTFoldingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87157FC723C0431900DA2AE3 /* LTFoldingCell.xib */; };
+		87674DB823C21659007AD400 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87674DB723C21659007AD400 /* UITableView+Extensions.swift */; };
+		87C70A0323AEB634004E90E4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C70A0223AEB634004E90E4 /* ContentView.swift */; };
+		87C70A0523AEB64E004E90E4 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C70A0423AEB64E004E90E4 /* Models.swift */; };
+		87C70A0723AEB65F004E90E4 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C70A0623AEB65F004E90E4 /* RootView.swift */; };
+		87F3640B23BD49DF00986564 /* FoldingCellMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F3640A23BD49DF00986564 /* FoldingCellMainViewController.swift */; };
 		9E62CD40226C81560078AAC6 /* RepositoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E62CD3B226C81560078AAC6 /* RepositoryCollectionViewCell.swift */; };
 		9E62CD41226C81560078AAC6 /* ReposService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E62CD3C226C81560078AAC6 /* ReposService.swift */; };
 		9E62CD42226C81560078AAC6 /* ReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E62CD3D226C81560078AAC6 /* ReposViewController.swift */; };
@@ -104,10 +111,18 @@
 		ABDE27FEA19C25945F82AB08 /* Pods_LibrariesPrototypeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFAA968927402D631B262A8 /* Pods_LibrariesPrototypeUITests.framework */; };
 		B60255D222711806005D31B8 /* LTGradientBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60255D122711806005D31B8 /* LTGradientBarButton.swift */; };
 		B60255D42271FBAE005D31B8 /* LTGradientLoadingBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60255D32271FBAE005D31B8 /* LTGradientLoadingBarViewController.swift */; };
+		B6253E36227F818D00342A94 /* UIImageView+AlamofireImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6253E35227F818D00342A94 /* UIImageView+AlamofireImage.swift */; };
+		B6253E38227F8AD800342A94 /* AppDelegateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6253E37227F8AD800342A94 /* AppDelegateViewModel.swift */; };
 		B65865062272033D00773E35 /* GradientLoadingBarConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65865052272033D00773E35 /* GradientLoadingBarConstants.swift */; };
-		B6586508227221C300773E35 /* AppDelegateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6586507227221C300773E35 /* AppDelegateHelper.swift */; };
 		B658650A2272223C00773E35 /* EnvironmentInfoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65865092272223C00773E35 /* EnvironmentInfoHelper.swift */; };
 		B658650C227222A200773E35 /* EnvironmentInfoConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B658650B227222A200773E35 /* EnvironmentInfoConstants.swift */; };
+		B68EE6B4227605AC00749D62 /* MainStretchyHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68EE6B3227605AC00749D62 /* MainStretchyHeaderViewController.swift */; };
+		B68EE6BB22760B3E00749D62 /* StretchyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68EE6BA22760B3E00749D62 /* StretchyHeaderView.swift */; };
+		B68EE6BD227615B600749D62 /* StretchyHeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68EE6BC227615B600749D62 /* StretchyHeaderLayout.swift */; };
+		B68EE6BF227640DC00749D62 /* LTCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68EE6BE227640DC00749D62 /* LTCollectionReusableView.swift */; };
+		B68EE6C22276410600749D62 /* LTViewPropertyAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68EE6C12276410600749D62 /* LTViewPropertyAnimator.swift */; };
+		B6E319F82276416000AD34F6 /* LTHeavyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E319F72276416000AD34F6 /* LTHeavyLabel.swift */; };
+		B6E319FA2276416E00AD34F6 /* LTLightLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E319F92276416E00AD34F6 /* LTLightLabel.swift */; };
 		F22E94A131A902D1727629A8 /* Pods_LibrariesPrototype.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F2A9BBB640BE5DCB529C15 /* Pods_LibrariesPrototype.framework */; };
 		FB3271EA226F662900B94AE6 /* GradientLoadingMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3271E9226F662900B94AE6 /* GradientLoadingMainViewController.swift */; };
 		FB3271EC226F663500B94AE6 /* GradientLoadingMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3271EB226F663500B94AE6 /* GradientLoadingMainViewModel.swift */; };
@@ -142,6 +157,13 @@
 		2C0A85CE7564EA861DE44C07 /* Pods_LibrariesPrototypeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibrariesPrototypeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32FFCE63D7B019D3EAD96C73 /* Pods-LibrariesPrototypeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototypeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototypeUITests/Pods-LibrariesPrototypeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6CFAA968927402D631B262A8 /* Pods_LibrariesPrototypeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibrariesPrototypeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87157FC623C0431900DA2AE3 /* LTFoldingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTFoldingCell.swift; sourceTree = "<group>"; };
+		87157FC723C0431900DA2AE3 /* LTFoldingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LTFoldingCell.xib; sourceTree = "<group>"; };
+		87674DB723C21659007AD400 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		87C70A0223AEB634004E90E4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		87C70A0423AEB64E004E90E4 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		87C70A0623AEB65F004E90E4 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		87F3640A23BD49DF00986564 /* FoldingCellMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldingCellMainViewController.swift; sourceTree = "<group>"; };
 		9BEA3E3759B09962CA71FCB7 /* Pods-LibrariesPrototype.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototype.release.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototype/Pods-LibrariesPrototype.release.xcconfig"; sourceTree = "<group>"; };
 		9E28B3B21F6C7D640CFA7D7F /* Pods-LibrariesPrototype.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototype.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototype/Pods-LibrariesPrototype.debug.xcconfig"; sourceTree = "<group>"; };
 		9E62CD3B226C81560078AAC6 /* RepositoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -249,10 +271,18 @@
 		A641A8D8E78C9E8B21CB0487 /* Pods-LibrariesPrototypeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototypeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototypeTests/Pods-LibrariesPrototypeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B60255D122711806005D31B8 /* LTGradientBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTGradientBarButton.swift; sourceTree = "<group>"; };
 		B60255D32271FBAE005D31B8 /* LTGradientLoadingBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTGradientLoadingBarViewController.swift; sourceTree = "<group>"; };
+		B6253E35227F818D00342A94 /* UIImageView+AlamofireImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+AlamofireImage.swift"; sourceTree = "<group>"; };
+		B6253E37227F8AD800342A94 /* AppDelegateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateViewModel.swift; sourceTree = "<group>"; };
 		B65865052272033D00773E35 /* GradientLoadingBarConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLoadingBarConstants.swift; sourceTree = "<group>"; };
-		B6586507227221C300773E35 /* AppDelegateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateHelper.swift; sourceTree = "<group>"; };
 		B65865092272223C00773E35 /* EnvironmentInfoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentInfoHelper.swift; sourceTree = "<group>"; };
 		B658650B227222A200773E35 /* EnvironmentInfoConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EnvironmentInfoConstants.swift; path = LibrariesPrototype/Common/Helpers/EnvironmentInfoConstants.swift; sourceTree = SOURCE_ROOT; };
+		B68EE6B3227605AC00749D62 /* MainStretchyHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStretchyHeaderViewController.swift; sourceTree = "<group>"; };
+		B68EE6BA22760B3E00749D62 /* StretchyHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyHeaderView.swift; sourceTree = "<group>"; };
+		B68EE6BC227615B600749D62 /* StretchyHeaderLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyHeaderLayout.swift; sourceTree = "<group>"; };
+		B68EE6BE227640DC00749D62 /* LTCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTCollectionReusableView.swift; sourceTree = "<group>"; };
+		B68EE6C12276410600749D62 /* LTViewPropertyAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTViewPropertyAnimator.swift; sourceTree = "<group>"; };
+		B6E319F72276416000AD34F6 /* LTHeavyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTHeavyLabel.swift; sourceTree = "<group>"; };
+		B6E319F92276416E00AD34F6 /* LTLightLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTLightLabel.swift; sourceTree = "<group>"; };
 		C0F2A9BBB640BE5DCB529C15 /* Pods_LibrariesPrototype.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibrariesPrototype.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0101268CB92B19951DB637D /* Pods-LibrariesPrototypeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototypeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototypeTests/Pods-LibrariesPrototypeTests.release.xcconfig"; sourceTree = "<group>"; };
 		FB3271E9226F662900B94AE6 /* GradientLoadingMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLoadingMainViewController.swift; sourceTree = "<group>"; };
@@ -305,6 +335,26 @@
 				1767AD9BE0E14BBDBFA132F2 /* Pods-LibrariesPrototypeUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		87C70A0123AEB5CA004E90E4 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				87C70A0223AEB634004E90E4 /* ContentView.swift */,
+				87C70A0423AEB64E004E90E4 /* Models.swift */,
+				87C70A0623AEB65F004E90E4 /* RootView.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		87F3640923BD49BA00986564 /* FoldingCell */ = {
+			isa = PBXGroup;
+			children = (
+				87F3640A23BD49DF00986564 /* FoldingCellMainViewController.swift */,
+				87157FC623C0431900DA2AE3 /* LTFoldingCell.swift */,
+				87157FC723C0431900DA2AE3 /* LTFoldingCell.xib */,
+			);
+			path = FoldingCell;
 			sourceTree = "<group>";
 		};
 		9E62CD39226C811C0078AAC6 /* RxSwift */ = {
@@ -427,6 +477,7 @@
 				9E94B40B2030C19000B8BA18 /* Presentation */,
 				9E94B4122030C19000B8BA18 /* Screens */,
 				9E94B3DC2030BEC000B8BA18 /* AppDelegate.swift */,
+				B6253E37227F8AD800342A94 /* AppDelegateViewModel.swift */,
 				9EA1EC3B226BE6E800AC5F88 /* Application.swift */,
 				9EA1EC37226BE5A100AC5F88 /* Navigation.swift */,
 				9E94B3E32030BEC000B8BA18 /* Assets.xcassets */,
@@ -468,6 +519,7 @@
 			children = (
 				9E94B40F2030C19000B8BA18 /* Controls */,
 				9E94B40E2030C19000B8BA18 /* Extensions */,
+				B68EE6C0227640F000749D62 /* Models */,
 				9EEA0F9E226A4BD5008595CC /* ViewControllers */,
 				9E94B40C2030C19000B8BA18 /* ViewModels */,
 				9E94B4112030C19000B8BA18 /* Views */,
@@ -488,8 +540,10 @@
 			children = (
 				9EEA0FB0226A586A008595CC /* LTViewController+ActivitiyIndicator.swift */,
 				FBAD4757226F7B4E00DFE2A2 /* LTViewController+GradientLoadingBar.swift */,
+				B6253E35227F818D00342A94 /* UIImageView+AlamofireImage.swift */,
 				9EEA0FAC226A573D008595CC /* UIImageView+AsyncLoadingFromURL.swift */,
 				9EEA0F9C226A4A51008595CC /* UIView+Constraints.swift */,
+				87674DB723C21659007AD400 /* UITableView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -499,7 +553,9 @@
 			children = (
 				9EE91FB0226A36DC0079827F /* LTButton.swift */,
 				B60255D122711806005D31B8 /* LTGradientBarButton.swift */,
+				B6E319F72276416000AD34F6 /* LTHeavyLabel.swift */,
 				9EE91FB2226A36E70079827F /* LTLabel.swift */,
+				B6E319F92276416E00AD34F6 /* LTLightLabel.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -516,6 +572,7 @@
 				9EEA0FA5226A4D56008595CC /* LTTableViewCell.swift */,
 				9EE91FAE226A36CD0079827F /* LTView.swift */,
 				9EA1EC39226BE60000AC5F88 /* LTWindow.swift */,
+				B68EE6BE227640DC00749D62 /* LTCollectionReusableView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -523,12 +580,15 @@
 		9E94B4122030C19000B8BA18 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				FB3271E6226F65FD00B94AE6 /* GradientLoadingBar */,
-				9E62CD39226C811C0078AAC6 /* RxSwift */,
 				9EEA0FBE226A88C1008595CC /* EmptyDataSet */,
+				87F3640923BD49BA00986564 /* FoldingCell */,
+				FB3271E6226F65FD00B94AE6 /* GradientLoadingBar */,
 				9EEA0F3C226A3F3C008595CC /* Main */,
 				9EEA0F50226A4958008595CC /* NativeAPI */,
+				9E62CD39226C811C0078AAC6 /* RxSwift */,
 				9EEA0F3D226A3F46008595CC /* Splash */,
+				B675303D2276050C00BD9AFA /* StretchyHeader */,
+				87C70A0123AEB5CA004E90E4 /* SwiftUI */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -563,7 +623,6 @@
 		9E94B4162030C19000B8BA18 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				B6586507227221C300773E35 /* AppDelegateHelper.swift */,
 				9EEA0FA1226A4C81008595CC /* Bindable.swift */,
 				B65865092272223C00773E35 /* EnvironmentInfoHelper.swift */,
 			);
@@ -927,6 +986,40 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		B675303D2276050C00BD9AFA /* StretchyHeader */ = {
+			isa = PBXGroup;
+			children = (
+				B675303E2276052200BD9AFA /* ViewControllers */,
+				B68EE6B922760B0B00749D62 /* Views */,
+			);
+			path = StretchyHeader;
+			sourceTree = "<group>";
+		};
+		B675303E2276052200BD9AFA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B68EE6B3227605AC00749D62 /* MainStretchyHeaderViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B68EE6B922760B0B00749D62 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B68EE6BC227615B600749D62 /* StretchyHeaderLayout.swift */,
+				B68EE6BA22760B3E00749D62 /* StretchyHeaderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B68EE6C0227640F000749D62 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B68EE6C12276410600749D62 /* LTViewPropertyAnimator.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		C6F8907B2D6825A6BB6D03AC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -983,6 +1076,7 @@
 				9E94B3D72030BEC000B8BA18 /* Resources */,
 				6D4E126E540F348DB9BD7198 /* [CP] Embed Pods Frameworks */,
 				9E62CD5D226D07A80078AAC6 /* [LT] SwiftLint */,
+				E62FD7598EFD9E89FEFD28F5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1038,12 +1132,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Ozgun Zor";
 				TargetAttributes = {
 					9E94B3D82030BEC000B8BA18 = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1020;
+						LastSwiftMigration = 1120;
 						ProvisioningStyle = Manual;
 					};
 					9E94B3EC2030BEC000B8BA18 = {
@@ -1085,6 +1179,7 @@
 			files = (
 				9E94B3E42030BEC000B8BA18 /* Assets.xcassets in Resources */,
 				9EEA0FB5226A5BB1008595CC /* LaunchScreen.storyboard in Resources */,
+				87157FC923C0431900DA2AE3 /* LTFoldingCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1131,26 +1226,34 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-LibrariesPrototype/Pods-LibrariesPrototype-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityLogger/AlamofireNetworkActivityLogger.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
 				"${BUILT_PRODUCTS_DIR}/EmptyDataSet-Swift/EmptyDataSet_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/FoldingCell/FoldingCell.framework",
 				"${BUILT_PRODUCTS_DIR}/GradientLoadingBar/GradientLoadingBar.framework",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/LightweightObservable/LightweightObservable.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityLogger.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EmptyDataSet_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FoldingCell.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GradientLoadingBar.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LightweightObservable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1211,6 +1314,24 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
+		E62FD7598EFD9E89FEFD28F5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LibrariesPrototype/Pods-LibrariesPrototype-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/HockeySDK/HockeySDKResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/HockeySDKResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LibrariesPrototype/Pods-LibrariesPrototype-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1224,13 +1345,17 @@
 				FB3271F6226F697500B94AE6 /* GradientLoadingStatusBarViewController.swift in Sources */,
 				9EEA0F95226A498A008595CC /* GetHeroStories.swift in Sources */,
 				9EE91FDB226A3E5B0079827F /* Story.swift in Sources */,
+				B68EE6BD227615B600749D62 /* StretchyHeaderLayout.swift in Sources */,
 				9EE91FC6226A3A2E0079827F /* APIRequest.swift in Sources */,
 				FB3271F4226F696600B94AE6 /* GradientLoadingStatusBarWithSafeAreaViewController.swift in Sources */,
 				9EEA0FAD226A573E008595CC /* UIImageView+AsyncLoadingFromURL.swift in Sources */,
 				9EEA0F9D226A4A51008595CC /* UIView+Constraints.swift in Sources */,
 				9EEA0FCF226A89A0008595CC /* EmptyDataSetListWithImageViewController.swift in Sources */,
 				FB3271EC226F663500B94AE6 /* GradientLoadingMainViewModel.swift in Sources */,
+				B6253E38227F8AD800342A94 /* AppDelegateViewModel.swift in Sources */,
 				9EEA0FA0226A4BF6008595CC /* LTViewController.swift in Sources */,
+				B6E319FA2276416E00AD34F6 /* LTLightLabel.swift in Sources */,
+				87C70A0523AEB64E004E90E4 /* Models.swift in Sources */,
 				B658650A2272223C00773E35 /* EnvironmentInfoHelper.swift in Sources */,
 				9EEA0F7F226A498A008595CC /* HeroSearchViewModel.swift in Sources */,
 				9EE91FDC226A3E5B0079827F /* Event.swift in Sources */,
@@ -1239,6 +1364,7 @@
 				9EEA0F8E226A498A008595CC /* HeroStoryViewModel.swift in Sources */,
 				9EEA0FD1226A89EB008595CC /* BaseEmptyDataSetListViewController.swift in Sources */,
 				9EEA0FA6226A4D56008595CC /* LTTableViewCell.swift in Sources */,
+				87C70A0723AEB65F004E90E4 /* RootView.swift in Sources */,
 				9EE91FB5226A371C0079827F /* LTTableView.swift in Sources */,
 				FB3271EE226F693C00B94AE6 /* GradientLoadingButtonViewModel.swift in Sources */,
 				9E62CD44226C81560078AAC6 /* ReposViewModel.swift in Sources */,
@@ -1249,6 +1375,8 @@
 				9EEA0F8C226A498A008595CC /* GetCharacters.swift in Sources */,
 				9E62CD51226C904F0078AAC6 /* AlamofireHTTPClient.swift in Sources */,
 				9EEA0F8A226A498A008595CC /* HeroListCollectionViewLayout.swift in Sources */,
+				B68EE6B4227605AC00749D62 /* MainStretchyHeaderViewController.swift in Sources */,
+				B68EE6C22276410600749D62 /* LTViewPropertyAnimator.swift in Sources */,
 				9EE91FB1226A36DC0079827F /* LTButton.swift in Sources */,
 				9EEA0FCB226A8988008595CC /* EmptyDataSetListViewController.swift in Sources */,
 				9EE91FCB226A3B9E0079827F /* URLQueryItemEncoder.swift in Sources */,
@@ -1268,13 +1396,16 @@
 				9E62CD58226C911A0078AAC6 /* LTRXViewModel.swift in Sources */,
 				9EE91FCD226A3BA90079827F /* md5.swift in Sources */,
 				9EEA0F82226A498A008595CC /* BaseHeroViewController.swift in Sources */,
+				87F3640B23BD49DF00986564 /* FoldingCellMainViewController.swift in Sources */,
 				9EEA0F89226A498A008595CC /* HeroCollectionViewCell.swift in Sources */,
+				87C70A0323AEB634004E90E4 /* ContentView.swift in Sources */,
+				B68EE6BB22760B3E00749D62 /* StretchyHeaderView.swift in Sources */,
 				9EEA0F7E226A498A008595CC /* HeroListViewModel.swift in Sources */,
 				9EEA0F83226A498A008595CC /* HeroSearchViewController.swift in Sources */,
 				9EEA0F43226A3F8B008595CC /* MainViewController.swift in Sources */,
 				9E62CD5A226C91BD0078AAC6 /* LTRXViewController.swift in Sources */,
+				87157FC823C0431900DA2AE3 /* LTFoldingCell.swift in Sources */,
 				FB3271EA226F662900B94AE6 /* GradientLoadingMainViewController.swift in Sources */,
-				B6586508227221C300773E35 /* AppDelegateHelper.swift in Sources */,
 				9E62CD41226C81560078AAC6 /* ReposService.swift in Sources */,
 				9EEA0F87226A498A008595CC /* HeroCollectionView.swift in Sources */,
 				9EEA0F4F226A401F008595CC /* SplashService.swift in Sources */,
@@ -1286,12 +1417,14 @@
 				9EEA0F98226A498A008595CC /* GetHeroEvents.swift in Sources */,
 				9EA1EC3F226BFDF600AC5F88 /* MainEmptyDataSetListViewModel.swift in Sources */,
 				B60255D42271FBAE005D31B8 /* LTGradientLoadingBarViewController.swift in Sources */,
+				B6E319F82276416000AD34F6 /* LTHeavyLabel.swift in Sources */,
 				9E62CD40226C81560078AAC6 /* RepositoryCollectionViewCell.swift in Sources */,
 				9EEA0F8F226A498A008595CC /* HeroDetailViewModel.swift in Sources */,
 				9EEA0F93226A498A008595CC /* HeroDetailConstants.swift in Sources */,
 				9EE91FDF226A3E5B0079827F /* ComicCharacter.swift in Sources */,
 				9EE91FB7226A372B0079827F /* LTCollectionView.swift in Sources */,
 				FB3271F2226F695600B94AE6 /* GradientLoadingStatusBarWithSafeAreaViewModel.swift in Sources */,
+				87674DB823C21659007AD400 /* UITableView+Extensions.swift in Sources */,
 				9EEA0FA2226A4C81008595CC /* Bindable.swift in Sources */,
 				9EEA0F91226A498A008595CC /* HeroSerieViewModel.swift in Sources */,
 				9EE91FDD226A3E5B0079827F /* Comic.swift in Sources */,
@@ -1314,9 +1447,11 @@
 				9EEA0F99226A498A008595CC /* HeroDetailService.swift in Sources */,
 				9EA1EC38226BE5A100AC5F88 /* Navigation.swift in Sources */,
 				9EEA0F45226A3F9B008595CC /* SplashViewController.swift in Sources */,
+				B68EE6BF227640DC00749D62 /* LTCollectionReusableView.swift in Sources */,
 				9EEA0FA8226A52DD008595CC /* LTImageView.swift in Sources */,
 				9EEA0F7D226A498A008595CC /* HeroCellViewModel.swift in Sources */,
 				9EEA0F47226A3FB2008595CC /* MainViewModel.swift in Sources */,
+				B6253E36227F818D00342A94 /* UIImageView+AlamofireImage.swift in Sources */,
 				9EEA0FB1226A586B008595CC /* LTViewController+ActivitiyIndicator.swift in Sources */,
 				9EEA0FAB226A530A008595CC /* FavoriteButton.swift in Sources */,
 				FBAD4758226F7B4E00DFE2A2 /* LTViewController+GradientLoadingBar.swift in Sources */,
@@ -1371,6 +1506,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1378,6 +1514,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1405,7 +1542,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1428,6 +1565,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1435,6 +1573,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1456,7 +1595,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -1476,7 +1615,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ozgunzor.LibrariesPrototype;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1493,7 +1632,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ozgunzor.LibrariesPrototype;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -10,10 +10,13 @@ import UIKit
 
 enum MenuCase: Int {
     case nativeNetworking = 0
-    case emptyDataSet = 1
-    case rxSwift = 2
-    case gradeintProgressBar = 3
-    case none = -1
+    case emptyDataSet
+    case rxSwift
+    case gradientProgressBar
+    case stretchyHeader
+    case swiftUIScreens
+    case foldingCell
+    case none
 }
 
 protocol MainViewModelEvents {
@@ -21,15 +24,20 @@ protocol MainViewModelEvents {
     var showEmptyDataSet: (() -> Void)? {get set}
     var showRxSwiftScreens: (() -> Void)? {get set}
     var showGradientLoadingBarScreens: (() -> Void)? {get set}
+    var showStretchyHeaderScreens: (() -> Void)? {get set}
+    var showSwiftUIScreens: (() -> Void)? {get set}
+    var showFoldingCell: (() -> Void)? {get set}
 }
 
 class MainViewModel: LTViewModel, MainViewModelEvents {
-
     // MARK: - Events
     var showNativeNetworkingScreens: (() -> Void)?
     var showEmptyDataSet: (() -> Void)?
     var showRxSwiftScreens: (() -> Void)?
     var showGradientLoadingBarScreens: (() -> Void)?
+    var showStretchyHeaderScreens: (() -> Void)?
+    var showSwiftUIScreens: (() -> Void)?
+    var showFoldingCell: (() -> Void)?
 
     // MARK: - Variables
     private let service: MainService!
@@ -46,7 +54,7 @@ class MainViewModel: LTViewModel, MainViewModelEvents {
     
     // MARK: - Services
     private func getMenus() -> [String] {
-        return ["Native Networking Test with MarvelAPI", "Empty Data Set List", "RxSwift and Alamofire Screens", "Gradient Progress Bar"]
+        return ["Native Networking Test with MarvelAPI", "Empty Data Set List", "RxSwift and Alamofire Screens", "Gradient Progress Bar", "Stretchy Header CollectionView", "SwiftUI Screens", "Folding Cell"]
     }
     
     // MARK: - Helpers
@@ -59,11 +67,16 @@ class MainViewModel: LTViewModel, MainViewModelEvents {
             showEmptyDataSet!()
         case .rxSwift:
             showRxSwiftScreens!()
-        case .gradeintProgressBar:
+        case .gradientProgressBar:
             showGradientLoadingBarScreens!()
+        case .stretchyHeader:
+            showStretchyHeaderScreens!()
+        case .swiftUIScreens:
+            showSwiftUIScreens!()
+        case .foldingCell:
+            showFoldingCell!()
         case .none:
             print("Default case. Error happened or index not exist")            
         }
     }
-    
 }

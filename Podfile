@@ -7,13 +7,17 @@ target 'LibrariesPrototype' do
 
   # Pods for LibrariesPrototype
   pod 'Alamofire'
+  pod 'AlamofireImage', '~> 3.5'
   pod 'AlamofireNetworkActivityLogger', '~> 2.4'
   pod 'CocoaLumberjack/Swift'
   pod 'GradientLoadingBar', '~> 1.0'
   pod 'EmptyDataSet-Swift', '~> 4.2.0'
+  pod 'FoldingCell'
+  pod 'HockeySDK'
   pod 'RxCocoa'
   pod 'RxSwift'
   pod 'SVProgressHUD'
+  pod 'Swinject'
 
   target 'LibrariesPrototypeTests' do
     inherit! :search_paths

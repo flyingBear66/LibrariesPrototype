@@ -9,14 +9,14 @@
 import UIKit
 
 class HeroCollectionView: LTCollectionView {
-    
     init() {
         let heroCollectionViewLayout = HeroListCollectionViewLayout()
         super.init(frame: .zero, collectionViewLayout: heroCollectionViewLayout)
         backgroundColor = .clear
         register(HeroCollectionViewCell.self, forCellWithReuseIdentifier: HeroCellIdentifiers.heroCell)
     }
-    
+
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

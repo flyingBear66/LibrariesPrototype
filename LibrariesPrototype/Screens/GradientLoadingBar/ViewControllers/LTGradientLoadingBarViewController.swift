@@ -6,8 +6,8 @@
 //  Copyright © 2019 Ozgun Zor. All rights reserved.
 //
 
-import UIKit
 import GradientLoadingBar
+import UIKit
 
 class LTGradientLoadingBarViewController: LTViewController {
     // MARK: - UIControls

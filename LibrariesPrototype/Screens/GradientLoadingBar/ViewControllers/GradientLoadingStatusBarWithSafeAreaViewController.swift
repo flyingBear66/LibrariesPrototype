@@ -6,8 +6,8 @@
 //  Copyright © 2019 Ozgun Zor. All rights reserved.
 //
 
-import UIKit
 import GradientLoadingBar
+import UIKit
 
 class GradientLoadingStatusBarWithSafeAreaViewController: LTGradientLoadingBarViewController {
     private let safeAreaGradientLoadingBarSafe = GradientLoadingBar(height: GradientLoadingBarConstants.height,
@@ -23,6 +23,7 @@ class GradientLoadingStatusBarWithSafeAreaViewController: LTGradientLoadingBarVi
         setupViews()
     }
 
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

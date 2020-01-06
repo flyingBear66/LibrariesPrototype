@@ -22,7 +22,6 @@ protocol GradientLoadingMainViewModelEvents {
 }
 
 class GradientLoadingMainViewModel: LTViewModel {
-
     // MARK: - Events
     var showButtonScreens: (() -> Void)?
     var showStatusBarScreens: (() -> Void)?

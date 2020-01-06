@@ -10,7 +10,6 @@ import RxSwift
 import UIKit
 
 class LTRXViewController: LTViewController {
-
     // MARK: - Variables
     var disposeBag = DisposeBag()
     

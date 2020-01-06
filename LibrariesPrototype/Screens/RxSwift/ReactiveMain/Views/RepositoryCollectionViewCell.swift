@@ -11,7 +11,6 @@ import RxSwift
 import UIKit
 
 class RepositoryCollectionViewCell: LTCollectionViewCell {
-    
     // MARK: - Variables
 
     var viewModel: RepositoryViewModel? {
@@ -51,7 +50,8 @@ class RepositoryCollectionViewCell: LTCollectionViewCell {
         super.init(frame: frame)
         setupViews()
     }
-    
+
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

@@ -6,11 +6,10 @@
 //  Copyright © 2019 Ozgun Zor. All rights reserved.
 //
 
-import UIKit
 import GradientLoadingBar
+import UIKit
 
 class GradientLoadingStatusBarViewController: LTViewController {
-    
     // MARK: - Variables
     private var viewModel: GradientLoadingStatusBarViewModel!
 
@@ -21,6 +20,7 @@ class GradientLoadingStatusBarViewController: LTViewController {
         setupViews()
     }
 
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

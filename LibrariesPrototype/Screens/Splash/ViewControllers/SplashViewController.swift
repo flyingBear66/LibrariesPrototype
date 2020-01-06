@@ -9,7 +9,6 @@
 import UIKit
 
 class SplashViewController: LTViewController {
-
     // MARK: - Variables
     private var viewModel: SplashViewModel!
     
@@ -19,7 +18,8 @@ class SplashViewController: LTViewController {
         self.viewModel = viewModel
         setupViews()
     }
-    
+
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -51,7 +51,5 @@ class SplashViewController: LTViewController {
     }
     
     func bindViewModel() {
-        // TODO: When needed
     }
-    
 }

@@ -9,7 +9,6 @@
 import UIKit
 
 class MainViewController: LTViewController {
-
     // MARK: - UIControls
     let tableView: LTTableView = {
         let tableView = LTTableView()
@@ -17,7 +16,7 @@ class MainViewController: LTViewController {
     }()
     
     // MARK: - Variables
-    private var viewModel: MainViewModel!
+    var viewModel: MainViewModel!
     
     // MARK: - View LifeCycle
     init(withViewModel viewModel: MainViewModel) {
@@ -25,7 +24,8 @@ class MainViewController: LTViewController {
         self.viewModel = viewModel
         setupViews()
     }
-    
+
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -48,14 +48,12 @@ class MainViewController: LTViewController {
     }
     
     func bindViewModel() {
-        // TODO: When needed
     }
     
     // MARK: - UI Actions
 }
 
 extension MainViewController: UITableViewDataSource, UITableViewDelegate {
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.menus.count
     }
@@ -69,5 +67,4 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.openScreen(withIndexPath: indexPath)
     }
-    
 }

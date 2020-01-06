@@ -8,6 +8,5 @@
 
 import Foundation
 
-class MainService {
-    
+class MainService: LTService {
 }

@@ -11,7 +11,6 @@ import Foundation
 enum GithubAPI {}
 
 extension GithubAPI {
-    
     static func getFlyingBearPublicRepos() -> Endpoint<[Repository]> {
         return Endpoint(path: "users/flyingBear66/repos")
     }

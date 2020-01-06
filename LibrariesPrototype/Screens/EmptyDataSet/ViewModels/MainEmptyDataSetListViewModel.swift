@@ -22,7 +22,6 @@ protocol MainEmptyDataSetListViewModelEvents {
 }
     
 class MainEmptyDataSetListViewModel: LTViewModel, MainEmptyDataSetListViewModelEvents {
-    
     // MARK: - Events
     var showEmptyDataSetList: (() -> Void)?
     var showEmptyDataSetListWithButton: (() -> Void)?

@@ -10,7 +10,6 @@ import EmptyDataSet_Swift
 import UIKit
 
 class EmptyDataSetListWithImageViewController: BaseEmptyDataSetListViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -22,7 +21,6 @@ class EmptyDataSetListWithImageViewController: BaseEmptyDataSetListViewControlle
 }
 
 extension EmptyDataSetListWithImageViewController: EmptyDataSetSource {
-    
     func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
         return NSAttributedString(string: "List is Empty")
     }
@@ -30,5 +28,4 @@ extension EmptyDataSetListWithImageViewController: EmptyDataSetSource {
     func image(forEmptyDataSet scrollView: UIScrollView) -> UIImage? {
         return UIImage(named: "Dog")
     }
-    
 }

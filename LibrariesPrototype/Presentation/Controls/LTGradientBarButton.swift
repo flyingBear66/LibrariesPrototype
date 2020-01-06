@@ -6,8 +6,8 @@
 //  Copyright © 2019 Ozgun Zor. All rights reserved.
 //
 
-import UIKit
 import GradientLoadingBar
+import UIKit
 
 enum GradientLoadingBarType {
     case bottom
@@ -15,7 +15,6 @@ enum GradientLoadingBarType {
 }
 
 class LTGradientBarButton: LTView {
-    
     // MARK: - UIControls
     var gradientLoadingBar: GradientLoadingBar?
     
@@ -46,7 +45,7 @@ class LTGradientBarButton: LTView {
         }
     }
     
-    var durations: Durations = Durations(fadeIn: 1.0, fadeOut: 1.0, progress: 1.0) {
+    var durations = Durations(fadeIn: 1.0, fadeOut: 1.0, progress: 1.0) {
         didSet {
             updateGradientLoadingBar()
         }
@@ -60,37 +59,37 @@ class LTGradientBarButton: LTView {
         return button
     }()
     
-    func updateGradientLoadingBar() {
-        let gradientLoadingBarView: GradientLoadingBar?
-        switch type {
-        case .top:
-            gradientLoadingBarView = GradientLoadingBar(height: height,
-                                                        durations:durations,
-                                                        gradientColorList:gradientColorList,
-                                                        onView: button)
-        case .bottom:
-            gradientLoadingBarView = BottomGradientLoadingBar(height: height,
-                                                              durations:durations,
-                                                              gradientColorList: gradientColorList,
-                                                              onView: button)
-        }
-
-        self.gradientLoadingBar = gradientLoadingBarView
-    }
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         layer.borderWidth = 1
         layer.borderColor = UIColor.lightGray.cgColor
         layer.cornerRadius = 5
         
-        
         addSubview(button)
         button.addConstraints(equalToSuperview())
     }
-    
+
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    func updateGradientLoadingBar() {
+        let gradientLoadingBarView: GradientLoadingBar?
+        switch type {
+        case .top:
+            gradientLoadingBarView = GradientLoadingBar(height: height,
+                                                        durations: durations,
+                                                        gradientColorList: gradientColorList,
+                                                        onView: button)
+        case .bottom:
+            gradientLoadingBarView = BottomGradientLoadingBar(height: height,
+                                                              durations: durations,
+                                                              gradientColorList: gradientColorList,
+                                                              onView: button)
+        }
+
+        self.gradientLoadingBar = gradientLoadingBarView
     }
     
     @objc func buttonTapped() {

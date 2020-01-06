@@ -10,21 +10,23 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
+    
+    fileprivate let viewModel = AppDelegateViewModel()
     
     var application: Application?
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        let window = LTWindow(frame: UIScreen.main.bounds)
-        self.application = Application(window: window)
-        self.window = window
-        
-        
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Libraries to set up
-        AppDelegateHelper.setupLibrariesOnLaunch()
+        self.viewModel.setupLibrariesOnLaunch()
+        
+        // setup Window
+        let window = LTWindow(frame: UIScreen.main.bounds)
+        self.window = window
 
+        // Setup Application
+        self.application = Application(window: window)
+        
         // Start app first Screen
         self.application?.navigation.firstScreenAsSplash()
         
@@ -52,6 +54,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
 }
 
