@@ -19,33 +19,33 @@ There will be a menu when the app launches and you can navigate to other views t
   - ViewControllers (Activities)
   - Views (Fragments, if it is needed)
 
-  <img src="" alt="EmptyDataSet" style="zoom:50%;" />
+  <img src="https://raw.githubusercontent.com/flyingBear66/LibrariesPrototype/feature/gifs_for_readme/gifs/EmptyDateSet.gif" alt="EmptyDataSet" style="zoom:50%;" />
 
 - FoldingCell
 
-  <img src="" alt="FoldingCell" style="zoom:50%;" />
+  <img src="https://raw.githubusercontent.com/flyingBear66/LibrariesPrototype/feature/gifs_for_readme/gifs/FoldingCell.gif" alt="FoldingCell" style="zoom:50%;" />
 
 - GradientLoadingBar
 
-  <img src="" alt="GradientLoadingBar" style="zoom:50%;" />
+  <img src="https://raw.githubusercontent.com/flyingBear66/LibrariesPrototype/feature/gifs_for_readme/gifs/GradientLoadingBar.gif" alt="GradientLoadingBar" style="zoom:50%;" />
 
-  <img src="" alt="GradientLoadingBar2" style="zoom:50%;" />
+  <img src="https://raw.githubusercontent.com/flyingBear66/LibrariesPrototype/feature/gifs_for_readme/gifs/GradientOthers.gif" alt="GradientLoadingBar2" style="zoom:50%;" />
 
 - NativeAPI
 
-  <img src="" alt="NativeAPI" style="zoom:50%;" />
+  <img src="https://raw.githubusercontent.com/flyingBear66/LibrariesPrototype/feature/gifs_for_readme/gifs/List.gif" alt="NativeAPI" style="zoom:50%;" />
 
-  <img src="" alt="NativeAPI" style="zoom:50%;" />
+  <img src="https://raw.githubusercontent.com/flyingBear66/LibrariesPrototype/feature/gifs_for_readme/gifs/ListDetail.gif" alt="NativeAPI" style="zoom:50%;" />
 
-  <img src="" alt="NativeAPI" style="zoom:50%;" />
+  <img src="https://raw.githubusercontent.com/flyingBear66/LibrariesPrototype/feature/gifs_for_readme/gifs/Search.gif" alt="NativeAPI" style="zoom:50%;" />
 
 - RxSwift
 
-  <img src="" alt="RxSwift" style="zoom:50%;" />
+  <img src="https://raw.githubusercontent.com/flyingBear66/LibrariesPrototype/feature/gifs_for_readme/gifs/RxSwiftAlamofire.gif" alt="RxSwift" style="zoom:50%;" />
 
 - StretchyHeader
 
-  <img src="" alt="StretchyHeader" style="zoom:50%;" />
+  <img src="https://raw.githubusercontent.com/flyingBear66/LibrariesPrototype/feature/gifs_for_readme/gifs/StretchyHeader.gif" alt="StretchyHeader" style="zoom:20%;" />
 
 - SwiftUI
 
