@@ -51,9 +51,9 @@ There will be a menu when the app launches and you can navigate to other views t
 
   This directory contains a demo app written by SwiftUI
 
-  <img src="" alt="EmptyDataSet" style="zoom:50%;" />
+  <img src="https://raw.githubusercontent.com/flyingBear66/LibrariesPrototype/feature/gifs_for_readme/gifs/SwiftUIMainPage.gif" alt="SwiftUIMain" style="zoom:20%;" />
 
-  <img src="" alt="EmptyDataSet" style="zoom:50%;" />
+  <img src="https://raw.githubusercontent.com/flyingBear66/LibrariesPrototype/feature/gifs_for_readme/gifs/CreateEvent.gif" alt="CreateEvent" style="zoom:20%;" />
 
 - Splash
 
