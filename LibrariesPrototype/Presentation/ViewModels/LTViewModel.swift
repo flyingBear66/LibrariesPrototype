@@ -9,7 +9,6 @@
 import UIKit
 
 class LTViewModel: NSObject {
-    
     // MARK: - Variables
     public var loading = Bindable<Bool>(false)
 }

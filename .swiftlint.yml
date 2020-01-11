@@ -17,11 +17,48 @@ disabled_rules: # rule identifiers to exclude from running
   - vertical_whitespace
   - discouraged_direct_init
   - weak_delegate
+  - todo
 opt_in_rules: # some rules are only opt-in
+  - anyobject_protocol
+  - collection_alignment
+  - contains_over_filter_count
+  - contains_over_filter_is_empty
+  - contains_over_range_nil_comparison
+  - convenience_type
+  - deployment_target
+  - duplicate_imports
+  - empty_collection_literal
+  - empty_xctest_method
+  - file_types_order
+  - flatmap_over_map_reduce
+  - identical_operands
+  - inert_defer
+  - last_where
+  - legacy_hashing
+  - legacy_random	
+  # - multiline_arguments_brackets
+  # - multiline_function_chains
+  - reduce_boolean
+  - reduce_into
+  - redundant_objc_attribute
+  - redundant_set_access_control
+  - redundant_type_annotation
+  - static_operator
+  - toggle_bool
+  # - type_contents_order
+  - unavailable_function
+  - unused_capture_list
+  - unused_control_flow_label
+  - unused_declaration
+  - unused_import
+  - unused_setter_value
+  - vertical_whitespace_closing_braces
+  - vertical_whitespace_opening_braces
+  - xct_specific_matcher
   - empty_count
   - array_init
   # - attributes
-  - closure_end_indentation
+  # - closure_end_indentation
   # - closure_spacing #
   # - conditional_returns_on_newline
   - contains_over_first_not_nil
@@ -30,13 +67,13 @@ opt_in_rules: # some rules are only opt-in
   # - discouraged_optional_collection
   - empty_string
   # - explicit_acl
-  - explicit_enum_raw_value
+  # - explicit_enum_raw_value
   - explicit_init
   # - explicit_top_level_acl
   # - explicit_type_interface
   # - extension_access_modifier
   - fatal_error_message
-  - file_header
+  # - file_header
   - first_where
   - force_unwrapping
   - implicit_return
@@ -144,8 +181,8 @@ cyclomatic_complexity:
   error: 30
 # 
 function_body_length:
-  warning: 80
-  error: 100
+  warning: 100
+  error: 120
 # naming rules can set warnings/errors for min_length and max_length
 # additionally they can set excluded names
 type_name:

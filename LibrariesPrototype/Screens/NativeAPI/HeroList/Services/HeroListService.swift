@@ -9,7 +9,6 @@
 import Foundation
 
 class HeroListService: LTService {
-    
     var offset = 0
     let limit = 20
     
@@ -39,5 +38,4 @@ class HeroListService: LTService {
             }
         }
     }
-    
 }

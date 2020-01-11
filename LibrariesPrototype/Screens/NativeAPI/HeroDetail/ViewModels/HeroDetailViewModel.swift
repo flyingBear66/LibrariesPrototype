@@ -9,7 +9,6 @@
 import UIKit
 
 class HeroDetailViewModel: LTViewModel {
-    
     // MARK: - Variables
     private let service: HeroDetailService!
     public var heroDetailDidError = Bindable<String>("")
@@ -24,11 +23,11 @@ class HeroDetailViewModel: LTViewModel {
     private var seriesLoaded = Bindable<Bool>(false)
     private var storiesLoaded = Bindable<Bool>(false)
 
-    private var heroId: Int = 0
+    private var heroId: Int
     
     // MARK: - Init
     
-    init(withService service: LTService, heroId id: Int) {
+    init(withService service: LTService, heroId id: Int = 0) {
         self.service = (service as! HeroDetailService)
         self.heroId = id
         favorited.value = UserDefaults.standard.bool(forKey: "\(heroId)")
@@ -36,6 +35,11 @@ class HeroDetailViewModel: LTViewModel {
     }
     
     // MARK: - Public Methods
+    
+    func setHeroId(_ heroId: Int) {
+        self.heroId = heroId
+    }
+    
     func favoriteTapped() {
         UserDefaults.standard.set(!favorited.value, forKey: "\(heroId)")
         // To Notify Hero List
@@ -130,5 +134,4 @@ class HeroDetailViewModel: LTViewModel {
             HeroStoryViewModel(story: story)
         })
     }
-
 }

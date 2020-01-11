@@ -9,7 +9,6 @@
 import UIKit
 
 class BaseEmptyDataSetListViewController: LTViewController {
-
     // MARK: - UIControls
     let tableView: LTTableView = {
         let tableView = LTTableView()
@@ -21,7 +20,8 @@ class BaseEmptyDataSetListViewController: LTViewController {
         super.init()
         setupViews()
     }
-    
+
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -45,7 +45,6 @@ class BaseEmptyDataSetListViewController: LTViewController {
 }
 
 extension BaseEmptyDataSetListViewController: UITableViewDataSource, UITableViewDelegate {
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0
     }

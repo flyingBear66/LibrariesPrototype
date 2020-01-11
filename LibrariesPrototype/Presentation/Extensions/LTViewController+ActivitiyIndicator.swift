@@ -10,7 +10,6 @@ import SVProgressHUD
 import UIKit
 
 extension LTViewController {
-        
     public func showLoadingIndicator() {
         SVProgressHUD.show()
         UIApplication.shared.beginIgnoringInteractionEvents()
@@ -20,5 +19,4 @@ extension LTViewController {
         SVProgressHUD.dismiss()
         UIApplication.shared.endIgnoringInteractionEvents()
     }
-    
 }

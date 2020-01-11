@@ -22,7 +22,6 @@ protocol HeroListViewModelEvents {
 }
 
 class HeroListViewModel: LTViewModel, HeroListViewModelEvents {
-
     // MARK: - Events
     var showHeroDetail: ((Int) -> Void)?
     var showHeroSearch: (() -> Void)?

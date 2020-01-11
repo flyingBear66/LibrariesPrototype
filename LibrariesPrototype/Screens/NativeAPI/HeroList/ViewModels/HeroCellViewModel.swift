@@ -9,7 +9,6 @@
 import Foundation
 
 class HeroCellViewModel: LTViewModel {
-    
     // MARK: - Variables
     private let hero: ComicCharacter
     public let heroImageURLString: String

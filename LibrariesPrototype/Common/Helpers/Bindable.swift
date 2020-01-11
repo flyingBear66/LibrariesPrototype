@@ -11,7 +11,6 @@
 import Foundation
 
 class Bindable<T> {
-    
     typealias CallBack = (T) -> ()
     
     var callback: CallBack?
@@ -34,5 +33,4 @@ class Bindable<T> {
         self.callback = callback
         callback?(value)
     }
-    
 }

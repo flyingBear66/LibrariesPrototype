@@ -6,12 +6,15 @@
 //  Copyright © 2019 Ozgun Zor. All rights reserved.
 //
 
+import CocoaLumberjack
+import GradientLoadingBar
 import UIKit
 
 class LTViewController: UIViewController {
-    
     // MARK: - UIControls
-    
+    let gradientLoadingBar = GradientLoadingBar(height: GradientLoadingBarConstants.height,
+                                                isRelativeToSafeArea: false)
+
     // MARK: - View LifeCycle
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -21,4 +24,13 @@ class LTViewController: UIViewController {
         super.init(coder: aDecoder)
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        DDLogInfo("\(String(describing: self)) viewDidLoad")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        hideGradientLoadingBar()
+    }
 }

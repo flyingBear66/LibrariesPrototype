@@ -8,10 +8,10 @@
 
 import Foundation
 
-struct HeroCellIdentifiers {
-    static let heroCell = "heroCell"
+enum HeroCellViewConstants {
+    static let cornerRadius = 5
 }
 
-struct HeroCellViewConstants {
-    static let cornerRadius = 5
+enum HeroCellIdentifiers {
+    static let heroCell = "heroCell"
 }

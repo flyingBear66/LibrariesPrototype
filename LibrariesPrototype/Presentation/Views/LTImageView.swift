@@ -9,5 +9,4 @@
 import UIKit
 
 class LTImageView: UIImageView {
-
 }

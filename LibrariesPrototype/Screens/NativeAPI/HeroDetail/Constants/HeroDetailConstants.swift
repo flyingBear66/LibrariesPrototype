@@ -8,14 +8,14 @@
 
 import Foundation
 
-struct HeroDetailServiceConstants {
-    static let requiredDetailCount = 3
-}
-
-struct EmptyStateStrings {
+enum EmptyStateStrings {
     static let heroDetail = "N/a"
 }
 
-struct HeroDetailViewConstants {
+enum HeroDetailViewConstants {
     static let cardCornerRadius = 5
+}
+
+enum HeroDetailServiceConstants {
+    static let requiredDetailCount = 3
 }

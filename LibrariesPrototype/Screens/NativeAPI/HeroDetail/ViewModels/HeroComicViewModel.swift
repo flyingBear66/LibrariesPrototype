@@ -9,7 +9,6 @@
 import UIKit
 
 class HeroComicViewModel: LTViewModel {
-    
     // MARK: - Variables
     private let comic: Comic
     public let title: String

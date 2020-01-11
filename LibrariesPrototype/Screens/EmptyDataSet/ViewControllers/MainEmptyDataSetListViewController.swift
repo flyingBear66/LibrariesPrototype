@@ -9,7 +9,6 @@
 import UIKit
 
 class MainEmptyDataSetListViewController: LTViewController {
-
     // MARK: - UIControls
     let tableView: LTTableView = {
         let tableView = LTTableView()
@@ -17,7 +16,7 @@ class MainEmptyDataSetListViewController: LTViewController {
     }()
     
     let menus: [String] = {
-       return ["List", "List with Image", "List With Button"]
+       ["List", "List with Image", "List With Button"]
     }()
     
     // MARK: - Variables
@@ -29,7 +28,8 @@ class MainEmptyDataSetListViewController: LTViewController {
         self.viewModel = viewModel
         setupViews()
     }
-    
+
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -53,7 +53,6 @@ class MainEmptyDataSetListViewController: LTViewController {
 }
 
 extension MainEmptyDataSetListViewController: UITableViewDataSource, UITableViewDelegate {
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menus.count
     }
