@@ -4,7 +4,62 @@ This is a project to test some popular libraries and as well as trending archite
 
 There will be a menu when the app launches and you can navigate to other views to tryout libraries etc.
 
-### Common
+
+
+### Project Structures
+
+#### Screens
+
+- EmptyDataSet
+
+  - ViewModels 
+  - ViewControllers 
+  - Controls ( if it is needed)
+  - Models (If it is needed)
+  - ViewControllers (Activities)
+  - Views (Fragments, if it is needed)
+
+  <img src="https://raw.githubusercontent.com/flyingBear66/LibrariesPrototype/feature/gifs_for_readme/gifs/EmptyDateSet.gif" alt="EmptyDataSet" style="zoom:50%;" />
+
+- FoldingCell
+
+  <img src="https://raw.githubusercontent.com/flyingBear66/LibrariesPrototype/feature/gifs_for_readme/gifs/FoldingCell.gif" alt="FoldingCell" style="zoom:50%;" />
+
+- GradientLoadingBar
+
+  <img src="https://raw.githubusercontent.com/flyingBear66/LibrariesPrototype/feature/gifs_for_readme/gifs/GradientLoadingBar.gif" alt="GradientLoadingBar" style="zoom:50%;" />
+
+  <img src="https://raw.githubusercontent.com/flyingBear66/LibrariesPrototype/feature/gifs_for_readme/gifs/GradientOthers.gif" alt="GradientLoadingBar2" style="zoom:50%;" />
+
+- NativeAPI
+
+  <img src="https://raw.githubusercontent.com/flyingBear66/LibrariesPrototype/feature/gifs_for_readme/gifs/List.gif" alt="NativeAPI" style="zoom:50%;" />
+
+  <img src="https://raw.githubusercontent.com/flyingBear66/LibrariesPrototype/feature/gifs_for_readme/gifs/ListDetail.gif" alt="NativeAPI" style="zoom:50%;" />
+
+  <img src="https://raw.githubusercontent.com/flyingBear66/LibrariesPrototype/feature/gifs_for_readme/gifs/Search.gif" alt="NativeAPI" style="zoom:50%;" />
+
+- RxSwift
+
+  <img src="https://raw.githubusercontent.com/flyingBear66/LibrariesPrototype/feature/gifs_for_readme/gifs/RxSwiftAlamofire.gif" alt="RxSwift" style="zoom:50%;" />
+
+- StretchyHeader
+
+  <img src="https://raw.githubusercontent.com/flyingBear66/LibrariesPrototype/feature/gifs_for_readme/gifs/StretchyHeader.gif" alt="StretchyHeader" style="zoom:20%;" />
+
+- SwiftUI
+
+  This directory contains a demo app written by SwiftUI
+
+  <img src="https://raw.githubusercontent.com/flyingBear66/LibrariesPrototype/feature/gifs_for_readme/gifs/SwiftUIMainPage.gif" alt="SwiftUIMain" style="zoom:20%;" />
+
+  <img src="https://raw.githubusercontent.com/flyingBear66/LibrariesPrototype/feature/gifs_for_readme/gifs/CreateEvent.gif" alt="CreateEvent" style="zoom:20%;" />
+
+- Splash
+
+- Main
+
+#### Common
 
 - Constants
 
@@ -18,7 +73,7 @@ There will be a menu when the app launches and you can navigate to other views t
 
   (Some libraries or code pieces that doesn't have a pod file goes here)
 
-### Infrastructure
+#### Infrastructure
 
 - Networking
 
@@ -36,7 +91,7 @@ There will be a menu when the app launches and you can navigate to other views t
 
 - Logging
 
-### Presentation
+#### Presentation
 
 - Constants
 
@@ -73,36 +128,7 @@ There will be a menu when the app launches and you can navigate to other views t
   - LTCollectionViewCell.swift
   - LTWindow.swift
 
-### Screens
-
-- EmptyDataSet
-
-  - ViewModels 
-  - ViewControllers 
-  - Controls ( if it is needed)
-  - Models (If it is needed)
-  - ViewControllers (Activities)
-  - Views (Fragments, if it is needed)
-
-- FoldingCell
-
-- GradientLoadingBar
-
-- Main
-
-- NativeAPI
-
-- RxSwift
-
-- Splash
-
-- StretchyHeader
-
-- SwiftUI
-
-  This directory contains a demo app written by SwiftUI
-
-### Others
+#### Others
 
 * AppDelegate.swift
 
@@ -116,7 +142,7 @@ There will be a menu when the app launches and you can navigate to other views t
 
 * Assests (Images, Icons)
 
-### Configurations
+#### Configurations
 
 ​	This directory has `.xcconfig` files with parameters for every environment such as below.
 
