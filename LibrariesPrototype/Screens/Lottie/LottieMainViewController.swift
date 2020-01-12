@@ -64,9 +64,11 @@ extension LottieMainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         cell.backgroundColor = .lightGray
+
         let animationView = animations[indexPath.row]
         cell.addSubview(animationView)
         animationView.addConstraints(equalToSuperview())
+
         return cell
     }
     
