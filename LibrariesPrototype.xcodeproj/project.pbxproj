@@ -123,6 +123,7 @@
 		B68EE6C22276410600749D62 /* LTViewPropertyAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68EE6C12276410600749D62 /* LTViewPropertyAnimator.swift */; };
 		B6E319F82276416000AD34F6 /* LTHeavyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E319F72276416000AD34F6 /* LTHeavyLabel.swift */; };
 		B6E319FA2276416E00AD34F6 /* LTLightLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E319F92276416E00AD34F6 /* LTLightLabel.swift */; };
+		D6FF3DA323CA92B000E9DD55 /* LottieMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FF3DA223CA92B000E9DD55 /* LottieMainViewController.swift */; };
 		F22E94A131A902D1727629A8 /* Pods_LibrariesPrototype.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F2A9BBB640BE5DCB529C15 /* Pods_LibrariesPrototype.framework */; };
 		FB3271EA226F662900B94AE6 /* GradientLoadingMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3271E9226F662900B94AE6 /* GradientLoadingMainViewController.swift */; };
 		FB3271EC226F663500B94AE6 /* GradientLoadingMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3271EB226F663500B94AE6 /* GradientLoadingMainViewModel.swift */; };
@@ -285,6 +286,7 @@
 		B6E319F92276416E00AD34F6 /* LTLightLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTLightLabel.swift; sourceTree = "<group>"; };
 		C0F2A9BBB640BE5DCB529C15 /* Pods_LibrariesPrototype.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibrariesPrototype.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0101268CB92B19951DB637D /* Pods-LibrariesPrototypeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototypeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototypeTests/Pods-LibrariesPrototypeTests.release.xcconfig"; sourceTree = "<group>"; };
+		D6FF3DA223CA92B000E9DD55 /* LottieMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieMainViewController.swift; sourceTree = "<group>"; };
 		FB3271E9226F662900B94AE6 /* GradientLoadingMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLoadingMainViewController.swift; sourceTree = "<group>"; };
 		FB3271EB226F663500B94AE6 /* GradientLoadingMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLoadingMainViewModel.swift; sourceTree = "<group>"; };
 		FB3271ED226F693C00B94AE6 /* GradientLoadingButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLoadingButtonViewModel.swift; sourceTree = "<group>"; };
@@ -583,6 +585,7 @@
 				9EEA0FBE226A88C1008595CC /* EmptyDataSet */,
 				87F3640923BD49BA00986564 /* FoldingCell */,
 				FB3271E6226F65FD00B94AE6 /* GradientLoadingBar */,
+				D6FF3DA123CA926600E9DD55 /* Lottie */,
 				9EEA0F3C226A3F3C008595CC /* Main */,
 				9EEA0F50226A4958008595CC /* NativeAPI */,
 				9E62CD39226C811C0078AAC6 /* RxSwift */,
@@ -1030,6 +1033,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D6FF3DA123CA926600E9DD55 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				D6FF3DA223CA92B000E9DD55 /* LottieMainViewController.swift */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
 		FB3271E6226F65FD00B94AE6 /* GradientLoadingBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -1238,6 +1249,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -1254,6 +1266,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1435,6 +1448,7 @@
 				9EA1EC3C226BE6E800AC5F88 /* Application.swift in Sources */,
 				9EEA0F90226A498A008595CC /* HeroComicViewModel.swift in Sources */,
 				9EEA0F8D226A498A008595CC /* HeroListService.swift in Sources */,
+				D6FF3DA323CA92B000E9DD55 /* LottieMainViewController.swift in Sources */,
 				9EE91FBD226A37F90079827F /* MarvelAPIClient.swift in Sources */,
 				9EEA0FB9226A615D008595CC /* LTNavigationController.swift in Sources */,
 				9EEA0F92226A498A008595CC /* HeroEventViewModel.swift in Sources */,
