@@ -50,7 +50,8 @@ class LottieDetailViewController: LTViewController {
     }
 
     func updateUI() {
-        containerView.backgroundColor = .lightGray
+//        containerView.backgroundColor = .lightGray
+        view.backgroundColor = .lightGray
 
         // Adding Views
         containerView.addSubview(playButton)
@@ -68,7 +69,7 @@ class LottieDetailViewController: LTViewController {
                                       equal(animationView, \.topAnchor, \.bottomAnchor, constant: 0),
                                       equal(view, \.trailingAnchor),
                                       equal(view, \.leadingAnchor),
-                                      equal(\.heightAnchor, to: 50)])
+                                      equal(\.heightAnchor, to: 100)])
     }
 
     // MARK: - UI Actions

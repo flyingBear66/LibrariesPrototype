@@ -15,15 +15,11 @@ class LottieMainViewController: LTViewController {
     let tableView: LTTableView = {
         let tableView = LTTableView()
         tableView.separatorStyle = .none
+        tableView.rowHeight = 200
         return tableView
     }()
 
-    // MRK
-    let animationView1 = AnimationView()
-    let animationView2 = AnimationView()
-
-    let animation1 = Animation.named("biking1", subdirectory: "lottieFiles")
-    let animation2 = Animation.named("biking2", subdirectory: "lottieFiles")
+    var animations = [AnimationView]()
     
     // MARK: - Variables
     
@@ -45,6 +41,10 @@ class LottieMainViewController: LTViewController {
     
     // MARK: - Helpers
     func setupViews() {
+        for n in 1...20 {
+            animations.append(AnimationView(animation: Animation.named("biking\(n)", subdirectory: "lottieFiles")))
+        }
+
         view.backgroundColor = .white
         tableView.dataSource = self
         tableView.delegate = self
@@ -58,23 +58,15 @@ class LottieMainViewController: LTViewController {
 
 extension LottieMainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        2
+        animations.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         cell.backgroundColor = .lightGray
-        if indexPath.row == 0 {
-            animationView1.animation = animation1
-            cell.addSubview(animationView1)
-            animationView1.addConstraints(equalToSuperview())
-        } else if indexPath.row == 1 {
-            animationView2.animation = animation2
-            cell.addSubview(animationView2)
-            animationView2.addConstraints(equalToSuperview())
-        } else {
-            cell.textLabel?.text = "\(indexPath.row)"
-        }
+        let animationView = animations[indexPath.row]
+        cell.addSubview(animationView)
+        animationView.addConstraints(equalToSuperview())
         return cell
     }
     
@@ -83,13 +75,5 @@ extension LottieMainViewController: UITableViewDelegate, UITableViewDataSource {
 
         let lottieDetailViewController = LottieDetailViewController(with: "biking\(indexPath.row + 1)")
         navigationController?.pushViewController(lottieDetailViewController, animated: true)
-    }
-
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
-            animationView1.play()
-        } else if indexPath.row == 1 {
-            animationView2.play()
-        }
     }
 }
