@@ -6,24 +6,24 @@
 //  Copyright © 2020 Ozgun Zor. All rights reserved.
 //
 
-import UIKit
 import Lottie
+import UIKit
 
 class LottieMainViewController: LTViewController {
-    
-    let animationView1 = AnimationView()
-    let animationView2 = AnimationView()
 
-    let animation1 = Animation.named("biking1", subdirectory: "lottieFiles")
-    let animation2 = Animation.named("biking2", subdirectory: "lottieFiles")
-        
-        
     // MARK: - UIControls
     let tableView: LTTableView = {
         let tableView = LTTableView()
         tableView.separatorStyle = .none
         return tableView
     }()
+
+    // MRK
+    let animationView1 = AnimationView()
+    let animationView2 = AnimationView()
+
+    let animation1 = Animation.named("biking1", subdirectory: "lottieFiles")
+    let animation2 = Animation.named("biking2", subdirectory: "lottieFiles")
     
     // MARK: - Variables
     
@@ -48,7 +48,6 @@ class LottieMainViewController: LTViewController {
         view.backgroundColor = .white
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.rowHeight = UITableView.automaticDimension
     }
     
     func updateUI() {
@@ -81,6 +80,12 @@ extension LottieMainViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+
+        let lottieDetailViewController = LottieDetailViewController(with: "biking\(indexPath.row + 1)")
+        navigationController?.pushViewController(lottieDetailViewController, animated: true)
+    }
+
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
             animationView1.play()
         } else if indexPath.row == 1 {

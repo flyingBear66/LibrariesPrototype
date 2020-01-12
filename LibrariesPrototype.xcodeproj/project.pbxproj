@@ -11,6 +11,7 @@
 		87157FC823C0431900DA2AE3 /* LTFoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87157FC623C0431900DA2AE3 /* LTFoldingCell.swift */; };
 		87157FC923C0431900DA2AE3 /* LTFoldingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87157FC723C0431900DA2AE3 /* LTFoldingCell.xib */; };
 		87674DB823C21659007AD400 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87674DB723C21659007AD400 /* UITableView+Extensions.swift */; };
+		87BB6F9323CB6FE000BD973A /* LottieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB6F9223CB6FE000BD973A /* LottieDetailViewController.swift */; };
 		87C70A0323AEB634004E90E4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C70A0223AEB634004E90E4 /* ContentView.swift */; };
 		87C70A0523AEB64E004E90E4 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C70A0423AEB64E004E90E4 /* Models.swift */; };
 		87C70A0723AEB65F004E90E4 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C70A0623AEB65F004E90E4 /* RootView.swift */; };
@@ -162,6 +163,7 @@
 		87157FC623C0431900DA2AE3 /* LTFoldingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTFoldingCell.swift; sourceTree = "<group>"; };
 		87157FC723C0431900DA2AE3 /* LTFoldingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LTFoldingCell.xib; sourceTree = "<group>"; };
 		87674DB723C21659007AD400 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		87BB6F9223CB6FE000BD973A /* LottieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieDetailViewController.swift; sourceTree = "<group>"; };
 		87C70A0223AEB634004E90E4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		87C70A0423AEB64E004E90E4 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		87C70A0623AEB65F004E90E4 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -1040,6 +1042,7 @@
 			isa = PBXGroup;
 			children = (
 				D6FF3DA223CA92B000E9DD55 /* LottieMainViewController.swift */,
+				87BB6F9223CB6FE000BD973A /* LottieDetailViewController.swift */,
 			);
 			path = Lottie;
 			sourceTree = "<group>";
@@ -1436,6 +1439,7 @@
 				B60255D42271FBAE005D31B8 /* LTGradientLoadingBarViewController.swift in Sources */,
 				B6E319F82276416000AD34F6 /* LTHeavyLabel.swift in Sources */,
 				9E62CD40226C81560078AAC6 /* RepositoryCollectionViewCell.swift in Sources */,
+				87BB6F9323CB6FE000BD973A /* LottieDetailViewController.swift in Sources */,
 				9EEA0F8F226A498A008595CC /* HeroDetailViewModel.swift in Sources */,
 				9EEA0F93226A498A008595CC /* HeroDetailConstants.swift in Sources */,
 				9EE91FDF226A3E5B0079827F /* ComicCharacter.swift in Sources */,
