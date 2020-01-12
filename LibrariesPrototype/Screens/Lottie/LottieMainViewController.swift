@@ -7,24 +7,84 @@
 //
 
 import UIKit
+import Lottie
 
 class LottieMainViewController: LTViewController {
+    
+    let animationView1 = AnimationView()
+    let animationView2 = AnimationView()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    let animation1 = Animation.named("biking1", subdirectory: "lottieFiles")
+    let animation2 = Animation.named("biking2", subdirectory: "lottieFiles")
+        
+        
+    // MARK: - UIControls
+    let tableView: LTTableView = {
+        let tableView = LTTableView()
+        tableView.separatorStyle = .none
+        return tableView
+    }()
+    
+    // MARK: - Variables
+    
+    // MARK: - View LifeCycle
+    override init() {
+        super.init()
+        setupViews()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @available(*, unavailable)
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
-    */
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateUI()
+    }
+    
+    // MARK: - Helpers
+    func setupViews() {
+        view.backgroundColor = .white
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.rowHeight = UITableView.automaticDimension
+    }
+    
+    func updateUI() {
+        view.addSubview(tableView)
+        tableView.addConstraints(equalToSuperview())
+    }
+}
 
+extension LottieMainViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
+        2
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.backgroundColor = .lightGray
+        if indexPath.row == 0 {
+            animationView1.animation = animation1
+            cell.addSubview(animationView1)
+            animationView1.addConstraints(equalToSuperview())
+        } else if indexPath.row == 1 {
+            animationView2.animation = animation2
+            cell.addSubview(animationView2)
+            animationView2.addConstraints(equalToSuperview())
+        } else {
+            cell.textLabel?.text = "\(indexPath.row)"
+        }
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        if indexPath.row == 0 {
+            animationView1.play()
+        } else if indexPath.row == 1 {
+            animationView2.play()
+        }
+    }
 }
