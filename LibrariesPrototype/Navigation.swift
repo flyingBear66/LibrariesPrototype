@@ -143,6 +143,12 @@ extension Navigation {
         currentViewController = container.resolve(FoldingCellMainViewController.self)!
         pushTo(viewContoller: currentViewController, FoldingCellMainViewController.self)
     }
+    
+    // MARK: Lottie Screens
+    private func openLottieScreens() {
+        currentViewController = container.resolve(LottieMainViewController.self)!
+        pushTo(viewContoller: currentViewController, LottieMainViewController.self)
+    }
 }
 
 // MARK: - Navigate methods
@@ -197,6 +203,14 @@ extension Navigation {
         registerStretchyHeaderScreens()
         registerSwiftUIScreens()
         registerFoldingCellScreens()
+        registerLottieScreens()
+    }
+    
+    private func registerLottieScreens() {
+        // ViewControllers
+        container.register(LottieMainViewController.self) { r in
+            LottieMainViewController()
+        }
     }
     
     private func registerSplash() {
@@ -397,6 +411,10 @@ extension Navigation {
 
             viewModel.showFoldingCell = { [unowned self] in
                 self.openFoldingCell()
+            }
+            
+            viewModel.showLottie = { [unowned self] in
+                self.openLottieScreens()
             }
             
             return viewModel
