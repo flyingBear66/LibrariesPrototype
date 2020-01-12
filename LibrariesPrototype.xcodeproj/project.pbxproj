@@ -124,6 +124,7 @@
 		B6E319F82276416000AD34F6 /* LTHeavyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E319F72276416000AD34F6 /* LTHeavyLabel.swift */; };
 		B6E319FA2276416E00AD34F6 /* LTLightLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E319F92276416E00AD34F6 /* LTLightLabel.swift */; };
 		D6FF3DA323CA92B000E9DD55 /* LottieMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FF3DA223CA92B000E9DD55 /* LottieMainViewController.swift */; };
+		D6FF3DA523CAA52500E9DD55 /* lottieFiles in Resources */ = {isa = PBXBuildFile; fileRef = D6FF3DA423CAA52500E9DD55 /* lottieFiles */; };
 		F22E94A131A902D1727629A8 /* Pods_LibrariesPrototype.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F2A9BBB640BE5DCB529C15 /* Pods_LibrariesPrototype.framework */; };
 		FB3271EA226F662900B94AE6 /* GradientLoadingMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3271E9226F662900B94AE6 /* GradientLoadingMainViewController.swift */; };
 		FB3271EC226F663500B94AE6 /* GradientLoadingMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3271EB226F663500B94AE6 /* GradientLoadingMainViewModel.swift */; };
@@ -287,6 +288,7 @@
 		C0F2A9BBB640BE5DCB529C15 /* Pods_LibrariesPrototype.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibrariesPrototype.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0101268CB92B19951DB637D /* Pods-LibrariesPrototypeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototypeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototypeTests/Pods-LibrariesPrototypeTests.release.xcconfig"; sourceTree = "<group>"; };
 		D6FF3DA223CA92B000E9DD55 /* LottieMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieMainViewController.swift; sourceTree = "<group>"; };
+		D6FF3DA423CAA52500E9DD55 /* lottieFiles */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lottieFiles; sourceTree = SOURCE_ROOT; };
 		FB3271E9226F662900B94AE6 /* GradientLoadingMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLoadingMainViewController.swift; sourceTree = "<group>"; };
 		FB3271EB226F663500B94AE6 /* GradientLoadingMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLoadingMainViewModel.swift; sourceTree = "<group>"; };
 		FB3271ED226F693C00B94AE6 /* GradientLoadingButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLoadingButtonViewModel.swift; sourceTree = "<group>"; };
@@ -483,6 +485,7 @@
 				9EA1EC3B226BE6E800AC5F88 /* Application.swift */,
 				9EA1EC37226BE5A100AC5F88 /* Navigation.swift */,
 				9E94B3E32030BEC000B8BA18 /* Assets.xcassets */,
+				D6FF3DA423CAA52500E9DD55 /* lottieFiles */,
 				9E94B3E82030BEC000B8BA18 /* Info.plist */,
 				9E94B5892030DC7B00B8BA18 /* Configurations */,
 				9EEA0FB4226A5BB1008595CC /* LaunchScreen.storyboard */,
@@ -1191,6 +1194,7 @@
 				9E94B3E42030BEC000B8BA18 /* Assets.xcassets in Resources */,
 				9EEA0FB5226A5BB1008595CC /* LaunchScreen.storyboard in Resources */,
 				87157FC923C0431900DA2AE3 /* LTFoldingCell.xib in Resources */,
+				D6FF3DA523CAA52500E9DD55 /* lottieFiles in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
