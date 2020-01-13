@@ -11,6 +11,7 @@
 		87157FC823C0431900DA2AE3 /* LTFoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87157FC623C0431900DA2AE3 /* LTFoldingCell.swift */; };
 		87157FC923C0431900DA2AE3 /* LTFoldingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87157FC723C0431900DA2AE3 /* LTFoldingCell.xib */; };
 		87674DB823C21659007AD400 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87674DB723C21659007AD400 /* UITableView+Extensions.swift */; };
+		87BB6F9323CB6FE000BD973A /* LottieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB6F9223CB6FE000BD973A /* LottieDetailViewController.swift */; };
 		87C70A0323AEB634004E90E4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C70A0223AEB634004E90E4 /* ContentView.swift */; };
 		87C70A0523AEB64E004E90E4 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C70A0423AEB64E004E90E4 /* Models.swift */; };
 		87C70A0723AEB65F004E90E4 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C70A0623AEB65F004E90E4 /* RootView.swift */; };
@@ -123,6 +124,8 @@
 		B68EE6C22276410600749D62 /* LTViewPropertyAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68EE6C12276410600749D62 /* LTViewPropertyAnimator.swift */; };
 		B6E319F82276416000AD34F6 /* LTHeavyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E319F72276416000AD34F6 /* LTHeavyLabel.swift */; };
 		B6E319FA2276416E00AD34F6 /* LTLightLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E319F92276416E00AD34F6 /* LTLightLabel.swift */; };
+		D6FF3DA323CA92B000E9DD55 /* LottieMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FF3DA223CA92B000E9DD55 /* LottieMainViewController.swift */; };
+		D6FF3DA523CAA52500E9DD55 /* lottieFiles in Resources */ = {isa = PBXBuildFile; fileRef = D6FF3DA423CAA52500E9DD55 /* lottieFiles */; };
 		F22E94A131A902D1727629A8 /* Pods_LibrariesPrototype.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F2A9BBB640BE5DCB529C15 /* Pods_LibrariesPrototype.framework */; };
 		FB3271EA226F662900B94AE6 /* GradientLoadingMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3271E9226F662900B94AE6 /* GradientLoadingMainViewController.swift */; };
 		FB3271EC226F663500B94AE6 /* GradientLoadingMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3271EB226F663500B94AE6 /* GradientLoadingMainViewModel.swift */; };
@@ -160,6 +163,7 @@
 		87157FC623C0431900DA2AE3 /* LTFoldingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTFoldingCell.swift; sourceTree = "<group>"; };
 		87157FC723C0431900DA2AE3 /* LTFoldingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LTFoldingCell.xib; sourceTree = "<group>"; };
 		87674DB723C21659007AD400 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		87BB6F9223CB6FE000BD973A /* LottieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieDetailViewController.swift; sourceTree = "<group>"; };
 		87C70A0223AEB634004E90E4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		87C70A0423AEB64E004E90E4 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		87C70A0623AEB65F004E90E4 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -285,6 +289,8 @@
 		B6E319F92276416E00AD34F6 /* LTLightLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTLightLabel.swift; sourceTree = "<group>"; };
 		C0F2A9BBB640BE5DCB529C15 /* Pods_LibrariesPrototype.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibrariesPrototype.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0101268CB92B19951DB637D /* Pods-LibrariesPrototypeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesPrototypeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LibrariesPrototypeTests/Pods-LibrariesPrototypeTests.release.xcconfig"; sourceTree = "<group>"; };
+		D6FF3DA223CA92B000E9DD55 /* LottieMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieMainViewController.swift; sourceTree = "<group>"; };
+		D6FF3DA423CAA52500E9DD55 /* lottieFiles */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lottieFiles; sourceTree = SOURCE_ROOT; };
 		FB3271E9226F662900B94AE6 /* GradientLoadingMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLoadingMainViewController.swift; sourceTree = "<group>"; };
 		FB3271EB226F663500B94AE6 /* GradientLoadingMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLoadingMainViewModel.swift; sourceTree = "<group>"; };
 		FB3271ED226F693C00B94AE6 /* GradientLoadingButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLoadingButtonViewModel.swift; sourceTree = "<group>"; };
@@ -481,6 +487,7 @@
 				9EA1EC3B226BE6E800AC5F88 /* Application.swift */,
 				9EA1EC37226BE5A100AC5F88 /* Navigation.swift */,
 				9E94B3E32030BEC000B8BA18 /* Assets.xcassets */,
+				D6FF3DA423CAA52500E9DD55 /* lottieFiles */,
 				9E94B3E82030BEC000B8BA18 /* Info.plist */,
 				9E94B5892030DC7B00B8BA18 /* Configurations */,
 				9EEA0FB4226A5BB1008595CC /* LaunchScreen.storyboard */,
@@ -583,6 +590,7 @@
 				9EEA0FBE226A88C1008595CC /* EmptyDataSet */,
 				87F3640923BD49BA00986564 /* FoldingCell */,
 				FB3271E6226F65FD00B94AE6 /* GradientLoadingBar */,
+				D6FF3DA123CA926600E9DD55 /* Lottie */,
 				9EEA0F3C226A3F3C008595CC /* Main */,
 				9EEA0F50226A4958008595CC /* NativeAPI */,
 				9E62CD39226C811C0078AAC6 /* RxSwift */,
@@ -1030,6 +1038,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D6FF3DA123CA926600E9DD55 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				D6FF3DA223CA92B000E9DD55 /* LottieMainViewController.swift */,
+				87BB6F9223CB6FE000BD973A /* LottieDetailViewController.swift */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
 		FB3271E6226F65FD00B94AE6 /* GradientLoadingBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -1180,6 +1197,7 @@
 				9E94B3E42030BEC000B8BA18 /* Assets.xcassets in Resources */,
 				9EEA0FB5226A5BB1008595CC /* LaunchScreen.storyboard in Resources */,
 				87157FC923C0431900DA2AE3 /* LTFoldingCell.xib in Resources */,
+				D6FF3DA523CAA52500E9DD55 /* lottieFiles in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1238,6 +1256,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -1254,6 +1273,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1419,6 +1439,7 @@
 				B60255D42271FBAE005D31B8 /* LTGradientLoadingBarViewController.swift in Sources */,
 				B6E319F82276416000AD34F6 /* LTHeavyLabel.swift in Sources */,
 				9E62CD40226C81560078AAC6 /* RepositoryCollectionViewCell.swift in Sources */,
+				87BB6F9323CB6FE000BD973A /* LottieDetailViewController.swift in Sources */,
 				9EEA0F8F226A498A008595CC /* HeroDetailViewModel.swift in Sources */,
 				9EEA0F93226A498A008595CC /* HeroDetailConstants.swift in Sources */,
 				9EE91FDF226A3E5B0079827F /* ComicCharacter.swift in Sources */,
@@ -1435,6 +1456,7 @@
 				9EA1EC3C226BE6E800AC5F88 /* Application.swift in Sources */,
 				9EEA0F90226A498A008595CC /* HeroComicViewModel.swift in Sources */,
 				9EEA0F8D226A498A008595CC /* HeroListService.swift in Sources */,
+				D6FF3DA323CA92B000E9DD55 /* LottieMainViewController.swift in Sources */,
 				9EE91FBD226A37F90079827F /* MarvelAPIClient.swift in Sources */,
 				9EEA0FB9226A615D008595CC /* LTNavigationController.swift in Sources */,
 				9EEA0F92226A498A008595CC /* HeroEventViewModel.swift in Sources */,

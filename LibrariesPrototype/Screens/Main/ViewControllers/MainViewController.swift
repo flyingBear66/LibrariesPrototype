@@ -66,5 +66,6 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.openScreen(withIndexPath: indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
