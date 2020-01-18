@@ -17,25 +17,11 @@ class ChartsLineFirstViewController: ChartsBaseViewController {
 
         chartView = LineChartView()
 
+        updateChartData()
         updateUI()
 
         // Do any additional setup after loading the view.
         self.title = "Line Chart 1"
-        //        self.options = [.toggleValues,
-        //                        .toggleFilled,
-        //                        .toggleCircles,
-        //                        .toggleCubic,
-        //                        .toggleHorizontalCubic,
-        //                        .toggleIcons,
-        //                        .toggleStepped,
-        //                        .toggleHighlight,
-        //                        .animateX,
-        //                        .animateY,
-        //                        .animateXY,
-        //                        .saveToGallery,
-        //                        .togglePinchZoom,
-        //                        .toggleAutoScaleMinMax,
-        //                        .toggleData]
 
         chartView.delegate = self
 
@@ -77,17 +63,6 @@ class ChartsLineFirstViewController: ChartsBaseViewController {
 
         chartView.rightAxis.enabled = false
 
-        //[_chartView.viewPortHandler setMaximumScaleY: 2.f];
-        //[_chartView.viewPortHandler setMaximumScaleX: 2.f];
-
-        //            let marker = BalloonMarker(color: UIColor(white: 180/255, alpha: 1),
-        //                                       font: .systemFont(ofSize: 12),
-        //                                       textColor: .white,
-        //                                       insets: UIEdgeInsets(top: 8, left: 8, bottom: 20, right: 8))
-        //            marker.chartView = chartView
-        //            marker.minimumSize = CGSize(width: 80, height: 40)
-        //            chartView.marker = marker
-
         chartView.legend.form = .line
 
         chartView.animate(xAxisDuration: 2.5)
@@ -97,14 +72,44 @@ class ChartsLineFirstViewController: ChartsBaseViewController {
         // Adding Constraints
         view.addSubview(chartView)
         chartView.addConstraints(equalToSuperview())
-
-//        chartView.addConstraints([equal(view, \.topAnchor),
-//                                      equal(view, \.trailingAnchor),
-//                                      equal(view, \.leadingAnchor),
-//                                      equal(\.heightAnchor, to: 200)])
     }
 }
 
 extension ChartsLineFirstViewController: ChartViewDelegate {
+    func updateChartData() {
+        self.setDataCount(Int(20), range: UInt32(100))
+    }
 
+    func setDataCount(_ count: Int, range: UInt32) {
+        let values = (0..<count).map { i -> ChartDataEntry in
+            ChartDataEntry(x: Double(i), y: Double.random(in: 0.0...Double(range)))
+        }
+
+        let set1 = LineChartDataSet(entries: values, label: "DataSet 1")
+        set1.drawIconsEnabled = false
+
+        set1.lineDashLengths = [5, 2.5]
+        set1.highlightLineDashLengths = [5, 2.5]
+        set1.setColor(.black)
+        set1.setCircleColor(.black)
+        set1.lineWidth = 1
+        set1.circleRadius = 3
+        set1.drawCircleHoleEnabled = false
+        set1.valueFont = .systemFont(ofSize: 9)
+        set1.formLineDashLengths = [5, 2.5]
+        set1.formLineWidth = 1
+        set1.formSize = 15
+
+        let gradientColors = [ChartColorTemplates.colorFromString("#00ff0000").cgColor,
+                              ChartColorTemplates.colorFromString("#ffff0000").cgColor]
+        let gradient = CGGradient(colorsSpace: nil, colors: gradientColors as CFArray, locations: nil)!
+
+        set1.fillAlpha = 1
+        set1.fill = Fill(linearGradient: gradient, angle: 90) //.linearGradient(gradient, angle: 90)
+        set1.drawFilledEnabled = true
+
+        let data = LineChartData(dataSet: set1)
+
+        chartView.data = data
+    }
 }
