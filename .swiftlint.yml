@@ -137,7 +137,7 @@ type_body_length:
   - 620 # error
 # or they can set both explicitly
 file_length:
-  warning: 500
+  warning: 1000
   error: 1200
 # opening_brace
 opening_brace: error
