@@ -149,6 +149,12 @@ extension Navigation {
         currentViewController = container.resolve(LottieMainViewController.self)!
         pushTo(viewContoller: currentViewController, LottieMainViewController.self)
     }
+
+    // MARK: Charts Screens
+    private func openChartsScreens() {
+        currentViewController = container.resolve(ChartsMainViewController.self)!
+        pushTo(viewContoller: currentViewController, ChartsMainViewController.self)
+    }
 }
 
 // MARK: - Navigate methods
@@ -204,6 +210,7 @@ extension Navigation {
         registerSwiftUIScreens()
         registerFoldingCellScreens()
         registerLottieScreens()
+        registerCharts()
     }
     
     private func registerLottieScreens() {
@@ -416,6 +423,10 @@ extension Navigation {
             viewModel.showLottie = { [unowned self] in
                 self.openLottieScreens()
             }
+
+            viewModel.showCharts = { [unowned self] in
+                self.openChartsScreens()
+            }
             
             return viewModel
         }
@@ -458,6 +469,18 @@ extension Navigation {
         // ViewControllers
         container.register(FoldingCellMainViewController.self) { r in
             FoldingCellMainViewController()
+        }
+    }
+
+    private func registerCharts() {
+        // ViewModels
+        container.register(ChartsMainViewModel.self) { r in
+            ChartsMainViewModel()
+        }
+
+        // ViewControllers
+        container.register(ChartsMainViewController.self) { r in
+            ChartsMainViewController(withViewModel: r.resolve(ChartsMainViewModel.self)!)
         }
     }
 }

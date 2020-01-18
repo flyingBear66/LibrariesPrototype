@@ -17,6 +17,7 @@ enum MenuCase: Int {
     case swiftUIScreens
     case foldingCell
     case lottie
+    case charts
     case none
 }
 
@@ -29,6 +30,7 @@ protocol MainViewModelEvents {
     var showSwiftUIScreens: (() -> Void)? {get set}
     var showFoldingCell: (() -> Void)? {get set}
     var showLottie: (() -> Void)? {get set}
+    var showCharts: (() -> Void)? {get set}
 }
 
 class MainViewModel: LTViewModel, MainViewModelEvents {
@@ -41,6 +43,7 @@ class MainViewModel: LTViewModel, MainViewModelEvents {
     var showSwiftUIScreens: (() -> Void)?
     var showFoldingCell: (() -> Void)?
     var showLottie: (() -> Void)?
+    var showCharts: (() -> Void)?
 
     // MARK: - Variables
     private let service: MainService!
@@ -57,7 +60,7 @@ class MainViewModel: LTViewModel, MainViewModelEvents {
     
     // MARK: - Services
     private func getMenus() -> [String] {
-        return ["Native Networking Test with MarvelAPI", "Empty Data Set List", "RxSwift and Alamofire Screens", "Gradient Progress Bar", "Stretchy Header CollectionView", "SwiftUI Screens", "Folding Cell", "Lottie AirBnb"]
+        return ["Native Networking Test with MarvelAPI", "Empty Data Set List", "RxSwift and Alamofire Screens", "Gradient Progress Bar", "Stretchy Header CollectionView", "SwiftUI Screens", "Folding Cell", "Lottie AirBnb", "Charts"]
     }
     
     // MARK: - Helpers
@@ -80,6 +83,8 @@ class MainViewModel: LTViewModel, MainViewModelEvents {
             showFoldingCell!()
         case .lottie:
             showLottie!()
+        case .charts:
+            showCharts!()
         case .none:
             print("Default case. Error happened or index not exist")            
         }
