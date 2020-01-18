@@ -19,6 +19,7 @@ target 'LibrariesPrototype' do
   pod 'SVProgressHUD'
   pod 'Swinject'
   pod 'lottie-ios'
+  pod 'Charts'
 
   target 'LibrariesPrototypeTests' do
     inherit! :search_paths
