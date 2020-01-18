@@ -155,6 +155,21 @@ extension Navigation {
         currentViewController = container.resolve(ChartsMainViewController.self)!
         pushTo(viewContoller: currentViewController, ChartsMainViewController.self)
     }
+
+    private func openLineFirst() {
+        currentViewController = container.resolve(ChartsLineFirstViewController.self)!
+        pushTo(viewContoller: currentViewController, ChartsLineFirstViewController.self)
+    }
+
+    private func openLineSecond() {
+        currentViewController = container.resolve(ChartsLineSecondViewController.self)!
+        pushTo(viewContoller: currentViewController, ChartsLineSecondViewController.self)
+    }
+
+    private func openLineCubic() {
+        currentViewController = container.resolve(ChartsLineCubicViewController.self)!
+        pushTo(viewContoller: currentViewController, ChartsLineCubicViewController.self)
+    }
 }
 
 // MARK: - Navigate methods
@@ -236,7 +251,7 @@ extension Navigation {
             
             return viewModel
         }
-    
+
         // ViewControllers
         container.register(SplashViewController.self) { r in
             SplashViewController(withViewModel: r.resolve(SplashViewModel.self)!)
@@ -475,12 +490,38 @@ extension Navigation {
     private func registerCharts() {
         // ViewModels
         container.register(ChartsMainViewModel.self) { r in
-            ChartsMainViewModel()
+            let viewModel = ChartsMainViewModel()
+
+            viewModel.showLineFirst = { [unowned self] in
+                self.openLineFirst()
+            }
+
+            viewModel.showLineSecond = { [unowned self] in
+                self.openLineSecond()
+            }
+
+            viewModel.showLineCubic = { [unowned self] in
+                self.openLineCubic()
+            }
+
+            return viewModel
         }
 
         // ViewControllers
         container.register(ChartsMainViewController.self) { r in
             ChartsMainViewController(withViewModel: r.resolve(ChartsMainViewModel.self)!)
+        }
+
+        container.register(ChartsLineFirstViewController.self) { r in
+            ChartsLineFirstViewController()
+        }
+
+        container.register(ChartsLineSecondViewController.self) { r in
+            ChartsLineSecondViewController()
+        }
+
+        container.register(ChartsLineCubicViewController.self) { r in
+            ChartsLineCubicViewController()
         }
     }
 }

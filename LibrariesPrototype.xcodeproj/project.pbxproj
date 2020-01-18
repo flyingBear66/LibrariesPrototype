@@ -12,6 +12,10 @@
 		87157FC923C0431900DA2AE3 /* LTFoldingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87157FC723C0431900DA2AE3 /* LTFoldingCell.xib */; };
 		872C048723D3A0FC0088D449 /* ChartsMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872C048623D3A0FC0088D449 /* ChartsMainViewController.swift */; };
 		872C048923D3A15A0088D449 /* ChartsMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872C048823D3A15A0088D449 /* ChartsMainViewModel.swift */; };
+		872C048B23D3A7820088D449 /* ChartsLineFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872C048A23D3A7820088D449 /* ChartsLineFirstViewController.swift */; };
+		872C048D23D3A79D0088D449 /* ChartsBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872C048C23D3A79D0088D449 /* ChartsBaseViewController.swift */; };
+		872C048F23D3C46B0088D449 /* ChartsLineSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872C048E23D3C46B0088D449 /* ChartsLineSecondViewController.swift */; };
+		872C049123D3C4860088D449 /* ChartsLineCubicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872C049023D3C4860088D449 /* ChartsLineCubicViewController.swift */; };
 		87674DB823C21659007AD400 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87674DB723C21659007AD400 /* UITableView+Extensions.swift */; };
 		87BB6F9323CB6FE000BD973A /* LottieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB6F9223CB6FE000BD973A /* LottieDetailViewController.swift */; };
 		87C70A0323AEB634004E90E4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C70A0223AEB634004E90E4 /* ContentView.swift */; };
@@ -166,6 +170,10 @@
 		87157FC723C0431900DA2AE3 /* LTFoldingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LTFoldingCell.xib; sourceTree = "<group>"; };
 		872C048623D3A0FC0088D449 /* ChartsMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsMainViewController.swift; sourceTree = "<group>"; };
 		872C048823D3A15A0088D449 /* ChartsMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsMainViewModel.swift; sourceTree = "<group>"; };
+		872C048A23D3A7820088D449 /* ChartsLineFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsLineFirstViewController.swift; sourceTree = "<group>"; };
+		872C048C23D3A79D0088D449 /* ChartsBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsBaseViewController.swift; sourceTree = "<group>"; };
+		872C048E23D3C46B0088D449 /* ChartsLineSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsLineSecondViewController.swift; sourceTree = "<group>"; };
+		872C049023D3C4860088D449 /* ChartsLineCubicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsLineCubicViewController.swift; sourceTree = "<group>"; };
 		87674DB723C21659007AD400 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		87BB6F9223CB6FE000BD973A /* LottieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieDetailViewController.swift; sourceTree = "<group>"; };
 		87C70A0223AEB634004E90E4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -352,6 +360,10 @@
 			children = (
 				872C048623D3A0FC0088D449 /* ChartsMainViewController.swift */,
 				872C048823D3A15A0088D449 /* ChartsMainViewModel.swift */,
+				872C048A23D3A7820088D449 /* ChartsLineFirstViewController.swift */,
+				872C048C23D3A79D0088D449 /* ChartsBaseViewController.swift */,
+				872C048E23D3C46B0088D449 /* ChartsLineSecondViewController.swift */,
+				872C049023D3C4860088D449 /* ChartsLineCubicViewController.swift */,
 			);
 			path = Charts;
 			sourceTree = "<group>";
@@ -1412,6 +1424,7 @@
 				9EEA0F8C226A498A008595CC /* GetCharacters.swift in Sources */,
 				9E62CD51226C904F0078AAC6 /* AlamofireHTTPClient.swift in Sources */,
 				9EEA0F8A226A498A008595CC /* HeroListCollectionViewLayout.swift in Sources */,
+				872C048B23D3A7820088D449 /* ChartsLineFirstViewController.swift in Sources */,
 				B68EE6B4227605AC00749D62 /* MainStretchyHeaderViewController.swift in Sources */,
 				B68EE6C22276410600749D62 /* LTViewPropertyAnimator.swift in Sources */,
 				9EE91FB1226A36DC0079827F /* LTButton.swift in Sources */,
@@ -1421,6 +1434,7 @@
 				FB3271F8226F697F00B94AE6 /* GradientLoadingButtonViewController.swift in Sources */,
 				9EEA0FAF226A57F1008595CC /* LTScrollView.swift in Sources */,
 				9EE91FC2226A3A0C0079827F /* MarvelResponse.swift in Sources */,
+				872C048F23D3C46B0088D449 /* ChartsLineSecondViewController.swift in Sources */,
 				9EEA0F8B226A498A008595CC /* HeroSearchService.swift in Sources */,
 				B658650C227222A200773E35 /* EnvironmentInfoConstants.swift in Sources */,
 				FB3271F0226F694B00B94AE6 /* GradientLoadingStatusBarViewModel.swift in Sources */,
@@ -1438,6 +1452,7 @@
 				87C70A0323AEB634004E90E4 /* ContentView.swift in Sources */,
 				B68EE6BB22760B3E00749D62 /* StretchyHeaderView.swift in Sources */,
 				9EEA0F7E226A498A008595CC /* HeroListViewModel.swift in Sources */,
+				872C048D23D3A79D0088D449 /* ChartsBaseViewController.swift in Sources */,
 				9EEA0F83226A498A008595CC /* HeroSearchViewController.swift in Sources */,
 				9EEA0F43226A3F8B008595CC /* MainViewController.swift in Sources */,
 				9E62CD5A226C91BD0078AAC6 /* LTRXViewController.swift in Sources */,
@@ -1488,6 +1503,7 @@
 				9EA1EC38226BE5A100AC5F88 /* Navigation.swift in Sources */,
 				9EEA0F45226A3F9B008595CC /* SplashViewController.swift in Sources */,
 				B68EE6BF227640DC00749D62 /* LTCollectionReusableView.swift in Sources */,
+				872C049123D3C4860088D449 /* ChartsLineCubicViewController.swift in Sources */,
 				9EEA0FA8226A52DD008595CC /* LTImageView.swift in Sources */,
 				9EEA0F7D226A498A008595CC /* HeroCellViewModel.swift in Sources */,
 				9EEA0F47226A3FB2008595CC /* MainViewModel.swift in Sources */,
